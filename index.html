@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Peekaboo : cours de couture et de stylisme à Nyon</title>
+<meta name="description" content="Cours de couture et de stylisme, stages de vacances et ateliers pour enfants, ados et adultes, avec la styliste Melody, à Nyon.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://peekaboo-maquette.vercel.app/">
+<style>:root{--fond:#f4ecdd;--texte:#1f1b16;--voile-fond:#1f3170;--ouverture-fond:#b2261f;--menu-fond:#f4ecdd}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f4ecdd">
+<link rel="icon" href="/assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Peekaboo">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Peekaboo : cours de couture et de stylisme à Nyon">
+<meta property="og:description" content="Cours de couture et de stylisme, stages de vacances et ateliers pour enfants, ados et adultes, avec la styliste Melody, à Nyon.">
+<meta property="og:url" content="https://peekaboo-maquette.vercel.app/">
+<meta property="og:image" content="https://peekaboo-maquette.vercel.app/assets/partage/accueil-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Peekaboo, ateliers de couture à Nyon : table de coupe et patron">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Accueil</span></div></div>
+<div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
+  <div class="pan-tissu" data-effet="coucou">
+    <span class="pan-couture"></span>
+    <span class="pan-yeux"><span class="pan-oeil"></span><span class="pan-oeil"></span></span>
+    <span class="pan-etiquette"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span><small>Ateliers d’arts plastiques pour designers en herbe</small></span>
+    <span class="pan-coin"></span>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil" aria-current="page">
+      <img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil" aria-current="page">Accueil</a></li><li style="--i:1"><a href="/cours" class="menu-lien" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li style="--i:2"><a href="/melody" class="menu-lien" data-libelle="Melody">Melody</a></li><li style="--i:3"><a href="/inscription" class="menu-lien" data-libelle="Inscription">Inscription</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+41763969174">Appeler 076 396 91 74</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1" data-page="accueil">
+<section class="hero" id="debut" data-plein-ecran>
+  <div class="hero-texte">
+    <p class="hero-tag" data-anime="gsap">Ateliers d’arts plastiques pour designers en herbe</p>
+    <h1 class="hero-titre">
+      <span class="hero-coucou craie" data-anime="gsap" aria-hidden="true">coucou !</span>
+      <span class="visuellement-cache">PEEKABOO</span>
+      <span class="hero-mot" aria-hidden="true"><span class="lettre" style="--i:0">P</span><span class="lettre" style="--i:1">E</span><span class="lettre" style="--i:2">E</span><span class="lettre" style="--i:3">K</span><span class="lettre" style="--i:4">A</span><span class="lettre" style="--i:5">B</span><span class="lettre" style="--i:6">O</span><span class="lettre" style="--i:7">O</span></span>
+      <span class="hero-sous" data-anime="gsap">Cours de couture et de stylisme à Nyon</span>
+    </h1>
+    <p class="hero-intro" data-anime="gsap">Pour enfants, ados et adultes : chacun repart avec sa réalisation unique, qu’il aura lui-même imaginée.</p>
+    <p class="hero-actions" data-anime="gsap">
+      <a href="/inscription" class="bouton" data-libelle="Inscription" data-action-principale data-survol="magnetique">Demander une inscription</a>
+      <span class="hero-info" data-info-cle>Inscription possible en cours d’année</span>
+    </p>
+  </div>
+  <div class="hero-patron">
+    <figure class="media hero-media" data-grok style="--cadrage:50% 52%">
+  <picture>
+    <img src="/assets/images/grok/cours-weekend-784.webp" srcset="/assets/images/grok/cours-weekend-480.webp 480w, /assets/images/grok/cours-weekend-640.webp 640w, /assets/images/grok/cours-weekend-784.webp 784w" sizes="(max-width: 760px) 80vw, 40vw" alt="Matériel d’atelier créatif : feutrine, boutons, rubans, laines et bobines" width="784" height="1175" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    <svg class="patron-svg" viewBox="0 0 400 520" preserveAspectRatio="none" aria-hidden="true" data-effet="patron-ciseaux">
+      <defs>
+        <pattern id="patron-grille" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#2747a8" stroke-opacity=".16" stroke-width=".8"/></pattern>
+        <mask id="patron-masque" maskUnits="userSpaceOnUse" x="-20" y="-20" width="440" height="570"><path class="patron-revele" d="M100 30 L150 18 Q200 70 250 18 L300 30 Q296 118 332 150 L384 496 Q200 528 16 496 L68 150 Q104 118 100 30 Z" pathLength="1" fill="none" stroke="#fff" stroke-width="16"/></mask>
+      </defs>
+      <g class="patron-piece">
+        <path d="M100 30 L150 18 Q200 70 250 18 L300 30 Q296 118 332 150 L384 496 Q200 528 16 496 L68 150 Q104 118 100 30 Z" class="patron-papier"/>
+        <path d="M100 30 L150 18 Q200 70 250 18 L300 30 Q296 118 332 150 L384 496 Q200 528 16 496 L68 150 Q104 118 100 30 Z" fill="url(#patron-grille)"/>
+        <g class="patron-reperes">
+          <path class="droit-fil" d="M200 150 L200 430 M190 164 L200 150 L210 164 M190 416 L200 430 L210 416"/>
+          <path class="crans" d="M44 330 L58 334 M356 334 L370 330 M196 509 L196 523 M204 509 L204 523"/>
+          <text class="patron-note" x="214" y="300" transform="rotate(90 214 300)">droit-fil</text>
+          <text class="patron-note patron-note--coupe" x="112" y="70">couper ici</text>
+        </g>
+      </g>
+      <path class="patron-trait" d="M100 30 L150 18 Q200 70 250 18 L300 30 Q296 118 332 150 L384 496 Q200 528 16 496 L68 150 Q104 118 100 30 Z" mask="url(#patron-masque)"/>
+      <g class="ciseaux" transform="translate(352 478) rotate(-24)" aria-hidden="true">
+  <g class="lame lame-a"><path d="M-4 -2.2 L58 -5 Q62 -3.6 58 -1.6 L-4 2 Z"/><path class="branche" d="M-4 -1 L-14 -9"/><ellipse class="anneau" cx="-22" cy="-13" rx="10" ry="7" transform="rotate(-24 -22 -13)"/></g>
+  <g class="lame lame-b"><path d="M-4 2.2 L58 5 Q62 3.6 58 1.6 L-4 -2 Z"/><path class="branche" d="M-4 1 L-14 9"/><ellipse class="anneau" cx="-22" cy="13" rx="10" ry="7" transform="rotate(24 -22 13)"/></g>
+  <circle class="pivot" r="2.6"/>
+</g>
+    </svg>
+    <span class="hero-aiguille" data-fil-point="0.5 0.5" data-fil-sans-perle aria-hidden="true"></span>
+  </div>
+</section>
+<div class="galon-section">
+  <div class="galon" id="galon" data-boucle-css data-ruban><p aria-hidden="true"><span>Couture · Stylisme · Stages de vacances · Ateliers du weekend · Made in Nyon ·</span> <span>Couture · Stylisme · Stages de vacances · Ateliers du weekend · Made in Nyon ·</span></p></div>
+  <button type="button" class="galon-pause" data-pause-pour="galon" data-libelle-pause="Pause" data-libelle-lecture="Lecture"><span data-libelle-bouton>Pause</span></button>
+</div>
+<section class="cours" id="cours" data-fil="gauche">
+  <div class="cadre">
+    <div class="tete-section">
+      <p class="surtitre">Les cours</p>
+      <h2 data-anime="lignes">Un fil pour chacun</h2>
+      <p data-anime>Stylisme et couture ou ateliers de création, pour ados, enfants et adultes, tout au long de l’année.</p>
+    </div>
+    <ul class="etiquettes"><li class="etiquette etiquette--fil" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Enfants et ados</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-enfants-ados-784.webp" srcset="/assets/images/grok/accueil-enfants-ados-480.webp 480w, /assets/images/grok/accueil-enfants-ados-640.webp 640w, /assets/images/grok/accueil-enfants-ados-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Couture et stylisme" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Couture et stylisme</h3>
+  <p class="etiquette-prix" data-prix><strong>CHF 1100.–</strong> <span>par an</span></p>
+  <p class="etiquette-texte">Toute l’année scolaire. Le cours suit les envies du jour et l’autonomie de chaque élève : chacun repart avec la pièce qu’il a imaginée.</p>
+  <p class="etiquette-horaire">Lundi 18 h – 19 h, mardi 17 h – 18 h, jeudi 17 h – 18 h et 18 h – 19 h (cours ado)</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=enfants-ados" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li><li class="etiquette etiquette--craie" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Adultes</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-adultes-784.webp" srcset="/assets/images/grok/accueil-adultes-480.webp 480w, /assets/images/grok/accueil-adultes-640.webp 640w, /assets/images/grok/accueil-adultes-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Couture adultes" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Couture adultes</h3>
+  <p class="etiquette-prix" data-prix><strong>CHF 175.–</strong> <span>les 5 cours</span></p>
+  <p class="etiquette-texte">Apprendre ou reprendre la couture avec une styliste : le cours s’adapte à votre projet et à votre autonomie.</p>
+  <p class="etiquette-horaire">Lundi 9 h 30 – 10 h 30, mardi 16 h – 17 h</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=adultes" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li><li class="etiquette etiquette--kraft" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Vacances</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-stage-click-784.webp" srcset="/assets/images/grok/accueil-stage-click-480.webp 480w, /assets/images/grok/accueil-stage-click-640.webp 640w, /assets/images/grok/accueil-stage-click-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Stage « click! »" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Stage « click ! »</h3>
+  <p class="etiquette-prix" data-prix><strong>CHF 380.–</strong> <span>la semaine, tissu non compris</span></p>
+  <p class="etiquette-texte">Une semaine créative, du croquis à la réalisation : vêtement, accessoire ou bijou, selon le projet de chaque participant.</p>
+  <p class="etiquette-horaire">9 h 15 – 11 h 45</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=stage-click" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li></ul>
+    <p class="suite" data-anime><a href="/cours" class="lien-fleche" data-libelle="Cours &amp; stages">Tout savoir</a></p>
+  </div>
+</section>
+<section class="esprit" id="esprit" data-fil="droite">
+  <div class="cadre esprit-grille">
+    <div class="esprit-texte">
+      <p class="surtitre">L’esprit de l’atelier</p>
+      <h2 class="esprit-phrase" data-anime><span class="craie-mot">L’écoute,<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 14 C 50 6, 120 20, 196 9"/></svg></span> <span class="craie-mot">l’attention,<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 10 C 60 20, 130 4, 196 14"/></svg></span> <span class="craie-mot">la sensibilité<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 13 C 70 5, 110 21, 196 8"/></svg></span> </h2>
+      <p data-anime>Un enseignement basé sur l’écoute, l’attention et la sensibilité de chaque élève, pour lui permettre de trouver les moyens de développer sa propre pensée créatrice.</p>
+    </div>
+    <div class="esprit-visuel">
+      <figure class="media esprit-media" data-grok data-fx="onde" style="--cadrage:52% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/accueil-ouverture-mobile-640.webp 640w" sizes="(max-width: 760px) 92vw, 44vw">
+    <img src="/assets/images/grok/accueil-ouverture-1280.webp" srcset="/assets/images/grok/accueil-ouverture-640.webp 640w, /assets/images/grok/accueil-ouverture-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 44vw" alt="Table de coupe vue de dessus : patron en papier, lin plié, craie et épingles" width="1280" height="720" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <p class="note-craie craie" aria-hidden="true" data-superpose>chaque élève est unique<svg viewBox="0 0 60 40" data-fx="trace" data-effet="craie"><path d="M4 4 C 20 30, 40 34, 56 20 M46 16 L56 20 L52 30"/></svg></p>
+    </div>
+  </div>
+</section>
+<section class="etapes" id="etapes" data-entete-cache aria-label="Les cinq étapes, du croquis au vêtement">
+  <div class="cadre etapes-grille">
+    <div class="etapes-texte">
+      <p class="surtitre">Du croquis au vêtement</p>
+      <h2 data-anime="lignes">Une idée, cinq étapes</h2>
+      <p class="etapes-intro" data-anime>C’est le chemin du stage « click ! » : du croquis à la pièce que l’on porte.</p>
+      <ol class="etapes-liste" data-anime="cascade"><li class="etape est-active" data-etape="0"><span class="etape-num">01</span><span><strong>Le croquis</strong> On dessine son idée : un vêtement, un accessoire, un bijou.</span></li><li class="etape" data-etape="1"><span class="etape-num">02</span><span><strong>Le patron</strong> L’idée devient des pièces de papier, avec leurs crans et leur droit-fil.</span></li><li class="etape" data-etape="2"><span class="etape-num">03</span><span><strong>La coupe</strong> On épingle, on trace à la craie, on taille le tissu.</span></li><li class="etape" data-etape="3"><span class="etape-num">04</span><span><strong>La couture</strong> On assemble, point après point, à la main ou à la machine.</span></li><li class="etape" data-etape="4"><span class="etape-num">05</span><span><strong>L’essayage</strong> On ajuste, puis on repart avec sa création.</span></li></ol>
+      <div class="etapes-progres" aria-hidden="true"><span></span></div>
+    </div>
+    <div class="etapes-scene" data-effet="croquis-vetement" tabindex="0" role="region" aria-label="Les cinq étapes, du croquis au vêtement">
+      <div class="etapes-cadre etapes-cadre--croquis" data-visuel><svg class="croquis" viewBox="0 0 300 400" aria-hidden="true" >
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 22 q-8 0 -8 8 q0 7 8 9"/>
+    <path d="M150 39 L84 74 L216 74 Z"/>
+    <path d="M110 74 Q118 96 112 120 Q150 132 188 120 Q182 96 190 74"/>
+    <path d="M112 120 Q122 150 118 178 Q150 188 182 178 Q178 150 188 120"/>
+    <path d="M118 178 Q96 270 58 368 Q150 392 242 368 Q204 270 182 178"/>
+    <path d="M136 186 Q128 280 112 378"/><path d="M164 186 Q172 280 188 378"/><path d="M150 188 L150 384"/>
+    <path d="M96 300 q24 6 48 0 q24 -6 60 2" stroke-dasharray="4 6"/>
+  </g>
+</svg><span class="etapes-legende craie" aria-hidden="true">Le croquis</span></div>
+      <div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-etape-patron-960.webp" srcset="/assets/images/grok/accueil-etape-patron-480.webp 480w, /assets/images/grok/accueil-etape-patron-640.webp 640w, /assets/images/grok/accueil-etape-patron-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="Le patron" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div><div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-etape-coupe-960.webp" srcset="/assets/images/grok/accueil-etape-coupe-480.webp 480w, /assets/images/grok/accueil-etape-coupe-640.webp 640w, /assets/images/grok/accueil-etape-coupe-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="La coupe" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div><div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-etape-couture-960.webp" srcset="/assets/images/grok/accueil-etape-couture-480.webp 480w, /assets/images/grok/accueil-etape-couture-640.webp 640w, /assets/images/grok/accueil-etape-couture-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="La couture" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div><div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-etape-essayage-960.webp" srcset="/assets/images/grok/accueil-etape-essayage-480.webp 480w, /assets/images/grok/accueil-etape-essayage-640.webp 640w, /assets/images/grok/accueil-etape-essayage-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="L’essayage" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure></div>
+    </div>
+  </div>
+</section>
+<section class="melody-bloc" id="melody" data-fil="gauche">
+  <div class="cadre melody-grille">
+    <div class="melody-texte">
+      <p class="surtitre">Qui enseigne</p>
+      <h2 data-anime="lignes">Melody, styliste et enseignante</h2>
+      <p data-anime>Arts visuels, LISAA Paris, HEAD Genève, un stage aux ateliers Galliano, des costumes pour la scène, puis un diplôme d’enseignante à la HEPL : les deux facettes, artistique et pédagogique, au service des élèves.</p>
+      <blockquote class="citation craie-citation" data-anime><p>J’aime sensibiliser, encourager, documenter et accompagner mes élèves même quand tout semble refléter l’impossible !</p></blockquote>
+      <p class="melody-langues" data-anime>Français, anglais, italien et espagnol</p>
+      <p data-anime><a href="/melody" class="lien-fleche" data-libelle="Melody">Son parcours</a></p>
+    </div>
+    <ol class="boutonnieres" data-anime="cascade" data-visuel><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Gymnase</span><span class="boutonniere-titre">Arts visuels</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Barcelone</span><span class="boutonniere-titre">Le départ</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Paris</span><span class="boutonniere-titre">LISAA</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Genève</span><span class="boutonniere-titre">HEAD</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">2009</span><span class="boutonniere-titre">Ateliers Galliano</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Scène</span><span class="boutonniere-titre">Costumière</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">2010</span><span class="boutonniere-titre">MADEBYMELODY</span></li><li class="boutonniere"><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">HEPL</span><span class="boutonniere-titre">Enseignante</span></li></ol>
+  </div>
+</section>
+<section class="marque" id="marque" data-fil="droite">
+  <div class="cadre marque-grille">
+    <div class="marque-texte">
+      <p class="surtitre"><img class="marque-logo" src="/assets/images/madebymelody-480.webp" alt="MADEBYMELODY" width="480" height="72"></p>
+      <h2 data-anime="lignes">La marque cousue à Nyon</h2>
+      <p data-anime>Depuis 2010, des pièces uniques et numérotées pour femmes et enfants, créées dans les ateliers Peekaboo. Les années 60, 70 et 90, la musique, la nature et les animaux.</p>
+      <p class="marque-actions" data-anime>
+        <a class="bouton" href="https://www.madebymelody.ch/boutique-tous-les-produits" target="_blank" rel="noopener" aria-label="La boutique MADEBYMELODY (nouvel onglet)">Voir la boutique</a>
+        <a href="/melody#marque" class="lien-fleche" data-libelle="Melody">La marque et le sur-mesure</a>
+      </p>
+    </div>
+    <figure class="media marque-media" data-anime="rideau" style="--cadrage:50% 40%">
+  <picture>
+    <img src="/assets/images/robe-madebymelody-960.webp" srcset="/assets/images/robe-madebymelody-480.webp 480w, /assets/images/robe-madebymelody-640.webp 640w, /assets/images/robe-madebymelody-960.webp 960w" sizes="(max-width: 760px) 80vw, 30vw" alt="Robe bustier rouge MADEBYMELODY sur un mannequin de couture" width="960" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+  <div class="tringle" data-effet="tringle" tabindex="0" role="region" aria-label="Pièces MADEBYMELODY">
+  <ul class="tringle-liste"><li class="piece" style="--i:0">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Sunshine</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 110.–</span></span>
+  </li><li class="piece" style="--i:1">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Strange Days</span><span class="piece-type">Short</span><span class="piece-prix" data-prix>CHF 50.–</span></span>
+  </li><li class="piece" style="--i:2">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Three Little Birds</span><span class="piece-type">Jupe</span><span class="piece-prix" data-prix>CHF 55.–</span></span>
+  </li><li class="piece" style="--i:3">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Supernature</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 150.–</span></span>
+  </li><li class="piece" style="--i:4">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Javanaise</span><span class="piece-type">Veste</span><span class="piece-prix" data-prix>CHF 220.–</span></span>
+  </li><li class="piece" style="--i:5">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Aquarius</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 90.–</span></span>
+  </li><li class="piece" style="--i:6">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Fever</span><span class="piece-type">Robe bustier</span><span class="piece-prix" data-prix>CHF 150.–</span></span>
+  </li><li class="piece" style="--i:7">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Envolez-moi</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 160.–</span></span>
+  </li><li class="piece" style="--i:8">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Hurricane</span><span class="piece-type">Veste</span><span class="piece-prix" data-prix>CHF 150.–</span></span>
+  </li><li class="piece" style="--i:9">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Grapevine</span><span class="piece-type">Top</span><span class="piece-prix" data-prix>CHF 55.–</span></span>
+  </li><li class="piece" style="--i:10">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Love Me Two</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 85.–</span></span>
+  </li><li class="piece" style="--i:11">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Playground</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 160.–</span></span>
+  </li></ul>
+</div>
+<p class="tringle-aide" aria-hidden="true"><span class="aide-souris">Faites défiler la tringle →</span><span class="aide-doigt">Faites glisser la tringle →</span></p>
+</section>
+<section class="pratique" id="pratique" data-fil="gauche">
+  <div class="cadre pratique-grille">
+    <div class="pratique-carte"><svg class="plan" viewBox="0 0 520 380" role="img" aria-label="Plan schématique de l’accès à l’atelier" data-visuel data-fx="trace">
+  <defs><pattern id="plan-grille" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="currentColor" stroke-opacity=".12" stroke-width="1"/></pattern></defs>
+  <rect width="520" height="380" fill="url(#plan-grille)"/>
+  <path class="plan-chemin" d="M-10 300 C 120 280, 200 250, 290 196 S 470 110, 540 96" fill="none" stroke="currentColor" stroke-opacity=".28" stroke-width="22" stroke-linecap="round"/>
+  <g><path data-fx-trait d="M-10 300 C 120 280, 200 250, 290 196 S 470 110, 540 96" fill="none" stroke="var(--fil)" stroke-width="2.5" stroke-dasharray="8 7"/></g>
+  <g class="plan-bati">
+    <rect x="282" y="204" width="200" height="94" rx="6"/>
+    <rect class="plan-atelier" x="140" y="112" width="184" height="78" rx="6"/>
+  </g>
+  <text x="382" y="246" text-anchor="middle" class="plan-texte">Bibliothèque</text>
+  <text x="382" y="274" text-anchor="middle" class="plan-texte">des jeunes</text>
+  <text x="232" y="160" text-anchor="middle" class="plan-texte plan-texte--fort">Peekaboo</text>
+  <text x="24" y="338" class="plan-texte plan-texte--petit" transform="rotate(-6 24 338)">Ch. de Crève-Cœur</text>
+  <g class="plan-epingle" transform="translate(231 104)"><path d="M0 0 C -14 -16 -14 -34 0 -38 C 14 -34 14 -16 0 0 Z"/><circle cy="-24" r="6" fill="#f4ecdd"/></g>
+</svg><p class="pratique-legende">Plan schématique : l’atelier est à côté de la bibliothèque des jeunes.</p></div>
+    <div class="pratique-texte">
+      <p class="surtitre">Infos pratiques</p>
+      <h2 data-anime="lignes">Où coudre ?</h2>
+      <address class="pratique-adresse" data-anime><strong>Ateliers Peekaboo</strong><br>Ch. de Crève-Cœur 3, 1260 Nyon<br>À côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a> · <a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></address>
+      <ul class="conditions" data-anime="cascade"><li><strong>Le tissu</strong> Non compris : tissus à prix préférentiels à l’atelier, et 20 % de réduction au magasin ALJA de Nyon.</li><li><strong>Le paiement</strong> Dans les 10 jours après l’inscription.</li><li><strong>L’assurance</strong> Une responsabilité civile suffisante est demandée à chaque participant.</li></ul>
+      <p data-anime><a href="/cours#conditions" class="lien-fleche" data-libelle="Cours &amp; stages">Toutes les conditions</a></p>
+    </div>
+  </div>
+</section>
+<section class="fin" id="fin" data-fil="gauche">
+  <div class="cadre fin-grille">
+    <figure class="media fin-media" data-grok data-fx="parallaxe" style="--cadrage:30% 55%">
+  <picture>
+    <img src="/assets/images/grok/accueil-atelier-1280.webp" srcset="/assets/images/grok/accueil-atelier-640.webp 640w, /assets/images/grok/accueil-atelier-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 46vw" alt="Petit atelier de couture lumineux, étagères de tissus et bobines" width="1280" height="854" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    <div>
+      <h2 data-anime="lignes">Une idée en tête ?</h2>
+      <p data-anime>Envoyez une demande : Peekaboo vous répond avec le formulaire d’inscription.</p>
+      <p class="fin-actions" data-anime>
+        <a href="/inscription" class="bouton" data-libelle="Inscription" data-survol="magnetique">Demander une inscription</a>
+        <a class="bouton bouton--contour" href="tel:+41763969174" data-survol="magnetique">Appeler l’atelier</a>
+      </p>
+    </div>
+  </div>
+</section>
+<template data-fil-objet><g class="aiguille-fil"><path d="M-26 -1.6 L18 -1.2 L26 0 L18 1.2 L-26 1.6 Q-30 0 -26 -1.6 Z" fill="#8d8f94"/><ellipse cx="-21" cy="0" rx="3.2" ry=".8" fill="#f4ecdd"/></g></template>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p><strong>Peekaboo</strong></p>
+      <p>Ch. de Crève-Cœur 3, 1260 Nyon<br>à côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a><br><a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+      <p class="pied-reseaux"><a href="https://www.instagram.com/peekaboonyon/" target="_blank" rel="noopener" aria-label="Instagram de Peekaboo (nouvel onglet)">Instagram</a> <a href="https://www.facebook.com/melody.nelson.94801/" target="_blank" rel="noopener" aria-label="Facebook de Peekaboo (nouvel onglet)">Facebook</a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil" aria-current="page">Accueil</a></li><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par Peekaboo.</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>© Peekaboo</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+41763969174">Appeler</a>
+  <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+</div>
+</body>
+</html>

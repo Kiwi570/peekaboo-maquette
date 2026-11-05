@@ -1,0 +1,98 @@
+[
+  {
+    "nom": "Sunshine",
+    "type": {
+      "fr": "Robe"
+    },
+    "prix": "110.–",
+    "image": ""
+  },
+  {
+    "nom": "Strange Days",
+    "type": {
+      "fr": "Short"
+    },
+    "prix": "50.–",
+    "image": ""
+  },
+  {
+    "nom": "Three Little Birds",
+    "type": {
+      "fr": "Jupe"
+    },
+    "prix": "55.–",
+    "image": ""
+  },
+  {
+    "nom": "Supernature",
+    "type": {
+      "fr": "Robe"
+    },
+    "prix": "150.–",
+    "image": ""
+  },
+  {
+    "nom": "Javanaise",
+    "type": {
+      "fr": "Veste"
+    },
+    "prix": "220.–",
+    "image": ""
+  },
+  {
+    "nom": "Aquarius",
+    "type": {
+      "fr": "Robe"
+    },
+    "prix": "90.–",
+    "image": ""
+  },
+  {
+    "nom": "Fever",
+    "type": {
+      "fr": "Robe bustier"
+    },
+    "prix": "150.–",
+    "image": ""
+  },
+  {
+    "nom": "Envolez-moi",
+    "type": {
+      "fr": "Robe"
+    },
+    "prix": "160.–",
+    "image": ""
+  },
+  {
+    "nom": "Hurricane",
+    "type": {
+      "fr": "Veste"
+    },
+    "prix": "150.–",
+    "image": ""
+  },
+  {
+    "nom": "Grapevine",
+    "type": {
+      "fr": "Top"
+    },
+    "prix": "55.–",
+    "image": ""
+  },
+  {
+    "nom": "Love Me Two",
+    "type": {
+      "fr": "Robe"
+    },
+    "prix": "85.–",
+    "image": ""
+  },
+  {
+    "nom": "Playground",
+    "type": {
+      "fr": "Robe"
+    },
+    "prix": "160.–",
+    "image": ""
+  }
+]

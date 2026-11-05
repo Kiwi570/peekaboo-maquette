@@ -1,0 +1,90 @@
+[
+  {
+    "repere": {
+      "fr": "Gymnase"
+    },
+    "titre": {
+      "fr": "Arts visuels"
+    },
+    "texte": {
+      "fr": "Le premier pas vers le dessin et la création."
+    }
+  },
+  {
+    "repere": {
+      "fr": "Barcelone"
+    },
+    "titre": {
+      "fr": "Le départ"
+    },
+    "texte": {
+      "fr": "Premier envol, loin de Nyon."
+    }
+  },
+  {
+    "repere": {
+      "fr": "Paris"
+    },
+    "titre": {
+      "fr": "LISAA"
+    },
+    "texte": {
+      "fr": "École d’arts appliqués, mode et stylisme."
+    }
+  },
+  {
+    "repere": {
+      "fr": "Genève"
+    },
+    "titre": {
+      "fr": "HEAD"
+    },
+    "texte": {
+      "fr": "Haute école d’art et de design."
+    }
+  },
+  {
+    "repere": {
+      "fr": "2009"
+    },
+    "titre": {
+      "fr": "Ateliers Galliano"
+    },
+    "texte": {
+      "fr": "Un stage dans les coulisses de la haute couture, « ce monde de magie (et de travail… !) »."
+    }
+  },
+  {
+    "repere": {
+      "fr": "Scène"
+    },
+    "titre": {
+      "fr": "Costumière"
+    },
+    "texte": {
+      "fr": "Collaborations avec des professionnels du théâtre et du court métrage, et divers prix de mode (à préciser)."
+    }
+  },
+  {
+    "repere": {
+      "fr": "2010"
+    },
+    "titre": {
+      "fr": "MADEBYMELODY"
+    },
+    "texte": {
+      "fr": "La marque naît à Nyon, dans les ateliers Peekaboo."
+    }
+  },
+  {
+    "repere": {
+      "fr": "HEPL"
+    },
+    "titre": {
+      "fr": "Enseignante"
+    },
+    "texte": {
+      "fr": "Retour sur les bancs pour un diplôme d’enseignante : l’art et la pédagogie réunis."
+    }
+  }
+]

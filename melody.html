@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Melody &amp; MADEBYMELODY : Peekaboo, Nyon</title>
+<meta name="description" content="Melody, styliste, artiste et enseignante, et sa marque MADEBYMELODY : pièces uniques et numérotées, sur-mesure, made in Nyon depuis 2010.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://peekaboo-maquette.vercel.app/melody">
+<style>:root{--fond:#f4ecdd;--texte:#1f1b16;--voile-fond:#1f3170;--ouverture-fond:#b2261f;--menu-fond:#f4ecdd}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f4ecdd">
+<link rel="icon" href="/assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Peekaboo">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Melody &amp; MADEBYMELODY : Peekaboo, Nyon">
+<meta property="og:description" content="Melody, styliste, artiste et enseignante, et sa marque MADEBYMELODY : pièces uniques et numérotées, sur-mesure, made in Nyon depuis 2010.">
+<meta property="og:url" content="https://peekaboo-maquette.vercel.app/melody">
+<meta property="og:image" content="https://peekaboo-maquette.vercel.app/assets/partage/melody-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Melody et sa marque MADEBYMELODY">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Melody</span></div></div>
+<div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
+  <div class="pan-tissu" data-effet="coucou">
+    <span class="pan-couture"></span>
+    <span class="pan-yeux"><span class="pan-oeil"></span><span class="pan-oeil"></span></span>
+    <span class="pan-etiquette"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span><small>Ateliers d’arts plastiques pour designers en herbe</small></span>
+    <span class="pan-coin"></span>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody" aria-current="page">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/cours" class="menu-lien" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li style="--i:2"><a href="/melody" class="menu-lien" data-libelle="Melody" aria-current="page">Melody</a></li><li style="--i:3"><a href="/inscription" class="menu-lien" data-libelle="Inscription">Inscription</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+41763969174">Appeler 076 396 91 74</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1" data-page="melody">
+<section class="page-tete tete-melody" id="debut">
+  <figure class="media tete-melody-fond" data-grok style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/melody-ouverture-mobile-640.webp 640w" sizes="100vw">
+    <img src="/assets/images/grok/melody-ouverture-1280.webp" srcset="/assets/images/grok/melody-ouverture-640.webp 640w, /assets/images/grok/melody-ouverture-1280.webp 1280w" sizes="100vw" alt="Bureau de styliste vu de dessus : carnet, crayons, échantillons et mètre ruban" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <div class="tete-melody-contenu">
+    <div class="polaroid-cadre" data-effet="polaroid">
+      <svg class="tete-croquis" viewBox="0 0 400 300" aria-hidden="true"><g fill="none" stroke="#2747a8" stroke-width="2" stroke-linecap="round">
+        <path pathLength="1" d="M30 250 C 60 120, 120 60, 200 40 S 350 90, 372 240"/><path pathLength="1" d="M60 270 q 140 30 280 0"/>
+        <path pathLength="1" d="M18 70 l 30 18 M380 60 l -28 22 M8 180 l 28 -6 M392 170 l -26 -8"/></g></svg>
+      <figure class="polaroid" data-visuel data-anime="gsap">
+        <span class="polaroid-epingle" aria-hidden="true"></span>
+        <img src="/assets/images/madebymelody-808.webp" alt="" width="808" height="122" class="polaroid-logo">
+        <figcaption class="craie">Photo de Melody à fournir</figcaption>
+      </figure>
+    </div>
+    <p class="surtitre" data-anime="gsap">La créatrice de Peekaboo et de MADEBYMELODY</p>
+    <h1 data-anime="gsap">Melody</h1>
+    <p class="tete-intro" data-anime="gsap">Styliste, artiste et enseignante passionnée : elle a créé les ateliers Peekaboo et sa marque de vêtements, entièrement réalisée à Nyon.</p>
+    <p class="tete-actions" data-anime="gsap"><a href="/melody#marque" class="bouton" data-libelle="Melody" data-action-principale>Voir les pièces</a> <span class="hero-info" data-info-cle>MADEBYMELODY depuis 2010</span></p>
+  </div>
+</section>
+<section class="bloc-page parcours" id="parcours">
+  <div class="cadre">
+    <div class="tete-section">
+      <p class="surtitre">Le parcours</p>
+      <h2 data-anime="lignes">Voyager, puis revenir</h2>
+      <p data-anime>« Mon parcours m’a fait voyager, puis revenir… »</p>
+    </div>
+    <ol class="frise" data-visuel>
+      <svg class="frise-fil" viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="fil-rouge"><path data-fx-trait d="M5 0 C 9 20, 1 30, 5 50 S 9 80, 5 100" fill="none" stroke="#b2261f" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
+      <li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Gymnase</span><strong>Arts visuels</strong><span>Le premier pas vers le dessin et la création.</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Barcelone</span><strong>Le départ</strong><span>Premier envol, loin de Nyon.</span></li><li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Paris</span><strong>LISAA</strong><span>École d’arts appliqués, mode et stylisme.</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Genève</span><strong>HEAD</strong><span>Haute école d’art et de design.</span></li><li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">2009</span><strong>Ateliers Galliano</strong><span>Un stage dans les coulisses de la haute couture, « ce monde de magie (et de travail… !) ».</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Scène</span><strong>Costumière</strong><span>Collaborations avec des professionnels du théâtre et du court métrage, et divers prix de mode (à préciser).</span></li><li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">2010</span><strong>MADEBYMELODY</strong><span>La marque naît à Nyon, dans les ateliers Peekaboo.</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">HEPL</span><strong>Enseignante</strong><span>Retour sur les bancs pour un diplôme d’enseignante : l’art et la pédagogie réunis.</span></li>
+    </ol>
+  </div>
+</section>
+<section class="bloc-page enseigner" id="enseigner">
+  <div class="cadre enseigner-grille">
+    <figure class="media enseigner-media" data-grok data-fx="parallaxe" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-etape-coupe-960.webp" srcset="/assets/images/grok/accueil-etape-coupe-480.webp 480w, /assets/images/grok/accueil-etape-coupe-640.webp 640w, /assets/images/grok/accueil-etape-coupe-960.webp 960w" sizes="(max-width: 760px) 92vw, 40vw" alt="Mains qui coupent un coton le long d’un trait de craie" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    <div>
+      <p class="surtitre">Enseigner</p>
+      <h2 data-anime="lignes">Deux facettes, un atelier</h2>
+      <p data-anime>La passion de l’enseignement s’est installée petit à petit : d’où le diplôme d’enseignante à la HEPL. Le parcours artistique et la pédagogie se retrouvent dans chaque cours.</p>
+      <blockquote class="citation" data-anime><p>J’aime sensibiliser, encourager, documenter et accompagner mes élèves même quand tout semble refléter l’impossible !</p></blockquote>
+      <p data-anime>Langue maternelle française ; elle parle couramment l’anglais, l’italien et l’espagnol.</p>
+    </div>
+  </div>
+</section>
+<section class="bloc-page marque" id="marque">
+  <div class="cadre marque-grille">
+    <div class="marque-texte">
+      <p class="surtitre"><img class="marque-logo" src="/assets/images/madebymelody-480.webp" alt="MADEBYMELODY" width="480" height="72"></p>
+      <h2 data-anime="lignes">Des pièces uniques, parce que vous êtes unique</h2>
+      <p data-anime>Prêt-à-porter et sur-mesure, en pièces uniques et numérotées pour femmes et enfants. Chaque collection représente une envie, un état d’esprit : une mode intemporelle, inspirée des années 60, 70 et 90, de la musique, de la nature et des animaux.</p>
+      <p data-anime>En vente sur madebymelody.ch et sur rendez-vous à l’atelier.</p>
+      <p class="marque-actions" data-anime><a class="bouton" href="https://www.madebymelody.ch/boutique-tous-les-produits" target="_blank" rel="noopener" aria-label="La boutique MADEBYMELODY (nouvel onglet)">Voir la boutique</a> <a class="lien-fleche" href="https://www.instagram.com/madebymelody.ch/" target="_blank" rel="noopener" aria-label="Instagram de MADEBYMELODY (nouvel onglet)">Instagram</a></p>
+    </div>
+    <figure class="media marque-media" data-anime="rideau" style="--cadrage:50% 40%">
+  <picture>
+    <img src="/assets/images/robe-madebymelody-960.webp" srcset="/assets/images/robe-madebymelody-480.webp 480w, /assets/images/robe-madebymelody-640.webp 640w, /assets/images/robe-madebymelody-960.webp 960w" sizes="(max-width: 760px) 80vw, 30vw" alt="Robe bustier rouge MADEBYMELODY sur un mannequin de couture" width="960" height="1280" loading="lazy" decoding="async">
+  </picture>
+</figure>
+  </div>
+  <div class="tringle" data-effet="tringle" tabindex="0" role="region" aria-label="Pièces MADEBYMELODY, faites défiler">
+  <ul class="tringle-liste"><li class="piece" style="--i:0">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Sunshine</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 110.–</span></span>
+  </li><li class="piece" style="--i:1">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Strange Days</span><span class="piece-type">Short</span><span class="piece-prix" data-prix>CHF 50.–</span></span>
+  </li><li class="piece" style="--i:2">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Three Little Birds</span><span class="piece-type">Jupe</span><span class="piece-prix" data-prix>CHF 55.–</span></span>
+  </li><li class="piece" style="--i:3">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Supernature</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 150.–</span></span>
+  </li><li class="piece" style="--i:4">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Javanaise</span><span class="piece-type">Veste</span><span class="piece-prix" data-prix>CHF 220.–</span></span>
+  </li><li class="piece" style="--i:5">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Aquarius</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 90.–</span></span>
+  </li><li class="piece" style="--i:6">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Fever</span><span class="piece-type">Robe bustier</span><span class="piece-prix" data-prix>CHF 150.–</span></span>
+  </li><li class="piece" style="--i:7">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Envolez-moi</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 160.–</span></span>
+  </li><li class="piece" style="--i:8">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Hurricane</span><span class="piece-type">Veste</span><span class="piece-prix" data-prix>CHF 150.–</span></span>
+  </li><li class="piece" style="--i:9">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Grapevine</span><span class="piece-type">Top</span><span class="piece-prix" data-prix>CHF 55.–</span></span>
+  </li><li class="piece" style="--i:10">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Love Me Two</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 85.–</span></span>
+  </li><li class="piece" style="--i:11">
+    <svg class="cintre" viewBox="0 0 60 40" aria-hidden="true"><path d="M30 2 q6 0 6 6 q0 5 -6 7 L4 34 L56 34 L30 15"/></svg>
+    <span class="piece-etiquette"><span class="piece-trou" aria-hidden="true"></span><span class="piece-nom">Playground</span><span class="piece-type">Robe</span><span class="piece-prix" data-prix>CHF 160.–</span></span>
+  </li></ul>
+</div>
+<p class="tringle-aide" aria-hidden="true"><span class="aide-souris">Faites défiler la tringle →</span><span class="aide-doigt">Faites glisser la tringle →</span></p>
+  <p class="cadre note-prix">Prix en CHF relevés sur madebymelody.ch, à vérifier.</p>
+</section>
+<section class="bloc-page mesure" id="sur-mesure">
+  <div class="cadre mesure-grille">
+    <div>
+      <p class="surtitre">Sur-mesure</p>
+      <h2 data-anime="lignes">Du quotidien à la robe de mariée</h2>
+      <p data-anime>La styliste dessine et crée la pièce de A à Z, à partir d’une idée ou d’un besoin, et conseille sur le choix des tissus et les derniers ajustements.</p>
+      <ol class="mesure-etapes" data-anime="cascade"><li><span>01</span> Une idée ou un besoin</li><li><span>02</span> Le choix des tissus</li><li><span>03</span> La création de A à Z</li><li><span>04</span> Les derniers ajustements</li></ol>
+      <p data-anime><a href="/contact?sujet=sur-mesure#formulaire" class="bouton" data-libelle="Contact" data-survol="magnetique">Prendre rendez-vous</a></p>
+    </div>
+    <figure class="media mesure-media" data-grok data-anime="rideau" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/melody-sur-mesure-960.webp" srcset="/assets/images/grok/melody-sur-mesure-480.webp 480w, /assets/images/grok/melody-sur-mesure-640.webp 640w, /assets/images/grok/melody-sur-mesure-960.webp 960w" sizes="(max-width: 760px) 80vw, 36vw" alt="Mannequin de couture avec une soie ivoire drapée et épinglée" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="bloc-page fin-page" id="fin">
+  <div class="cadre fin-carte" data-visuel>
+    <h2 data-anime="lignes">Une pièce à imaginer ?</h2>
+    <p data-anime>Sur rendez-vous à l’atelier, à Nyon.</p>
+    <p data-anime><a href="/contact?sujet=sur-mesure#formulaire" class="bouton" data-libelle="Contact">Prendre rendez-vous</a></p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p><strong>Peekaboo</strong></p>
+      <p>Ch. de Crève-Cœur 3, 1260 Nyon<br>à côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a><br><a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+      <p class="pied-reseaux"><a href="https://www.instagram.com/peekaboonyon/" target="_blank" rel="noopener" aria-label="Instagram de Peekaboo (nouvel onglet)">Instagram</a> <a href="https://www.facebook.com/melody.nelson.94801/" target="_blank" rel="noopener" aria-label="Facebook de Peekaboo (nouvel onglet)">Facebook</a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody" aria-current="page">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par Peekaboo.</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>© Peekaboo</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+41763969174">Appeler</a>
+  <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+</div>
+</body>
+</html>

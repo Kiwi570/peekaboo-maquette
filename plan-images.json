@@ -1,0 +1,315 @@
+[
+  {
+    "source": "recu/grok/accueil-ouverture.jpg",
+    "source_mobile": "recu/grok/accueil-ouverture-mobile.jpg",
+    "nom": "grok/accueil-ouverture",
+    "role": "ouverture",
+    "mobile": "9:16",
+    "page": "Accueil",
+    "emplacement": "Ouverture : photo révélée dans la pièce de patron découpée",
+    "priorite": "Indispensable",
+    "alt": "Table de coupe vue de dessus : patron en papier, lin plié, craie et épingles",
+    "consigne_scene": "Wide top-down view of a pale cutting table covered with cream sewing pattern paper marked with dashed cutting lines and small notches, folded raw linen, a piece of blue tailor's chalk, a red pin cushion and closed tailor's scissors arranged around the edges, the central area of the paper completely empty and smooth, no people, no hands."
+  },
+  {
+    "source": "recu/grok/accueil-enfants-ados.jpg",
+    "nom": "grok/accueil-enfants-ados",
+    "role": "carte-service",
+    "page": "Accueil",
+    "emplacement": "Étiquette du cours enfants et ados (reprise sur Cours & stages)",
+    "priorite": "Conseillée",
+    "alt": "Chutes de cotons imprimés, petits ciseaux et pelote à épingles sur une grande table",
+    "gabarit": "section-fond",
+    "consigne_scene": "Colourful printed cotton scraps, a small pair of round-tipped scissors, a tomato-shaped pin cushion and a soft tape measure spread on a large low table, cheerful and tidy, seen from slightly above, no people, no hands."
+  },
+  {
+    "source": "recu/grok/accueil-adultes.jpg",
+    "nom": "grok/accueil-adultes",
+    "role": "carte-service",
+    "page": "Accueil",
+    "emplacement": "Étiquette du cours adultes (reprise sur Cours & stages)",
+    "priorite": "Conseillée",
+    "alt": "Mains qui épinglent un patron en papier sur un lin plié",
+    "gabarit": "scene-metier",
+    "scene": "pinning a cream paper sewing pattern onto folded raw linen with a few steel pins"
+  },
+  {
+    "source": "recu/grok/accueil-stage-click.jpg",
+    "nom": "grok/accueil-stage-click",
+    "role": "carte-service",
+    "page": "Accueil",
+    "emplacement": "Étiquette du stage de vacances click! (reprise sur Cours & stages)",
+    "priorite": "Conseillée",
+    "alt": "Carnet de croquis ouvert, crayons de couleur et échantillons de tissu épinglés",
+    "gabarit": "section-fond",
+    "consigne_scene": "An open sketchbook on a pale wooden table with a few loose abstract pencil strokes suggesting the outline of a simple dress, no figure, no face, coloured pencils beside it and three small printed fabric swatches pinned to the page edge, no people, no hands."
+  },
+  {
+    "source": "recu/grok/accueil-tissu.jpg",
+    "nom": "grok/accueil-tissu",
+    "role": "section-fond",
+    "zone_texte": "gauche",
+    "page": "Accueil",
+    "emplacement": "L'esprit de l'atelier : tissu qui ondule (WebGL)",
+    "priorite": "Indispensable",
+    "alt": "Lin brut drapé sur une table de coupe dans une lumière rasante",
+    "consigne_scene": "A length of raw linen loosely draped across a pale cutting table, soft folds catching the light, a few steel pins and a spool of bright red thread near the right edge, nobody, no hands."
+  },
+  {
+    "source": "recu/grok/accueil-etape-patron.jpg",
+    "nom": "grok/accueil-etape-patron",
+    "role": "galerie",
+    "page": "Accueil",
+    "emplacement": "Du croquis au vêtement, étape 2 : le patron",
+    "priorite": "Indispensable",
+    "alt": "Patron en papier épinglé à plat sur un coton plié",
+    "gabarit": "section-fond",
+    "consigne_scene": "A cream paper sewing pattern pinned flat onto folded cotton fabric, blue tailor's chalk marks along its edge, seen from above, blank pattern paper with only dashed lines and notches, no people, no hands."
+  },
+  {
+    "source": "recu/grok/accueil-etape-coupe.jpg",
+    "nom": "grok/accueil-etape-coupe",
+    "role": "galerie",
+    "page": "Accueil",
+    "emplacement": "Du croquis au vêtement, étape 3 : la coupe",
+    "priorite": "Indispensable",
+    "alt": "Ciseaux de tailleur qui suivent un trait de craie sur un tissu",
+    "gabarit": "scene-metier",
+    "scene": "cutting cotton fabric along a blue chalk line with a pair of tailor's scissors"
+  },
+  {
+    "source": "recu/grok/accueil-etape-couture.jpg",
+    "nom": "grok/accueil-etape-couture",
+    "role": "galerie",
+    "page": "Accueil",
+    "emplacement": "Du croquis au vêtement, étape 4 : la couture",
+    "priorite": "Indispensable",
+    "alt": "Aiguille et fil rouge qui piquent un lin en points réguliers",
+    "gabarit": "section-fond",
+    "consigne_scene": "Macro photograph of a sewing needle resting in raw linen with a bright red thread running through the fabric in neat even running stitches, soft raking light, no hands."
+  },
+  {
+    "source": "recu/grok/accueil-etape-essayage.jpg",
+    "nom": "grok/accueil-etape-essayage",
+    "role": "galerie",
+    "page": "Accueil",
+    "emplacement": "Du croquis au vêtement, étape 5 : l'essayage",
+    "priorite": "Indispensable",
+    "alt": "Mannequin de couture portant une toile écrue épinglée",
+    "gabarit": "section-fond",
+    "consigne_scene": "A plain dress form in a bright sewing studio wearing a simple unbleached muslin toile held with steel pins, blue chalk lines on the muslin, a tape measure around its neck, not a finished garment, nobody."
+  },
+  {
+    "source": "recu/grok/accueil-atelier.jpg",
+    "nom": "grok/accueil-atelier",
+    "role": "section-fond",
+    "zone_texte": "droite",
+    "page": "Accueil",
+    "emplacement": "Infos pratiques : l'atelier (si aucune photo réelle de l'atelier ne convient)",
+    "priorite": "Conseillée",
+    "alt": "Petit atelier de couture lumineux, étagères de tissus et bobines",
+    "gabarit": "lieu",
+    "consigne_scene": "Small tidy sewing studio interior with shelves of folded fabrics and fabric rolls, spools of thread on a wall rack, two plain covered sewing machines without any brand marking, a tall window with soft daylight and a few plants, nobody in the room."
+  },
+  {
+    "source": "recu/grok/cours-ouverture.jpg",
+    "source_mobile": "recu/grok/cours-ouverture-mobile.jpg",
+    "nom": "grok/cours-ouverture",
+    "role": "ouverture",
+    "mobile": "9:16",
+    "zone_texte": "gauche",
+    "page": "Cours & stages",
+    "emplacement": "Ouverture : table de coupe et mètre ruban",
+    "priorite": "Indispensable",
+    "alt": "Mètre ruban déroulé sur un papier de patron kraft, ciseaux et épingles",
+    "consigne_scene": "Wide top-down view of light kraft pattern paper on a pale cutting table with a yellow tape measure unrolled in a long soft curve across it, closed tailor's scissors and a few steel pins near the right edge, the tape measure showing tick marks only and no numbers, generous empty paper on the left, no people, no hands."
+  },
+  {
+    "source": "recu/grok/cours-weekend.jpg",
+    "nom": "grok/cours-weekend",
+    "role": "carte-service",
+    "page": "Cours & stages",
+    "emplacement": "Fiche ateliers du weekend",
+    "priorite": "Conseillée",
+    "alt": "Matériel d'atelier créatif : feutrine, boutons, rubans et laines",
+    "gabarit": "section-fond",
+    "consigne_scene": "Creative workshop materials spread on a long pale table: felt sheets in cheerful colours, buttons in small glass jars, ribbons, balls of yarn and plain paper, tidy and joyful, no people, no hands."
+  },
+  {
+    "source": "recu/grok/cours-tissus.jpg",
+    "nom": "grok/cours-tissus",
+    "role": "galerie",
+    "page": "Cours & stages",
+    "emplacement": "Le tissu et le matériel",
+    "priorite": "Conseillée",
+    "alt": "Étagères de cotons pliés, imprimés et unis",
+    "gabarit": "section-fond",
+    "consigne_scene": "Shelves of neatly folded cotton fabrics in many cheerful prints and plain colours, seen straight on, soft daylight, plain shelf edges without any label, nobody."
+  },
+  {
+    "source": "recu/grok/cours-conditions.jpg",
+    "nom": "grok/cours-conditions",
+    "role": "section-fond",
+    "zone_texte": "droite",
+    "page": "Cours & stages",
+    "emplacement": "Conditions d'inscription (FAQ)",
+    "priorite": "Facultative",
+    "alt": "Bobines de fil de toutes les couleurs alignées sur du lin",
+    "consigne_scene": "A row of wooden spools of thread in a gradient of colours lying on pale linen, shallow depth of field, calm empty area on the right, nobody, no hands."
+  },
+  {
+    "source": "recu/grok/melody-ouverture.jpg",
+    "source_mobile": "recu/grok/melody-ouverture-mobile.jpg",
+    "nom": "grok/melody-ouverture",
+    "role": "ouverture",
+    "mobile": "9:16",
+    "zone_texte": "centre",
+    "page": "Melody & MADEBYMELODY",
+    "emplacement": "Ouverture : bureau de styliste sous la photo épinglée de Melody",
+    "priorite": "Indispensable",
+    "alt": "Bureau de styliste vu de dessus : carnet vierge, crayons, échantillons, mètre ruban",
+    "consigne_scene": "A stylist's desk seen from above with a blank sketchbook, pencils, small fabric swatches and a tape measure arranged around the edges, the centre of the desk left empty and smooth, no people, no hands."
+  },
+  {
+    "source": "recu/grok/melody-sur-mesure.jpg",
+    "nom": "grok/melody-sur-mesure",
+    "role": "galerie",
+    "page": "Melody & MADEBYMELODY",
+    "emplacement": "Le sur-mesure",
+    "priorite": "Conseillée",
+    "alt": "Mannequin de couture avec une soie ivoire drapée et épinglée",
+    "gabarit": "section-fond",
+    "consigne_scene": "A plain dress form in soft window light with a length of ivory silk loosely draped and pinned over one shoulder, a pin cushion on its stand, not a finished garment, nobody."
+  },
+  {
+    "source": "recu/grok/melody-tringle.jpg",
+    "nom": "grok/melody-tringle",
+    "role": "section-fond",
+    "zone_texte": "haut",
+    "page": "Melody & MADEBYMELODY",
+    "emplacement": "Fond de la tringle des pièces MADEBYMELODY (si les photos de la boutique manquent)",
+    "priorite": "Facultative",
+    "alt": "Portant en bois vide avec quelques cintres contre un mur crème",
+    "consigne_scene": "An empty clothes rail of pale wood with a few wooden hangers, against a cream wall, soft daylight, no garments at all, nobody."
+  },
+  {
+    "source": "recu/grok/inscription-ouverture.jpg",
+    "source_mobile": "recu/grok/inscription-ouverture-mobile.jpg",
+    "nom": "grok/inscription-ouverture",
+    "role": "ouverture",
+    "ratio": "3:2",
+    "mobile": "4:5",
+    "zone_texte": "gauche",
+    "page": "Inscription",
+    "emplacement": "Ouverture compacte de la fiche d'inscription",
+    "priorite": "Conseillée",
+    "alt": "Pelote à épingles et bobine de fil rouge sur un tissu bleu marqué à la craie",
+    "consigne_scene": "A red pin cushion full of colourful pins and a spool of bright red thread resting on deep chalk-blue cotton marked with pale chalk lines, seen from above, the left half of the fabric calm and empty, no people, no hands."
+  },
+  {
+    "source": "recu/grok/contact-bandeau.jpg",
+    "source_mobile": "recu/grok/contact-bandeau-mobile.jpg",
+    "nom": "grok/contact-bandeau",
+    "role": "ouverture",
+    "ratio": "2:1",
+    "mobile": "4:5",
+    "page": "Contact",
+    "emplacement": "Bandeau panoramique sous le numéro de téléphone",
+    "priorite": "Indispensable",
+    "alt": "Fenêtre d'un petit atelier de couture, table de coupe et tissus pliés",
+    "gabarit": "lieu",
+    "consigne_scene": "The tall window of a small sewing studio seen from inside, a cutting table in front of it with folded fabrics and spools of thread, plants on the sill, soft daylight, nobody in the room, nothing written anywhere."
+  },
+  {
+    "source": "recu/grok/404.jpg",
+    "nom": "grok/404",
+    "role": "404",
+    "page": "404",
+    "emplacement": "En tête de la page 404 : le point sauté",
+    "priorite": "Conseillée",
+    "alt": "Couture interrompue, un fil rouge qui pend et l'aiguille posée à côté",
+    "consigne_scene": "A hand-stitched seam in raw linen interrupted halfway, one loose bright red thread dangling and the needle lying next to it, raking light, a gentle touch of humour, no hands."
+  },
+  {
+    "source": "recu/site/logo-sombre.png",
+    "nom": "logo",
+    "role": "logo",
+    "largeurs": [
+      240,
+      480
+    ],
+    "alt": "Peekaboo, ateliers d'arts plastiques pour designers en herbe"
+  },
+  {
+    "source": "recu/site/www-madebymelody-ch.png",
+    "nom": "madebymelody",
+    "role": "logo",
+    "largeurs": [
+      480,
+      808
+    ],
+    "alt": "madebymelody"
+  },
+  {
+    "source": "recu/site/couture-adultes.jpg",
+    "nom": "robe-madebymelody",
+    "role": "galerie",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "cadrage": [
+      50,
+      42
+    ],
+    "alt": "Robe bustier rouge MADEBYMELODY sur un mannequin de couture",
+    "page": "Accueil, Melody"
+  },
+  {
+    "source": "recu/site/yoga-heidi.jpg",
+    "nom": "affiche-atelier-bois",
+    "role": "galerie",
+    "ratio": "1414:2000",
+    "largeurs": [
+      480,
+      800
+    ],
+    "cadrage": [
+      50,
+      50
+    ],
+    "alt": "Affiche de l'atelier bois du dimanche 22 novembre, 16 h – 17 h 30 : fabriquer une mangeoire pour les oiseaux, dès 7 ans"
+  },
+  {
+    "source": "recu/site/yoga-heidi-3.jpg",
+    "nom": "affiche-atelier-noel",
+    "role": "galerie",
+    "ratio": "1414:2000",
+    "largeurs": [
+      480,
+      800
+    ],
+    "cadrage": [
+      50,
+      50
+    ],
+    "alt": "Affiche de l'atelier de Noël : guirlande lumineuse en tissu, 28 novembre et 5 décembre, 16 h – 17 h 30"
+  },
+  {
+    "source": "recu/site/couture-adultes-2.jpg",
+    "nom": "affiche-yoga",
+    "role": "galerie",
+    "ratio": "2121:1433",
+    "largeurs": [
+      480,
+      960
+    ],
+    "cadrage": [
+      50,
+      50
+    ],
+    "alt": "Affiche du yoga Esprit Samadhi avec Heidi à l'atelier Peekaboo"
+  }
+]

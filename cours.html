@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cours &amp; stages : Peekaboo, Nyon</title>
+<meta name="description" content="Couture et stylisme enfants et ados (1100.– par an), couture adultes (175.– les 5 cours), stage de vacances click! (380.– la semaine), ateliers du weekend, conditions d’inscription.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://peekaboo-maquette.vercel.app/cours">
+<style>:root{--fond:#f4ecdd;--texte:#1f1b16;--voile-fond:#1f3170;--ouverture-fond:#b2261f;--menu-fond:#f4ecdd}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f4ecdd">
+<link rel="icon" href="/assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Peekaboo">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Cours &amp; stages : Peekaboo, Nyon">
+<meta property="og:description" content="Couture et stylisme enfants et ados (1100.– par an), couture adultes (175.– les 5 cours), stage de vacances click! (380.– la semaine), ateliers du weekend, conditions d’inscription.">
+<meta property="og:url" content="https://peekaboo-maquette.vercel.app/cours">
+<meta property="og:image" content="https://peekaboo-maquette.vercel.app/assets/partage/cours-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Cours et stages de Peekaboo : mètre ruban sur papier kraft">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Cours &amp; stages</span></div></div>
+<div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
+  <div class="pan-tissu" data-effet="coucou">
+    <span class="pan-couture"></span>
+    <span class="pan-yeux"><span class="pan-oeil"></span><span class="pan-oeil"></span></span>
+    <span class="pan-etiquette"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span><small>Ateliers d’arts plastiques pour designers en herbe</small></span>
+    <span class="pan-coin"></span>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/cours" data-libelle="Cours &amp; stages" aria-current="page">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/cours" class="menu-lien" data-libelle="Cours &amp; stages" aria-current="page">Cours &amp; stages</a></li><li style="--i:2"><a href="/melody" class="menu-lien" data-libelle="Melody">Melody</a></li><li style="--i:3"><a href="/inscription" class="menu-lien" data-libelle="Inscription">Inscription</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+41763969174">Appeler 076 396 91 74</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1" data-page="cours">
+<section class="page-tete tete-cours" id="debut">
+  <div class="tete-cours-texte">
+    <p class="surtitre" data-anime="gsap">Couture et stylisme</p>
+    <h1 data-anime="gsap">Cours &amp; stages</h1>
+    <p class="tete-intro" data-anime="gsap">Toute l’année à Nyon, pour enfants, ados et adultes. Inscription possible en cours d’année.</p>
+    <p data-anime="gsap"><a href="/inscription" class="bouton" data-libelle="Inscription" data-action-principale data-survol="magnetique">Demander une inscription</a></p>
+  </div>
+  <div class="tete-cours-visuel">
+    <figure class="media tete-cours-media" data-grok style="--cadrage:62% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/cours-ouverture-mobile-640.webp 640w" sizes="(max-width: 760px) 100vw, 50vw">
+    <img src="/assets/images/grok/cours-ouverture-1280.webp" srcset="/assets/images/grok/cours-ouverture-640.webp 640w, /assets/images/grok/cours-ouverture-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 50vw" alt="Mètre ruban déroulé sur un papier de patron kraft, ciseaux et épingles" width="1280" height="720" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    <div class="metre" data-effet="metre-ruban" data-info-cle data-superpose data-anime="gsap">
+      <span class="metre-graduations" aria-hidden="true"></span>
+      <ul class="metre-reperes"><li class="metre-repere"><strong data-prix>CHF 1100.–</strong> <span>Enfants et ados · par an</span></li><li class="metre-repere"><strong data-prix>CHF 175.–</strong> <span>Adultes · les 5 cours</span></li><li class="metre-repere"><strong data-prix>CHF 380.–</strong> <span>Vacances · la semaine, tissu non compris</span></li></ul>
+    </div>
+  </div>
+</section>
+<section class="bloc-page fiches" id="fiches">
+  <div class="cadre">
+    <div class="tete-section">
+      <h2 data-anime="lignes">Choisir son cours</h2>
+      <p data-anime>Les cours se font en fonction des élèves, de leurs envies du jour et de leur autonomie.</p>
+    </div>
+    <ul class="etiquettes etiquettes--quatre"><li class="etiquette etiquette--fil" id="fiche-enfants-ados" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Enfants et ados</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-enfants-ados-784.webp" srcset="/assets/images/grok/accueil-enfants-ados-480.webp 480w, /assets/images/grok/accueil-enfants-ados-640.webp 640w, /assets/images/grok/accueil-enfants-ados-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Couture et stylisme" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Couture et stylisme</h3>
+  <p class="etiquette-prix" data-prix><strong>CHF 1100.–</strong> <span>par an</span></p>
+  <p class="etiquette-texte">Toute l’année scolaire. Le cours suit les envies du jour et l’autonomie de chaque élève : chacun repart avec la pièce qu’il a imaginée.</p>
+  <p class="etiquette-horaire">Lundi 18 h – 19 h, mardi 17 h – 18 h, jeudi 17 h – 18 h et 18 h – 19 h (cours ado)</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=enfants-ados" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li><li class="etiquette etiquette--craie" id="fiche-adultes" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Adultes</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-adultes-784.webp" srcset="/assets/images/grok/accueil-adultes-480.webp 480w, /assets/images/grok/accueil-adultes-640.webp 640w, /assets/images/grok/accueil-adultes-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Couture adultes" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Couture adultes</h3>
+  <p class="etiquette-prix" data-prix><strong>CHF 175.–</strong> <span>les 5 cours</span></p>
+  <p class="etiquette-texte">Apprendre ou reprendre la couture avec une styliste : le cours s’adapte à votre projet et à votre autonomie.</p>
+  <p class="etiquette-horaire">Lundi 9 h 30 – 10 h 30, mardi 16 h – 17 h</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=adultes" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li><li class="etiquette etiquette--kraft" id="fiche-stage-click" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Vacances</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/accueil-stage-click-784.webp" srcset="/assets/images/grok/accueil-stage-click-480.webp 480w, /assets/images/grok/accueil-stage-click-640.webp 640w, /assets/images/grok/accueil-stage-click-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Stage « click! »" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Stage « click ! »</h3>
+  <p class="etiquette-prix" data-prix><strong>CHF 380.–</strong> <span>la semaine, tissu non compris</span></p>
+  <p class="etiquette-texte">Une semaine créative, du croquis à la réalisation : vêtement, accessoire ou bijou, selon le projet de chaque participant.</p>
+  <p class="etiquette-horaire">9 h 15 – 11 h 45</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=stage-click" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li><li class="etiquette etiquette--sauge" id="fiche-weekend" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">Weekend</span>
+  <figure class="media etiquette-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/cours-weekend-784.webp" srcset="/assets/images/grok/cours-weekend-480.webp 480w, /assets/images/grok/cours-weekend-640.webp 640w, /assets/images/grok/cours-weekend-784.webp 784w" sizes="(max-width: 760px) 88vw, 30vw" alt="Ateliers du weekend" width="784" height="1175" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  <h3 class="etiquette-titre">Ateliers du weekend</h3>
+  <p class="etiquette-prix" data-prix><span>Tarif à compléter</span></p>
+  <p class="etiquette-texte">Des ateliers ponctuels le weekend : atelier bois, atelier de Noël… L’atelier bois est ouvert dès 7 ans.</p>
+  <p class="etiquette-horaire">16 h – 17 h 30, dates dans l’agenda</p>
+  <p class="etiquette-actions"><a href="/inscription?activite=weekend" class="bouton bouton--petit" data-libelle="Inscription">S’inscrire</a></p>
+</li></ul>
+  </div>
+</section>
+<section class="bloc-page planning" id="planning" data-planning>
+  <div class="cadre">
+    <div class="tete-section">
+      <p class="surtitre">Planning 2026-2027</p>
+      <h2 data-anime="lignes">La semaine à l’atelier</h2>
+      <p data-anime>En dehors des cours, l’atelier est en location libre pour vos cours et ateliers.</p>
+    </div>
+    <div class="filtres" role="group" aria-label="Afficher">
+      <button type="button" class="filtre filtre--tous" data-filtre="tous" aria-pressed="true">Tous</button><button type="button" class="filtre filtre--ados" data-filtre="ados" aria-pressed="false">Ados</button><button type="button" class="filtre filtre--adultes" data-filtre="adultes" aria-pressed="false">Adultes</button><button type="button" class="filtre filtre--yoga" data-filtre="yoga" aria-pressed="false">Yoga</button>
+      <p class="filtres-etat" data-planning-etat data-modele="{n} créneaux affichés" aria-live="polite"></p>
+    </div>
+    <div class="semaine" data-anime="cascade" data-visuel>
+      <div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Lundi</span><span class="jour-court" aria-hidden="true">Lun</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau creneau--adultes" data-type="adultes" style="--debut:0.0658;--duree:0.1316"><strong>Couture stylisme adulte</strong> <span>9 h 30 – 10 h 30</span> <span class="creneau-avec">avec Melody</span></li><li class="creneau creneau--ados" data-type="ados" style="--debut:0.6053;--duree:0.1316"><strong>Couture stylisme ado</strong> <span>18 h – 19 h</span> <span class="creneau-avec">avec Melody</span></li>
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div><div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Mardi</span><span class="jour-court" aria-hidden="true">Mar</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau creneau--adultes" data-type="adultes" style="--debut:0.3421;--duree:0.1316"><strong>Couture stylisme adulte</strong> <span>16 h – 17 h</span> <span class="creneau-avec">avec Melody</span></li><li class="creneau creneau--ados" data-type="ados" style="--debut:0.4737;--duree:0.1316"><strong>Couture stylisme ado</strong> <span>17 h – 18 h</span> <span class="creneau-avec">avec Melody</span></li><li class="creneau creneau--yoga" data-type="yoga" style="--debut:0.7368;--duree:0.1974"><strong>Yoga</strong> <span>19 h – 20 h 30</span> <span class="creneau-avec">avec Heidi</span></li>
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div><div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Mercredi</span><span class="jour-court" aria-hidden="true">Mer</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau creneau--yoga" data-type="yoga" style="--debut:0.6711;--duree:0.1974"><strong>Yoga</strong> <span>18 h 30 – 20 h</span> <span class="creneau-avec">avec Heidi</span></li>
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div><div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Jeudi</span><span class="jour-court" aria-hidden="true">Jeu</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau creneau--ados" data-type="ados" style="--debut:0.4737;--duree:0.1316"><strong>Couture stylisme ado</strong> <span>17 h – 18 h</span> <span class="creneau-avec">avec Melody</span></li><li class="creneau creneau--ados" data-type="ados" style="--debut:0.6053;--duree:0.1316"><strong>Couture stylisme ado</strong> <span>18 h – 19 h</span> <span class="creneau-avec">avec Melody</span></li><li class="creneau creneau--yoga" data-type="yoga" style="--debut:0.8026;--duree:0.1316"><strong>Yoga</strong> <span>19 h 30 – 20 h 30</span> <span class="creneau-avec">avec Heidi</span></li>
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div><div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Vendredi</span><span class="jour-court" aria-hidden="true">Ven</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div><div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Samedi</span><span class="jour-court" aria-hidden="true">Sam</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div><div class="jour">
+        <h3 class="jour-nom"><span class="jour-long">Dimanche</span><span class="jour-court" aria-hidden="true">Dim</span></h3>
+        <ul class="jour-creneaux">
+          <li class="creneau-libre">Location libre pour vos cours et ateliers</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note-a-completer">Transcrit du planning 2026-2027 du site actuel, âges à compléter. Le flyer du yoga indique d’autres horaires (mercredi 18 h 30, jeudi 19 h 30, vendredi 9 h et 10 h 30) : à confirmer avec Heidi.</p>
+    <div class="location" id="location">
+      <p class="surtitre">Louer l’atelier</p>
+      <h3>Location libre</h3>
+      <p>En dehors des cours, l’atelier se loue pour vos propres cours et ateliers : conditions et tarifs à compléter.</p>
+      <p><a href="/contact?sujet=autre#formulaire" class="lien-fleche" data-libelle="Contact">Demander les conditions</a></p>
+    </div>
+  </div>
+</section>
+<section class="bloc-page agenda" id="agenda">
+  <div class="cadre">
+    <div class="tete-section">
+      <p class="surtitre">Ateliers du weekend</p>
+      <h2 data-anime="lignes">Les prochains ateliers</h2>
+      <p class="note-a-completer" data-anime>Dates relevées sur les affiches du site actuel : année et tarifs à compléter.</p>
+    </div>
+    <ul class="ateliers" data-anime="cascade"><li class="atelier" id="atelier-atelier-bois">
+      <figure class="media atelier-affiche" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/affiche-atelier-bois-800.webp" srcset="/assets/images/affiche-atelier-bois-480.webp 480w, /assets/images/affiche-atelier-bois-800.webp 800w" sizes="(max-width: 760px) 60vw, 22vw" alt="Affiche de l’atelier bois : fabriquer une mangeoire pour les oiseaux, dès 7 ans" width="800" height="1132" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <div class="atelier-texte">
+        <h3>Atelier bois</h3>
+        <p>Viens fabriquer une mangeoire pour les oiseaux : scier, poncer, décorer… Dès 7 ans.</p>
+        <ul class="dates"><li class="date" data-date="2026-11-22" data-statut="avenir">
+          <span class="date-statut" data-avenir="Date à confirmer" data-termine="Terminé" data-aujourdhui="Aujourd’hui">Date à confirmer</span>
+          <span class="date-jour">Dimanche 22 novembre</span> <span class="date-heure">16 h – 17 h 30</span>
+          <a href="/inscription?activite=weekend" class="lien-fleche" data-libelle="Inscription">S’inscrire à cet atelier</a>
+        </li></ul>
+      </div>
+    </li><li class="atelier" id="atelier-atelier-noel">
+      <figure class="media atelier-affiche" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/affiche-atelier-noel-800.webp" srcset="/assets/images/affiche-atelier-noel-480.webp 480w, /assets/images/affiche-atelier-noel-800.webp 800w" sizes="(max-width: 760px) 60vw, 22vw" alt="Affiche de l’atelier de Noël : guirlande lumineuse en tissu" width="800" height="1132" loading="lazy" decoding="async">
+  </picture>
+</figure>
+      <div class="atelier-texte">
+        <h3>Atelier de Noël</h3>
+        <p>Viens créer une guirlande lumineuse en tissu aux ateliers Peekaboo.</p>
+        <ul class="dates"><li class="date" data-date="2026-11-28" data-statut="avenir">
+          <span class="date-statut" data-avenir="Date à confirmer" data-termine="Terminé" data-aujourdhui="Aujourd’hui">Date à confirmer</span>
+          <span class="date-jour">28 novembre (jour à confirmer)</span> <span class="date-heure">16 h – 17 h 30</span>
+          <a href="/inscription?activite=weekend" class="lien-fleche" data-libelle="Inscription">S’inscrire à cet atelier</a>
+        </li><li class="date" data-date="2026-12-05" data-statut="avenir">
+          <span class="date-statut" data-avenir="Date à confirmer" data-termine="Terminé" data-aujourdhui="Aujourd’hui">Date à confirmer</span>
+          <span class="date-jour">Samedi 5 décembre</span> <span class="date-heure">16 h – 17 h 30</span>
+          <a href="/inscription?activite=weekend" class="lien-fleche" data-libelle="Inscription">S’inscrire à cet atelier</a>
+        </li></ul>
+      </div>
+    </li></ul>
+  </div>
+</section>
+<section class="bloc-page stage" id="stage">
+  <div class="cadre stage-grille">
+    <div class="stage-dessin" data-visuel><svg class="croquis" viewBox="0 0 300 400" aria-hidden="true" data-fx="trace" data-effet="trace">
+  <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 22 q-8 0 -8 8 q0 7 8 9"/>
+    <path d="M150 39 L84 74 L216 74 Z"/>
+    <path d="M110 74 Q118 96 112 120 Q150 132 188 120 Q182 96 190 74"/>
+    <path d="M112 120 Q122 150 118 178 Q150 188 182 178 Q178 150 188 120"/>
+    <path d="M118 178 Q96 270 58 368 Q150 392 242 368 Q204 270 182 178"/>
+    <path d="M136 186 Q128 280 112 378"/><path d="M164 186 Q172 280 188 378"/><path d="M150 188 L150 384"/>
+    <path d="M96 300 q24 6 48 0 q24 -6 60 2" stroke-dasharray="4 6"/>
+  </g>
+</svg></div>
+    <div>
+      <p class="surtitre">Vacances</p>
+      <h2 data-anime="lignes">Stage « click ! »</h2>
+      <p data-anime>Une semaine créative, du croquis à la réalisation de vêtements, d’accessoires ou de bijoux, selon le projet de chaque participant.</p>
+      <ul class="stage-infos" data-anime="cascade"><li>Chaque matin, 9 h 15 – 11 h 45</li><li data-prix>380.– la semaine, tissu non compris</li><li>Les dates des prochains stages sont à compléter.</li></ul>
+      <p data-anime><a href="/inscription?activite=stage-click" class="bouton" data-libelle="Inscription" data-survol="magnetique">S’inscrire au stage</a></p>
+    </div>
+  </div>
+</section>
+<section class="bloc-page tissu" id="tissu">
+  <div class="cadre tissu-grille">
+    <div>
+      <p class="surtitre">Le tissu et le matériel</p>
+      <h2 data-anime="lignes">Tout est là, sauf le tissu</h2>
+      <p data-anime>Tous les outils nécessaires à la réalisation sont à disposition. Le tissu n’est pas compris : l’atelier en propose à prix préférentiels, et les élèves ont 20 % de réduction au magasin ALJA de Nyon. Chacun peut aussi apporter le sien.</p>
+    </div>
+    <figure class="media tissu-media" data-grok data-fx="parallaxe" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/cours-tissus-960.webp" srcset="/assets/images/grok/cours-tissus-480.webp 480w, /assets/images/grok/cours-tissus-640.webp 640w, /assets/images/grok/cours-tissus-960.webp 960w" sizes="(max-width: 760px) 92vw, 40vw" alt="Étagères de cotons pliés, imprimés et unis" width="960" height="1280" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="bloc-page conditions-page" id="conditions">
+  <div class="cadre faq-grille">
+    <div>
+      <p class="surtitre">Conditions d’inscription</p>
+      <h2 data-anime="lignes">Avant de s’inscrire</h2>
+      <details class="faq-item" data-anime><summary>Comment s’inscrire ?</summary><p>Contactez Peekaboo (demande en ligne, e-mail ou téléphone) : vous recevez ensuite un formulaire d’inscription. L’inscription est validée dès réception de ce formulaire et engage financièrement pour l’activité choisie (stage, semestre ou année).</p></details><details class="faq-item" data-anime><summary>Peut-on commencer en cours d’année ?</summary><p>Oui, l’inscription est possible en cours d’année.</p></details><details class="faq-item" data-anime><summary>Quand faut-il payer ?</summary><p>Le paiement est dû dans les 10 jours après l’inscription. Le non-paiement d’une facture n’est pas considéré comme une annulation de l’inscription.</p></details><details class="faq-item" data-anime><summary>Le tissu est-il compris ?</summary><p>Non. L’atelier propose des tissus à prix préférentiels et une réduction de 20 % au magasin ALJA de Nyon. Vous pouvez aussi apporter votre propre tissu.</p></details><details class="faq-item" data-anime><summary>Et en cas d’absence ?</summary><p>Aucun remboursement en cas d’absence, sauf sur présentation d’un certificat médical. Si l’enseignante est absente, les cours peuvent être remplacés.</p></details><details class="faq-item" data-anime><summary>Faut-il une assurance ?</summary><p>Oui : chaque participant doit disposer d’une assurance responsabilité civile suffisante pour les dommages qu’il pourrait causer. Peekaboo décline toute responsabilité pour les dommages que le participant pourrait subir.</p></details>
+    </div>
+    <figure class="media faq-media" data-grok data-fx="zoom" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/cours-conditions-1280.webp" srcset="/assets/images/grok/cours-conditions-640.webp 640w, /assets/images/grok/cours-conditions-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 36vw" alt="Bobines de fil de toutes les couleurs alignées sur du lin" width="1280" height="854" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="bloc-page yoga" id="yoga">
+  <div class="cadre yoga-grille">
+    <figure class="media yoga-media" style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/affiche-yoga-960.webp" srcset="/assets/images/affiche-yoga-480.webp 480w, /assets/images/affiche-yoga-960.webp 960w" sizes="(max-width: 760px) 92vw, 40vw" alt="Affiche du yoga Esprit Samadhi" width="960" height="649" loading="lazy" decoding="async">
+  </picture>
+</figure>
+    <div>
+      <p class="surtitre">Aussi à l’atelier</p>
+      <h2 data-anime="lignes">Yoga avec Heidi</h2>
+      <p data-anime>Esprit Samadhi : « le yoga, c’est bien plus que des postures ». Mardi 19 h – 20 h 30, mercredi 18 h 30 – 20 h, jeudi 19 h 30 – 20 h 30 (d’après le planning). Tarifs à compléter. Renseignements auprès de Heidi : <a href="tel:+41782145474">078 214 54 74</a></p>
+    </div>
+  </div>
+</section>
+<section class="bloc-page fin-page" id="fin">
+  <div class="cadre fin-carte" data-visuel>
+    <h2 data-anime="lignes">Prêt à coudre ?</h2>
+    <p data-anime>Envoyez une demande : Peekaboo vous répond avec le formulaire d’inscription.</p>
+    <p data-anime><a href="/inscription" class="bouton" data-libelle="Inscription" data-survol="magnetique">Demander une inscription</a></p>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p><strong>Peekaboo</strong></p>
+      <p>Ch. de Crève-Cœur 3, 1260 Nyon<br>à côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a><br><a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+      <p class="pied-reseaux"><a href="https://www.instagram.com/peekaboonyon/" target="_blank" rel="noopener" aria-label="Instagram de Peekaboo (nouvel onglet)">Instagram</a> <a href="https://www.facebook.com/melody.nelson.94801/" target="_blank" rel="noopener" aria-label="Facebook de Peekaboo (nouvel onglet)">Facebook</a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/cours" data-libelle="Cours &amp; stages" aria-current="page">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par Peekaboo.</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>© Peekaboo</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+41763969174">Appeler</a>
+  <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+</div>
+</body>
+</html>

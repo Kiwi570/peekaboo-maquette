@@ -1,0 +1,47 @@
+[
+  {
+    "cle": "atelier-bois",
+    "titre": {
+      "fr": "Atelier bois"
+    },
+    "texte": {
+      "fr": "Viens fabriquer une mangeoire pour les oiseaux : scier, poncer, décorer… Dès 7 ans."
+    },
+    "image": "affiche-atelier-bois",
+    "dates": [
+      {
+        "date": "2026-11-22",
+        "jour": {
+          "fr": "Dimanche 22 novembre"
+        },
+        "heure": "16 h – 17 h 30"
+      }
+    ]
+  },
+  {
+    "cle": "atelier-noel",
+    "titre": {
+      "fr": "Atelier de Noël"
+    },
+    "texte": {
+      "fr": "Viens créer une guirlande lumineuse en tissu aux ateliers Peekaboo."
+    },
+    "image": "affiche-atelier-noel",
+    "dates": [
+      {
+        "date": "2026-11-28",
+        "jour": {
+          "fr": "28 novembre (jour à confirmer)"
+        },
+        "heure": "16 h – 17 h 30"
+      },
+      {
+        "date": "2026-12-05",
+        "jour": {
+          "fr": "Samedi 5 décembre"
+        },
+        "heure": "16 h – 17 h 30"
+      }
+    ]
+  }
+]

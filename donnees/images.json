@@ -1,0 +1,1837 @@
+{
+  "grok/accueil-ouverture": {
+    "nom": "grok/accueil-ouverture",
+    "source": "recu/grok/accueil-ouverture.jpg",
+    "role": "ouverture",
+    "alt": "Table de coupe vue de dessus : patron en papier, lin plié, craie et épingles",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "e0c81c6fc5d8e61d",
+    "ratio": "16:9",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": {
+      "ratio": "9:16",
+      "largeurs": [
+        640
+      ],
+      "cadrage": "50% 59%"
+    },
+    "cadrage": "67% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 100,
+      "h": 94.7
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0.23,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.17,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0.15,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 126,
+      "width": 1168,
+      "height": 657,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "version téléphone sans 1080 px (source trop petite)",
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-ouverture-640.webp",
+      "grok/accueil-ouverture-1280.webp",
+      "grok/accueil-ouverture-mobile-640.webp"
+    ],
+    "poids": {
+      "grok/accueil-ouverture-640.webp": 17246,
+      "grok/accueil-ouverture-1280.webp": 61976,
+      "grok/accueil-ouverture-mobile-640.webp": 31776
+    },
+    "media": "c.media({ nom: 'grok/accueil-ouverture', alt: \"Table de coupe vue de dessus : patron en papier, lin plié, craie et épingles\", cadrage: '67% 50%', cadrageMobile: '50% 59%', sizes: '100vw', priorite: true })"
+  },
+  "grok/accueil-enfants-ados": {
+    "nom": "grok/accueil-enfants-ados",
+    "source": "recu/grok/accueil-enfants-ados.jpg",
+    "role": "carte-service",
+    "alt": "Chutes de cotons imprimés, petits ciseaux et pelote à épingles sur une grande table",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "f0e90c604663a8cc",
+    "ratio": "2:3",
+    "largeurs": [
+      480,
+      640,
+      784
+    ],
+    "mobile": null,
+    "cadrage": "47% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 96.1,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 779,
+      "height": 1168,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [],
+    "fichiers": [
+      "grok/accueil-enfants-ados-480.webp",
+      "grok/accueil-enfants-ados-640.webp",
+      "grok/accueil-enfants-ados-784.webp"
+    ],
+    "poids": {
+      "grok/accueil-enfants-ados-480.webp": 56798,
+      "grok/accueil-enfants-ados-640.webp": 85664,
+      "grok/accueil-enfants-ados-784.webp": 107872
+    },
+    "media": "c.media({ nom: 'grok/accueil-enfants-ados', alt: \"Chutes de cotons imprimés, petits ciseaux et pelote à épingles sur une grande table\", cadrage: '47% 50%', sizes: '(max-width: 760px) 100vw, 33vw', ratio: '2 / 3' })"
+  },
+  "grok/accueil-adultes": {
+    "nom": "grok/accueil-adultes",
+    "source": "recu/grok/accueil-adultes.jpg",
+    "role": "carte-service",
+    "alt": "Mains qui épinglent un patron en papier sur un lin plié",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "6422c41fa5e6ba83",
+    "ratio": "2:3",
+    "largeurs": [
+      480,
+      640,
+      784
+    ],
+    "mobile": null,
+    "cadrage": "57% 45%",
+    "sujet": {
+      "x": 0,
+      "y": 3.1,
+      "l": 96.1,
+      "h": 96.9
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0.05,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.05,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.01,
+        "ton": "moyen"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 779,
+      "height": 1168,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [],
+    "fichiers": [
+      "grok/accueil-adultes-480.webp",
+      "grok/accueil-adultes-640.webp",
+      "grok/accueil-adultes-784.webp"
+    ],
+    "poids": {
+      "grok/accueil-adultes-480.webp": 32066,
+      "grok/accueil-adultes-640.webp": 49490,
+      "grok/accueil-adultes-784.webp": 63446
+    },
+    "media": "c.media({ nom: 'grok/accueil-adultes', alt: \"Mains qui épinglent un patron en papier sur un lin plié\", cadrage: '57% 45%', sizes: '(max-width: 760px) 100vw, 33vw', ratio: '2 / 3' })"
+  },
+  "grok/accueil-stage-click": {
+    "nom": "grok/accueil-stage-click",
+    "source": "recu/grok/accueil-stage-click.jpg",
+    "role": "carte-service",
+    "alt": "Carnet de croquis ouvert, crayons de couleur et échantillons de tissu épinglés",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "0e8364462652d8d8",
+    "ratio": "2:3",
+    "largeurs": [
+      480,
+      640,
+      784
+    ],
+    "mobile": null,
+    "cadrage": "54% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 96.1,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "bas",
+        "score": 0.14,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.11,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 779,
+      "height": 1168,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [],
+    "fichiers": [
+      "grok/accueil-stage-click-480.webp",
+      "grok/accueil-stage-click-640.webp",
+      "grok/accueil-stage-click-784.webp"
+    ],
+    "poids": {
+      "grok/accueil-stage-click-480.webp": 31872,
+      "grok/accueil-stage-click-640.webp": 51522,
+      "grok/accueil-stage-click-784.webp": 65746
+    },
+    "media": "c.media({ nom: 'grok/accueil-stage-click', alt: \"Carnet de croquis ouvert, crayons de couleur et échantillons de tissu épinglés\", cadrage: '54% 50%', sizes: '(max-width: 760px) 100vw, 33vw', ratio: '2 / 3' })"
+  },
+  "grok/accueil-tissu": {
+    "nom": "grok/accueil-tissu",
+    "source": "recu/grok/accueil-tissu.jpg",
+    "role": "section-fond",
+    "alt": "Lin brut drapé sur une table de coupe dans une lumière rasante",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "90d04f7084d0fe20",
+    "ratio": "3:2",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": null,
+    "cadrage": "73% 30%",
+    "sujet": {
+      "x": 21.9,
+      "y": 0,
+      "l": 78.1,
+      "h": 64
+    },
+    "zones_calmes": [
+      {
+        "cote": "bas",
+        "score": 0.75,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.51,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.04,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.02,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": "gauche",
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 1168,
+      "height": 779,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-tissu-640.webp",
+      "grok/accueil-tissu-1280.webp"
+    ],
+    "poids": {
+      "grok/accueil-tissu-640.webp": 20570,
+      "grok/accueil-tissu-1280.webp": 59162
+    },
+    "media": "c.media({ nom: 'grok/accueil-tissu', alt: \"Lin brut drapé sur une table de coupe dans une lumière rasante\", cadrage: '73% 30%', sizes: '100vw' })"
+  },
+  "grok/accueil-etape-patron": {
+    "nom": "grok/accueil-etape-patron",
+    "source": "recu/grok/accueil-etape-patron.jpg",
+    "role": "galerie",
+    "alt": "Patron en papier épinglé à plat sur un coton plié",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "da8ca849ff23afd8",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "50% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 95.5,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "droite",
+        "score": 0.02,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 73,
+      "width": 784,
+      "height": 1045,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,22 fois (source de 784 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-etape-patron-480.webp",
+      "grok/accueil-etape-patron-640.webp",
+      "grok/accueil-etape-patron-960.webp"
+    ],
+    "poids": {
+      "grok/accueil-etape-patron-480.webp": 49608,
+      "grok/accueil-etape-patron-640.webp": 84230,
+      "grok/accueil-etape-patron-960.webp": 137098
+    },
+    "media": "c.media({ nom: 'grok/accueil-etape-patron', alt: \"Patron en papier épinglé à plat sur un coton plié\", sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "grok/accueil-etape-coupe": {
+    "nom": "grok/accueil-etape-coupe",
+    "source": "recu/grok/accueil-etape-coupe.jpg",
+    "role": "galerie",
+    "alt": "Ciseaux de tailleur qui suivent un trait de craie sur un tissu",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "28b168695dfed3d2",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "43% 49%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 95.5,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "bas",
+        "score": 0.26,
+        "ton": "moyen"
+      },
+      {
+        "cote": "droite",
+        "score": 0.19,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.07,
+        "ton": "moyen"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 784,
+      "height": 1045,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,22 fois (source de 784 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-etape-coupe-480.webp",
+      "grok/accueil-etape-coupe-640.webp",
+      "grok/accueil-etape-coupe-960.webp"
+    ],
+    "poids": {
+      "grok/accueil-etape-coupe-480.webp": 24322,
+      "grok/accueil-etape-coupe-640.webp": 36940,
+      "grok/accueil-etape-coupe-960.webp": 59836
+    },
+    "media": "c.media({ nom: 'grok/accueil-etape-coupe', alt: \"Ciseaux de tailleur qui suivent un trait de craie sur un tissu\", cadrage: '43% 49%', sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "grok/accueil-etape-couture": {
+    "nom": "grok/accueil-etape-couture",
+    "source": "recu/grok/accueil-etape-couture.jpg",
+    "role": "galerie",
+    "alt": "Aiguille et fil rouge qui piquent un lin en points réguliers",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "f529e5d80955a207",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "46% 36%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 95.5,
+      "h": 87.3
+    },
+    "zones_calmes": [
+      {
+        "cote": "bas",
+        "score": 0.45,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.24,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.16,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.04,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 784,
+      "height": 1045,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,22 fois (source de 784 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-etape-couture-480.webp",
+      "grok/accueil-etape-couture-640.webp",
+      "grok/accueil-etape-couture-960.webp"
+    ],
+    "poids": {
+      "grok/accueil-etape-couture-480.webp": 49430,
+      "grok/accueil-etape-couture-640.webp": 75274,
+      "grok/accueil-etape-couture-960.webp": 119494
+    },
+    "media": "c.media({ nom: 'grok/accueil-etape-couture', alt: \"Aiguille et fil rouge qui piquent un lin en points réguliers\", cadrage: '46% 36%', sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "grok/accueil-etape-essayage": {
+    "nom": "grok/accueil-etape-essayage",
+    "source": "recu/grok/accueil-etape-essayage.jpg",
+    "role": "galerie",
+    "alt": "Mannequin de couture portant une toile écrue épinglée",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "fece67fa5e1e7c20",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "64% 51%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 95.5,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "haut",
+        "score": 0.24,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.17,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 123,
+      "width": 784,
+      "height": 1045,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,22 fois (source de 784 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-etape-essayage-480.webp",
+      "grok/accueil-etape-essayage-640.webp",
+      "grok/accueil-etape-essayage-960.webp"
+    ],
+    "poids": {
+      "grok/accueil-etape-essayage-480.webp": 32070,
+      "grok/accueil-etape-essayage-640.webp": 51952,
+      "grok/accueil-etape-essayage-960.webp": 84502
+    },
+    "media": "c.media({ nom: 'grok/accueil-etape-essayage', alt: \"Mannequin de couture portant une toile écrue épinglée\", cadrage: '64% 51%', sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "grok/accueil-atelier": {
+    "nom": "grok/accueil-atelier",
+    "source": "recu/grok/accueil-atelier.jpg",
+    "role": "section-fond",
+    "alt": "Petit atelier de couture lumineux, étagères de tissus et bobines",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "9367aea0086a4e1a",
+    "ratio": "3:2",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": null,
+    "cadrage": "37% 52%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 100,
+      "h": 96.1
+    },
+    "zones_calmes": [
+      {
+        "cote": "droite",
+        "score": 0.35,
+        "ton": "moyen"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": "droite",
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 1168,
+      "height": 779,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/accueil-atelier-640.webp",
+      "grok/accueil-atelier-1280.webp"
+    ],
+    "poids": {
+      "grok/accueil-atelier-640.webp": 26316,
+      "grok/accueil-atelier-1280.webp": 67016
+    },
+    "media": "c.media({ nom: 'grok/accueil-atelier', alt: \"Petit atelier de couture lumineux, étagères de tissus et bobines\", cadrage: '37% 52%', sizes: '100vw' })"
+  },
+  "grok/cours-ouverture": {
+    "nom": "grok/cours-ouverture",
+    "source": "recu/grok/cours-ouverture.jpg",
+    "role": "ouverture",
+    "alt": "Mètre ruban déroulé sur un papier de patron kraft, ciseaux et épingles",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "da47482efab9f6e6",
+    "ratio": "16:9",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": {
+      "ratio": "9:16",
+      "largeurs": [
+        640
+      ],
+      "cadrage": "53% 63%"
+    },
+    "cadrage": "74% 50%",
+    "sujet": {
+      "x": 18.8,
+      "y": 0,
+      "l": 81.2,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0.6,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.44,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0.17,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": "gauche",
+    "recadrage": {
+      "left": 0,
+      "top": 16,
+      "width": 1168,
+      "height": 657,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "version téléphone sans 1080 px (source trop petite)",
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/cours-ouverture-640.webp",
+      "grok/cours-ouverture-1280.webp",
+      "grok/cours-ouverture-mobile-640.webp"
+    ],
+    "poids": {
+      "grok/cours-ouverture-640.webp": 27178,
+      "grok/cours-ouverture-1280.webp": 95768,
+      "grok/cours-ouverture-mobile-640.webp": 49006
+    },
+    "media": "c.media({ nom: 'grok/cours-ouverture', alt: \"Mètre ruban déroulé sur un papier de patron kraft, ciseaux et épingles\", cadrage: '74% 50%', cadrageMobile: '53% 63%', sizes: '100vw', priorite: true })"
+  },
+  "grok/cours-weekend": {
+    "nom": "grok/cours-weekend",
+    "source": "recu/grok/cours-weekend.jpg",
+    "role": "carte-service",
+    "alt": "Matériel d'atelier créatif : feutrine, boutons, rubans et laines",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "1fb2072f4592be59",
+    "ratio": "2:3",
+    "largeurs": [
+      480,
+      640,
+      784
+    ],
+    "mobile": null,
+    "cadrage": "48% 48%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 96.1,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "bas",
+        "score": 0.04,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 779,
+      "height": 1168,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [],
+    "fichiers": [
+      "grok/cours-weekend-480.webp",
+      "grok/cours-weekend-640.webp",
+      "grok/cours-weekend-784.webp"
+    ],
+    "poids": {
+      "grok/cours-weekend-480.webp": 37114,
+      "grok/cours-weekend-640.webp": 56444,
+      "grok/cours-weekend-784.webp": 70430
+    },
+    "media": "c.media({ nom: 'grok/cours-weekend', alt: \"Matériel d'atelier créatif : feutrine, boutons, rubans et laines\", cadrage: '48% 48%', sizes: '(max-width: 760px) 100vw, 33vw', ratio: '2 / 3' })"
+  },
+  "grok/cours-tissus": {
+    "nom": "grok/cours-tissus",
+    "source": "recu/grok/cours-tissus.jpg",
+    "role": "galerie",
+    "alt": "Étagères de cotons pliés, imprimés et unis",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "962b4201382d8b74",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "41% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 95.5,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 62,
+      "width": 784,
+      "height": 1045,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,22 fois (source de 784 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/cours-tissus-480.webp",
+      "grok/cours-tissus-640.webp",
+      "grok/cours-tissus-960.webp"
+    ],
+    "poids": {
+      "grok/cours-tissus-480.webp": 40766,
+      "grok/cours-tissus-640.webp": 63140,
+      "grok/cours-tissus-960.webp": 101472
+    },
+    "media": "c.media({ nom: 'grok/cours-tissus', alt: \"Étagères de cotons pliés, imprimés et unis\", cadrage: '41% 50%', sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "grok/cours-conditions": {
+    "nom": "grok/cours-conditions",
+    "source": "recu/grok/cours-conditions.jpg",
+    "role": "section-fond",
+    "alt": "Bobines de fil de toutes les couleurs alignées sur du lin",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "57487c7c4a396240",
+    "ratio": "3:2",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": null,
+    "cadrage": "40% 54%",
+    "sujet": {
+      "x": 3.1,
+      "y": 8.5,
+      "l": 56.3,
+      "h": 59.5
+    },
+    "zones_calmes": [
+      {
+        "cote": "droite",
+        "score": 0.78,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0.54,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0.5,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.09,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": "droite",
+    "recadrage": {
+      "left": 0,
+      "top": 5,
+      "width": 1168,
+      "height": 779,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/cours-conditions-640.webp",
+      "grok/cours-conditions-1280.webp"
+    ],
+    "poids": {
+      "grok/cours-conditions-640.webp": 23462,
+      "grok/cours-conditions-1280.webp": 58594
+    },
+    "media": "c.media({ nom: 'grok/cours-conditions', alt: \"Bobines de fil de toutes les couleurs alignées sur du lin\", cadrage: '40% 54%', sizes: '100vw' })"
+  },
+  "grok/melody-ouverture": {
+    "nom": "grok/melody-ouverture",
+    "source": "recu/grok/melody-ouverture.jpg",
+    "role": "ouverture",
+    "alt": "Bureau de styliste vu de dessus : carnet vierge, crayons, échantillons, mètre ruban",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "6ce91773f347da89",
+    "ratio": "16:9",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": {
+      "ratio": "9:16",
+      "largeurs": [
+        640
+      ],
+      "cadrage": "50% 62%"
+    },
+    "cadrage": "53% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 100,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "bas",
+        "score": 0.1,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.03,
+        "ton": "moyen"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.02,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": "centre",
+    "recadrage": {
+      "left": 0,
+      "top": 87,
+      "width": 1168,
+      "height": 657,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "version téléphone sans 1080 px (source trop petite)",
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/melody-ouverture-640.webp",
+      "grok/melody-ouverture-1280.webp",
+      "grok/melody-ouverture-mobile-640.webp"
+    ],
+    "poids": {
+      "grok/melody-ouverture-640.webp": 32854,
+      "grok/melody-ouverture-1280.webp": 91246,
+      "grok/melody-ouverture-mobile-640.webp": 68262
+    },
+    "media": "c.media({ nom: 'grok/melody-ouverture', alt: \"Bureau de styliste vu de dessus : carnet vierge, crayons, échantillons, mètre ruban\", cadrage: '53% 50%', cadrageMobile: '50% 62%', sizes: '100vw', priorite: true })"
+  },
+  "grok/melody-sur-mesure": {
+    "nom": "grok/melody-sur-mesure",
+    "source": "recu/grok/melody-sur-mesure.jpg",
+    "role": "galerie",
+    "alt": "Mannequin de couture avec une soie ivoire drapée et épinglée",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "a5add23642c8b2dc",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "46% 53%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 95.5,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "droite",
+        "score": 0.13,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.13,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 123,
+      "width": 784,
+      "height": 1045,
+      "source": [
+        784,
+        1168
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "784 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,22 fois (source de 784 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/melody-sur-mesure-480.webp",
+      "grok/melody-sur-mesure-640.webp",
+      "grok/melody-sur-mesure-960.webp"
+    ],
+    "poids": {
+      "grok/melody-sur-mesure-480.webp": 24992,
+      "grok/melody-sur-mesure-640.webp": 38028,
+      "grok/melody-sur-mesure-960.webp": 61072
+    },
+    "media": "c.media({ nom: 'grok/melody-sur-mesure', alt: \"Mannequin de couture avec une soie ivoire drapée et épinglée\", cadrage: '46% 53%', sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "grok/melody-tringle": {
+    "nom": "grok/melody-tringle",
+    "source": "recu/grok/melody-tringle.jpg",
+    "role": "section-fond",
+    "alt": "Portant en bois vide avec quelques cintres contre un mur crème",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "f3e93544cfc67538",
+    "ratio": "3:2",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": null,
+    "cadrage": "57% 74%",
+    "sujet": {
+      "x": 9.4,
+      "y": 40.5,
+      "l": 90.6,
+      "h": 54.8
+    },
+    "zones_calmes": [
+      {
+        "cote": "haut",
+        "score": 0.81,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.4,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.25,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.01,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": "haut",
+    "recadrage": {
+      "left": 0,
+      "top": 5,
+      "width": 1168,
+      "height": 779,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/melody-tringle-640.webp",
+      "grok/melody-tringle-1280.webp"
+    ],
+    "poids": {
+      "grok/melody-tringle-640.webp": 18898,
+      "grok/melody-tringle-1280.webp": 46734
+    },
+    "media": "c.media({ nom: 'grok/melody-tringle', alt: \"Portant en bois vide avec quelques cintres contre un mur crème\", cadrage: '57% 74%', sizes: '100vw' })"
+  },
+  "grok/inscription-ouverture": {
+    "nom": "grok/inscription-ouverture",
+    "source": "recu/grok/inscription-ouverture.jpg",
+    "role": "ouverture",
+    "alt": "Pelote à épingles et bobine de fil rouge sur un tissu bleu marqué à la craie",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "83d58aeeb553b7a3",
+    "ratio": "3:2",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": {
+      "ratio": "4:5",
+      "largeurs": [
+        640,
+        1080
+      ],
+      "cadrage": "52% 42%"
+    },
+    "cadrage": "57% 44%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 100,
+      "h": 96.1
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0.24,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0.21,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.1,
+        "ton": "moyen"
+      },
+      {
+        "cote": "droite",
+        "score": 0.05,
+        "ton": "sombre"
+      }
+    ],
+    "zone_texte": "gauche",
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 1168,
+      "height": 779,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/inscription-ouverture-640.webp",
+      "grok/inscription-ouverture-1280.webp",
+      "grok/inscription-ouverture-mobile-640.webp",
+      "grok/inscription-ouverture-mobile-1080.webp"
+    ],
+    "poids": {
+      "grok/inscription-ouverture-640.webp": 40934,
+      "grok/inscription-ouverture-1280.webp": 131340,
+      "grok/inscription-ouverture-mobile-640.webp": 86884,
+      "grok/inscription-ouverture-mobile-1080.webp": 163362
+    },
+    "media": "c.media({ nom: 'grok/inscription-ouverture', alt: \"Pelote à épingles et bobine de fil rouge sur un tissu bleu marqué à la craie\", cadrage: '57% 44%', cadrageMobile: '52% 42%', sizes: '100vw', priorite: true })"
+  },
+  "grok/contact-bandeau": {
+    "nom": "grok/contact-bandeau",
+    "source": "recu/grok/contact-bandeau.jpg",
+    "role": "ouverture",
+    "alt": "Fenêtre d'un petit atelier de couture, table de coupe et tissus pliés",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "50eeb2dd9f424e38",
+    "ratio": "2:1",
+    "largeurs": [
+      640,
+      1280
+    ],
+    "mobile": {
+      "ratio": "4:5",
+      "largeurs": [
+        640,
+        1080
+      ],
+      "cadrage": "38% 49%"
+    },
+    "cadrage": "38% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 0,
+      "l": 100,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "droite",
+        "score": 0.15,
+        "ton": "moyen"
+      },
+      {
+        "cote": "haut",
+        "score": 0.15,
+        "ton": "moyen"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 147,
+      "width": 1168,
+      "height": 584,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "largeurs retirées (source trop petite) : 1920",
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,1 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/contact-bandeau-640.webp",
+      "grok/contact-bandeau-1280.webp",
+      "grok/contact-bandeau-mobile-640.webp",
+      "grok/contact-bandeau-mobile-1080.webp"
+    ],
+    "poids": {
+      "grok/contact-bandeau-640.webp": 21788,
+      "grok/contact-bandeau-1280.webp": 51154,
+      "grok/contact-bandeau-mobile-640.webp": 50744,
+      "grok/contact-bandeau-mobile-1080.webp": 94790
+    },
+    "media": "c.media({ nom: 'grok/contact-bandeau', alt: \"Fenêtre d'un petit atelier de couture, table de coupe et tissus pliés\", cadrage: '38% 50%', cadrageMobile: '38% 49%', sizes: '100vw', priorite: true })"
+  },
+  "grok/404": {
+    "nom": "grok/404",
+    "source": "recu/grok/404.jpg",
+    "role": "404",
+    "alt": "Couture interrompue, un fil rouge qui pend et l'aiguille posée à côté",
+    "grok": true,
+    "mention": "Illustration générée",
+    "empreinte": "b82538d0dfe4b468",
+    "ratio": "16:9",
+    "largeurs": [
+      800,
+      1600
+    ],
+    "mobile": null,
+    "cadrage": "76% 50%",
+    "sujet": {
+      "x": 31.3,
+      "y": 0,
+      "l": 68.7,
+      "h": 100
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0.58,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0.35,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.28,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.01,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 48,
+      "width": 1168,
+      "height": 657,
+      "source": [
+        1168,
+        784
+      ]
+    },
+    "faible": true,
+    "raisons_faible": [
+      "1168 px de large"
+    ],
+    "avertissements": [
+      "agrandie 1,37 fois (source de 1168 px après recadrage)"
+    ],
+    "fichiers": [
+      "grok/404-800.webp",
+      "grok/404-1600.webp"
+    ],
+    "poids": {
+      "grok/404-800.webp": 36388,
+      "grok/404-1600.webp": 87942
+    },
+    "media": "c.media({ nom: 'grok/404', alt: \"Couture interrompue, un fil rouge qui pend et l'aiguille posée à côté\", cadrage: '76% 50%', sizes: '100vw', ratio: '16 / 9' })"
+  },
+  "logo": {
+    "nom": "logo",
+    "source": "recu/site/logo-sombre.png",
+    "role": "logo",
+    "alt": "Peekaboo, ateliers d'arts plastiques pour designers en herbe",
+    "grok": false,
+    "mention": null,
+    "empreinte": "c206f853c2760869",
+    "ratio": null,
+    "largeurs": [
+      240,
+      480
+    ],
+    "mobile": null,
+    "cadrage": null,
+    "sujet": null,
+    "zones_calmes": null,
+    "zone_texte": null,
+    "recadrage": null,
+    "faible": false,
+    "raisons_faible": [],
+    "avertissements": [],
+    "fichiers": [
+      "logo-240.webp",
+      "logo-480.webp"
+    ],
+    "poids": {
+      "logo-240.webp": 9348,
+      "logo-480.webp": 22140
+    },
+    "media": "c.media({ nom: 'logo', alt: \"Peekaboo, ateliers d'arts plastiques pour designers en herbe\", sizes: '240px' })"
+  },
+  "madebymelody": {
+    "nom": "madebymelody",
+    "source": "recu/site/www-madebymelody-ch.png",
+    "role": "logo",
+    "alt": "madebymelody",
+    "grok": false,
+    "mention": null,
+    "empreinte": "447b8d3a4374f04b",
+    "ratio": null,
+    "largeurs": [
+      480,
+      808
+    ],
+    "mobile": null,
+    "cadrage": null,
+    "sujet": null,
+    "zones_calmes": null,
+    "zone_texte": null,
+    "recadrage": null,
+    "faible": false,
+    "raisons_faible": [],
+    "avertissements": [],
+    "fichiers": [
+      "madebymelody-480.webp",
+      "madebymelody-808.webp"
+    ],
+    "poids": {
+      "madebymelody-480.webp": 4804,
+      "madebymelody-808.webp": 7490
+    },
+    "media": "c.media({ nom: 'madebymelody', alt: \"madebymelody\", sizes: '240px' })"
+  },
+  "robe-madebymelody": {
+    "nom": "robe-madebymelody",
+    "source": "recu/site/couture-adultes.jpg",
+    "role": "galerie",
+    "alt": "Robe bustier rouge MADEBYMELODY sur un mannequin de couture",
+    "grok": false,
+    "mention": null,
+    "empreinte": "91435fd3bba34429",
+    "ratio": "3:4",
+    "largeurs": [
+      480,
+      640,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "50% 38%",
+    "sujet": {
+      "x": 4.3,
+      "y": 2.6,
+      "l": 91.3,
+      "h": 97.4
+    },
+    "zones_calmes": [
+      {
+        "cote": "haut",
+        "score": 0.48,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.27,
+        "ton": "clair"
+      },
+      {
+        "cote": "gauche",
+        "score": 0.23,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.08,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 164,
+      "width": 1637,
+      "height": 2183,
+      "source": [
+        1637,
+        2347
+      ]
+    },
+    "faible": false,
+    "raisons_faible": [],
+    "avertissements": [],
+    "fichiers": [
+      "robe-madebymelody-480.webp",
+      "robe-madebymelody-640.webp",
+      "robe-madebymelody-960.webp"
+    ],
+    "poids": {
+      "robe-madebymelody-480.webp": 17214,
+      "robe-madebymelody-640.webp": 26258,
+      "robe-madebymelody-960.webp": 48728
+    },
+    "media": "c.media({ nom: 'robe-madebymelody', alt: \"Robe bustier rouge MADEBYMELODY sur un mannequin de couture\", cadrage: '50% 38%', sizes: '(max-width: 760px) 100vw, 50vw', ratio: '3 / 4' })"
+  },
+  "affiche-atelier-bois": {
+    "nom": "affiche-atelier-bois",
+    "source": "recu/site/yoga-heidi.jpg",
+    "role": "galerie",
+    "alt": "Affiche de l'atelier bois du dimanche 22 novembre, 16 h – 17 h 30 : fabriquer une mangeoire pour les oiseaux, dès 7 ans",
+    "grok": false,
+    "mention": null,
+    "empreinte": "4da3773042494798",
+    "ratio": "1414:2000",
+    "largeurs": [
+      480,
+      800
+    ],
+    "mobile": null,
+    "cadrage": "50% 50%",
+    "sujet": {
+      "x": 4.3,
+      "y": 9.4,
+      "l": 91.3,
+      "h": 90.6
+    },
+    "zones_calmes": [
+      {
+        "cote": "haut",
+        "score": 0.05,
+        "ton": "moyen"
+      },
+      {
+        "cote": "droite",
+        "score": 0.01,
+        "ton": "moyen"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "moyen"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "moyen"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 1414,
+      "height": 2000,
+      "source": [
+        1414,
+        2000
+      ]
+    },
+    "faible": false,
+    "raisons_faible": [],
+    "avertissements": [],
+    "fichiers": [
+      "affiche-atelier-bois-480.webp",
+      "affiche-atelier-bois-800.webp"
+    ],
+    "poids": {
+      "affiche-atelier-bois-480.webp": 82264,
+      "affiche-atelier-bois-800.webp": 201016
+    },
+    "media": "c.media({ nom: 'affiche-atelier-bois', alt: \"Affiche de l'atelier bois du dimanche 22 novembre, 16 h – 17 h 30 : fabriquer une mangeoire pour les oiseaux, dès 7 ans\", sizes: '(max-width: 760px) 100vw, 50vw', ratio: '1414 / 2000' })"
+  },
+  "affiche-atelier-noel": {
+    "nom": "affiche-atelier-noel",
+    "source": "recu/site/yoga-heidi-3.jpg",
+    "role": "galerie",
+    "alt": "Affiche de l'atelier de Noël : guirlande lumineuse en tissu, 28 novembre et 5 décembre, 16 h – 17 h 30",
+    "grok": false,
+    "mention": null,
+    "empreinte": "70998a2ab75b1bac",
+    "ratio": "1414:2000",
+    "largeurs": [
+      480,
+      800
+    ],
+    "mobile": null,
+    "cadrage": "50% 50%",
+    "sujet": {
+      "x": 0,
+      "y": 3.1,
+      "l": 91.3,
+      "h": 96.9
+    },
+    "zones_calmes": [
+      {
+        "cote": "haut",
+        "score": 0.11,
+        "ton": "sombre"
+      },
+      {
+        "cote": "droite",
+        "score": 0.03,
+        "ton": "sombre"
+      },
+      {
+        "cote": "gauche",
+        "score": 0,
+        "ton": "sombre"
+      },
+      {
+        "cote": "bas",
+        "score": 0,
+        "ton": "sombre"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 1414,
+      "height": 2000,
+      "source": [
+        1414,
+        2000
+      ]
+    },
+    "faible": false,
+    "raisons_faible": [],
+    "avertissements": [],
+    "fichiers": [
+      "affiche-atelier-noel-480.webp",
+      "affiche-atelier-noel-800.webp"
+    ],
+    "poids": {
+      "affiche-atelier-noel-480.webp": 48664,
+      "affiche-atelier-noel-800.webp": 90560
+    },
+    "media": "c.media({ nom: 'affiche-atelier-noel', alt: \"Affiche de l'atelier de Noël : guirlande lumineuse en tissu, 28 novembre et 5 décembre, 16 h – 17 h 30\", sizes: '(max-width: 760px) 100vw, 50vw', ratio: '1414 / 2000' })"
+  },
+  "affiche-yoga": {
+    "nom": "affiche-yoga",
+    "source": "recu/site/couture-adultes-2.jpg",
+    "role": "galerie",
+    "alt": "Affiche du yoga Esprit Samadhi avec Heidi à l'atelier Peekaboo",
+    "grok": false,
+    "mention": null,
+    "empreinte": "ce43d32a623f6ce0",
+    "ratio": "2121:1433",
+    "largeurs": [
+      480,
+      960
+    ],
+    "mobile": null,
+    "cadrage": "50% 50%",
+    "sujet": {
+      "x": 15.6,
+      "y": 4.5,
+      "l": 78.1,
+      "h": 90.9
+    },
+    "zones_calmes": [
+      {
+        "cote": "gauche",
+        "score": 0.53,
+        "ton": "clair"
+      },
+      {
+        "cote": "droite",
+        "score": 0.47,
+        "ton": "clair"
+      },
+      {
+        "cote": "bas",
+        "score": 0.46,
+        "ton": "clair"
+      },
+      {
+        "cote": "haut",
+        "score": 0.43,
+        "ton": "clair"
+      }
+    ],
+    "zone_texte": null,
+    "recadrage": {
+      "left": 0,
+      "top": 0,
+      "width": 2121,
+      "height": 1433,
+      "source": [
+        2121,
+        1433
+      ]
+    },
+    "faible": false,
+    "raisons_faible": [],
+    "avertissements": [],
+    "fichiers": [
+      "affiche-yoga-480.webp",
+      "affiche-yoga-960.webp"
+    ],
+    "poids": {
+      "affiche-yoga-480.webp": 8942,
+      "affiche-yoga-960.webp": 20718
+    },
+    "media": "c.media({ nom: 'affiche-yoga', alt: \"Affiche du yoga Esprit Samadhi avec Heidi à l'atelier Peekaboo\", sizes: '(max-width: 760px) 100vw, 50vw', ratio: '2121 / 1433' })"
+  }
+}

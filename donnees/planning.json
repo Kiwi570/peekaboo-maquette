@@ -1,0 +1,140 @@
+{
+  "jours": [
+    {
+      "fr": "Lundi"
+    },
+    {
+      "fr": "Mardi"
+    },
+    {
+      "fr": "Mercredi"
+    },
+    {
+      "fr": "Jeudi"
+    },
+    {
+      "fr": "Vendredi"
+    },
+    {
+      "fr": "Samedi"
+    },
+    {
+      "fr": "Dimanche"
+    }
+  ],
+  "courts": [
+    {
+      "fr": "Lun"
+    },
+    {
+      "fr": "Mar"
+    },
+    {
+      "fr": "Mer"
+    },
+    {
+      "fr": "Jeu"
+    },
+    {
+      "fr": "Ven"
+    },
+    {
+      "fr": "Sam"
+    },
+    {
+      "fr": "Dim"
+    }
+  ],
+  "creneaux": [
+    {
+      "jour": 0,
+      "debut": 9.5,
+      "fin": 10.5,
+      "type": "adultes",
+      "titre": {
+        "fr": "Couture stylisme adulte"
+      },
+      "avec": "Melody"
+    },
+    {
+      "jour": 0,
+      "debut": 18,
+      "fin": 19,
+      "type": "ados",
+      "titre": {
+        "fr": "Couture stylisme ado"
+      },
+      "avec": "Melody"
+    },
+    {
+      "jour": 1,
+      "debut": 16,
+      "fin": 17,
+      "type": "adultes",
+      "titre": {
+        "fr": "Couture stylisme adulte"
+      },
+      "avec": "Melody"
+    },
+    {
+      "jour": 1,
+      "debut": 17,
+      "fin": 18,
+      "type": "ados",
+      "titre": {
+        "fr": "Couture stylisme ado"
+      },
+      "avec": "Melody"
+    },
+    {
+      "jour": 1,
+      "debut": 19,
+      "fin": 20.5,
+      "type": "yoga",
+      "titre": {
+        "fr": "Yoga"
+      },
+      "avec": "Heidi"
+    },
+    {
+      "jour": 2,
+      "debut": 18.5,
+      "fin": 20,
+      "type": "yoga",
+      "titre": {
+        "fr": "Yoga"
+      },
+      "avec": "Heidi"
+    },
+    {
+      "jour": 3,
+      "debut": 17,
+      "fin": 18,
+      "type": "ados",
+      "titre": {
+        "fr": "Couture stylisme ado"
+      },
+      "avec": "Melody"
+    },
+    {
+      "jour": 3,
+      "debut": 18,
+      "fin": 19,
+      "type": "ados",
+      "titre": {
+        "fr": "Couture stylisme ado"
+      },
+      "avec": "Melody"
+    },
+    {
+      "jour": 3,
+      "debut": 19.5,
+      "fin": 20.5,
+      "type": "yoga",
+      "titre": {
+        "fr": "Yoga"
+      },
+      "avec": "Heidi"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact : Peekaboo, Nyon</title>
+<meta name="description" content="Ateliers Peekaboo, ch. de Crève-Cœur 3, 1260 Nyon, à côté de la bibliothèque des jeunes. 076 396 91 74.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://peekaboo-maquette.vercel.app/contact">
+<style>:root{--fond:#f4ecdd;--texte:#1f1b16;--voile-fond:#1f3170;--ouverture-fond:#b2261f;--menu-fond:#f4ecdd}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f4ecdd">
+<link rel="icon" href="/assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Peekaboo">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Contact : Peekaboo, Nyon">
+<meta property="og:description" content="Ateliers Peekaboo, ch. de Crève-Cœur 3, 1260 Nyon, à côté de la bibliothèque des jeunes. 076 396 91 74.">
+<meta property="og:url" content="https://peekaboo-maquette.vercel.app/contact">
+<meta property="og:image" content="https://peekaboo-maquette.vercel.app/assets/partage/contact-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Contact de l’atelier Peekaboo à Nyon">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Contact</span></div></div>
+<div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
+  <div class="pan-tissu" data-effet="coucou">
+    <span class="pan-couture"></span>
+    <span class="pan-yeux"><span class="pan-oeil"></span><span class="pan-oeil"></span></span>
+    <span class="pan-etiquette"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span><small>Ateliers d’arts plastiques pour designers en herbe</small></span>
+    <span class="pan-coin"></span>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact" aria-current="page">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/cours" class="menu-lien" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li style="--i:2"><a href="/melody" class="menu-lien" data-libelle="Melody">Melody</a></li><li style="--i:3"><a href="/inscription" class="menu-lien" data-libelle="Inscription">Inscription</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact" aria-current="page">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+41763969174">Appeler 076 396 91 74</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1" data-page="contact">
+<section class="page-tete tete-contact" id="debut">
+  <div class="cadre">
+    <p class="surtitre" data-anime="gsap">Contact</p>
+    <h1 class="tete-contact-titre" data-anime="gsap">Appelez l’atelier</h1>
+    <a class="numero" href="tel:+41763969174" data-effet="numero-cousu" data-action-principale>
+      <span class="numero-chiffres" data-anime="gsap">076 396 91 74</span>
+    </a>
+    <p class="tete-contact-texte" data-anime="gsap">Ou écrivez à <a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+    <p class="hero-info" data-info-cle data-anime="gsap">Ch. de Crève-Cœur 3, 1260 Nyon</p>
+  </div>
+  <figure class="media tete-contact-media" data-grok data-fx="parallaxe" style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/contact-bandeau-mobile-640.webp 640w, /assets/images/grok/contact-bandeau-mobile-1080.webp 1080w" sizes="100vw">
+    <img src="/assets/images/grok/contact-bandeau-1280.webp" srcset="/assets/images/grok/contact-bandeau-640.webp 640w, /assets/images/grok/contact-bandeau-1280.webp 1280w" sizes="100vw" alt="Fenêtre d’un atelier de couture" width="1280" height="640" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+</section>
+<section class="bloc-page acces" id="acces">
+  <div class="cadre pratique-grille">
+    <div class="pratique-carte"><svg class="plan" viewBox="0 0 520 380" role="img" aria-label="Plan schématique de l’accès à l’atelier" data-visuel data-fx="trace">
+  <defs><pattern id="plan-grille" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0H0V26" fill="none" stroke="currentColor" stroke-opacity=".12" stroke-width="1"/></pattern></defs>
+  <rect width="520" height="380" fill="url(#plan-grille)"/>
+  <path class="plan-chemin" d="M-10 300 C 120 280, 200 250, 290 196 S 470 110, 540 96" fill="none" stroke="currentColor" stroke-opacity=".28" stroke-width="22" stroke-linecap="round"/>
+  <g><path data-fx-trait d="M-10 300 C 120 280, 200 250, 290 196 S 470 110, 540 96" fill="none" stroke="var(--fil)" stroke-width="2.5" stroke-dasharray="8 7"/></g>
+  <g class="plan-bati">
+    <rect x="282" y="204" width="200" height="94" rx="6"/>
+    <rect class="plan-atelier" x="140" y="112" width="184" height="78" rx="6"/>
+  </g>
+  <text x="382" y="246" text-anchor="middle" class="plan-texte">Bibliothèque</text>
+  <text x="382" y="274" text-anchor="middle" class="plan-texte">des jeunes</text>
+  <text x="232" y="160" text-anchor="middle" class="plan-texte plan-texte--fort">Peekaboo</text>
+  <text x="24" y="338" class="plan-texte plan-texte--petit" transform="rotate(-6 24 338)">Ch. de Crève-Cœur</text>
+  <g class="plan-epingle" transform="translate(231 104)"><path d="M0 0 C -14 -16 -14 -34 0 -38 C 14 -34 14 -16 0 0 Z"/><circle cy="-24" r="6" fill="#f4ecdd"/></g>
+</svg><p class="pratique-legende">Plan schématique, à remplacer par une carte définitive.</p></div>
+    <div>
+      <h2 data-anime="lignes">Venir à l’atelier</h2>
+      <address class="pratique-adresse" data-anime><strong>Ateliers Peekaboo</strong><br>Ch. de Crève-Cœur 3, 1260 Nyon<br>À côté de la bibliothèque des jeunes</address>
+      <ul class="conditions" data-anime="cascade"><li>Accès en transports publics et stationnement : à compléter.</li><li>Horaires d’ouverture : sur rendez-vous et selon le planning des cours (à compléter).</li><li>Yoga avec Heidi : 078 214 54 74</li></ul>
+      <p class="reseaux" data-anime><a class="lien-fleche" href="https://www.instagram.com/peekaboonyon/" target="_blank" rel="noopener" aria-label="Instagram de Peekaboo (nouvel onglet)">Instagram</a> <a class="lien-fleche" href="https://www.facebook.com/melody.nelson.94801/" target="_blank" rel="noopener" aria-label="Facebook de Peekaboo (nouvel onglet)">Facebook</a></p>
+    </div>
+  </div>
+</section>
+<section class="bloc-page formulaire-contact" id="formulaire">
+  <div class="cadre formulaire-grille">
+    <div>
+      <h2 data-anime="lignes">Demande d’informations</h2>
+      <figure class="media formulaire-media" data-grok data-anime="rideau" style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/inscription-ouverture-mobile-640.webp 640w, /assets/images/grok/inscription-ouverture-mobile-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 36vw">
+    <img src="/assets/images/grok/inscription-ouverture-1280.webp" srcset="/assets/images/grok/inscription-ouverture-640.webp 640w, /assets/images/grok/inscription-ouverture-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 36vw" alt="Pelote à épingles et bobine de fil rouge sur un coton bleu marqué à la craie" width="1280" height="854" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+    </div>
+    <form class="formulaire" data-formulaire novalidate data-anime>
+      <div class="fpe__ligne">
+        <div class="champ"><label for="c-prenom">Prénom</label><input id="c-prenom" name="prenom" autocomplete="given-name" required></div>
+        <div class="champ"><label for="c-nom">Nom de famille</label><input id="c-nom" name="nom" autocomplete="family-name" required></div>
+      </div>
+      <div class="fpe__ligne">
+        <div class="champ"><label for="c-email">E-mail</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="champ"><label for="c-tel">Téléphone (facultatif)</label><input id="c-tel" name="tel" type="tel" autocomplete="tel"></div>
+      </div>
+      <div class="champ"><label for="c-sujet">Je voudrais des infos sur…</label>
+        <select id="c-sujet" name="sujet" required>
+          <option value="enfants-ados">Les cours enfants et ados</option><option value="adultes">Les cours adultes</option><option value="stage-click">Le stage click !</option><option value="weekend">Les ateliers du weekend</option><option value="sur-mesure">Le sur-mesure MADEBYMELODY</option><option value="autre">Autre chose</option>
+        </select></div>
+      <div class="champ"><label for="c-message">Message</label><textarea id="c-message" name="message" rows="4"></textarea></div>
+      <p class="mention-donnees">Vos données servent seulement à répondre à votre demande (loi fédérale sur la protection des données). Politique de confidentialité : à compléter.</p>
+      <p><button type="submit" class="bouton">Envoyer la demande</button></p>
+      <p data-message-envoi hidden tabindex="-1" data-texte="Demande simulée : rien n’a été envoyé. Sur le site final, elle partira vers Peekaboo."></p>
+    </form>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p><strong>Peekaboo</strong></p>
+      <p>Ch. de Crève-Cœur 3, 1260 Nyon<br>à côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a><br><a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+      <p class="pied-reseaux"><a href="https://www.instagram.com/peekaboonyon/" target="_blank" rel="noopener" aria-label="Instagram de Peekaboo (nouvel onglet)">Instagram</a> <a href="https://www.facebook.com/melody.nelson.94801/" target="_blank" rel="noopener" aria-label="Facebook de Peekaboo (nouvel onglet)">Facebook</a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription">Inscription</a></li><li><a href="/contact" data-libelle="Contact" aria-current="page">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par Peekaboo.</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>© Peekaboo</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+41763969174">Appeler</a>
+  <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+</div>
+</body>
+</html>

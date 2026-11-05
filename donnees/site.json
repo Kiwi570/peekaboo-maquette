@@ -1,0 +1,44 @@
+{
+  "nom": "Peekaboo",
+  "adresse": "https://peekaboo-maquette.vercel.app",
+  "siteActuel": "peekaboo-nyon.com",
+  "version": 1,
+  "langues": [
+    "fr"
+  ],
+  "navigation": [
+    "accueil",
+    "cours",
+    "melody",
+    "inscription",
+    "contact"
+  ],
+  "actionEntete": {
+    "page": "inscription"
+  },
+  "couleurs": {
+    "fond": "#f4ecdd",
+    "texte": "#1f1b16",
+    "voile": "#1f3170",
+    "ouverture": "#b2261f",
+    "menu": "#f4ecdd",
+    "theme": "#f4ecdd"
+  },
+  "contact": {
+    "telephone": "076 396 91 74",
+    "telephoneLien": "+41763969174",
+    "email": "melody_j8@hotmail.com",
+    "adresse": "Ch. de Crève-Cœur 3, 1260 Nyon",
+    "repere": "à côté de la bibliothèque des jeunes",
+    "instagram": "https://www.instagram.com/peekaboonyon/",
+    "facebook": "https://www.facebook.com/melody.nelson.94801/",
+    "boutique": "https://www.madebymelody.ch/boutique-tous-les-produits",
+    "instagramMarque": "https://www.instagram.com/madebymelody.ch/"
+  },
+  "polices": [
+    "/assets/polices/bricolage-grotesque-latin-800-normal.woff2",
+    "/assets/polices/instrument-sans-latin-400-normal.woff2"
+  ],
+  "imagePartage": "grok/accueil-ouverture-1280.webp",
+  "curseur": true
+}

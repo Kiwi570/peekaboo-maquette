@@ -1,0 +1,50 @@
+[
+  {
+    "q": {
+      "fr": "Comment s’inscrire ?"
+    },
+    "r": {
+      "fr": "Contactez Peekaboo (demande en ligne, e-mail ou téléphone) : vous recevez ensuite un formulaire d’inscription. L’inscription est validée dès réception de ce formulaire et engage financièrement pour l’activité choisie (stage, semestre ou année)."
+    }
+  },
+  {
+    "q": {
+      "fr": "Peut-on commencer en cours d’année ?"
+    },
+    "r": {
+      "fr": "Oui, l’inscription est possible en cours d’année."
+    }
+  },
+  {
+    "q": {
+      "fr": "Quand faut-il payer ?"
+    },
+    "r": {
+      "fr": "Le paiement est dû dans les 10 jours après l’inscription. Le non-paiement d’une facture n’est pas considéré comme une annulation de l’inscription."
+    }
+  },
+  {
+    "q": {
+      "fr": "Le tissu est-il compris ?"
+    },
+    "r": {
+      "fr": "Non. L’atelier propose des tissus à prix préférentiels et une réduction de 20 % au magasin ALJA de Nyon. Vous pouvez aussi apporter votre propre tissu."
+    }
+  },
+  {
+    "q": {
+      "fr": "Et en cas d’absence ?"
+    },
+    "r": {
+      "fr": "Aucun remboursement en cas d’absence, sauf sur présentation d’un certificat médical. Si l’enseignante est absente, les cours peuvent être remplacés."
+    }
+  },
+  {
+    "q": {
+      "fr": "Faut-il une assurance ?"
+    },
+    "r": {
+      "fr": "Oui : chaque participant doit disposer d’une assurance responsabilité civile suffisante pour les dommages qu’il pourrait causer. Peekaboo décline toute responsabilité pour les dommages que le participant pourrait subir."
+    }
+  }
+]

@@ -1,0 +1,397 @@
+{
+  "commun": {
+    "navigation": "Navigation principale",
+    "menu": "Menu",
+    "fermer": "Fermer",
+    "langueAutre": "Autre langue",
+    "actionEntete": "S’inscrire",
+    "appeler": "Appeler",
+    "calmeReduire": "Réduire les animations",
+    "calmeRetablir": "Rétablir les animations",
+    "calmeSysteme": "Animations réduites par le réglage de votre appareil",
+    "sommaire": "Sommaire",
+    "confort": "Confort de lecture",
+    "retourHaut": "Retour en haut",
+    "maquette": "Maquette : les informations marquées « à compléter » seront fournies par Peekaboo.",
+    "evitement": "Aller au contenu",
+    "mentionIa": "Illustration générée",
+    "pause": "Pause",
+    "lecture": "Lecture",
+    "introLigne": "Ateliers d’arts plastiques pour designers en herbe",
+    "coucou": "coucou !",
+    "legal": "Mentions légales · Politique de confidentialité : à compléter",
+    "suivre": "Suivre l’atelier",
+    "instagram": "Instagram de Peekaboo (nouvel onglet)",
+    "facebook": "Facebook de Peekaboo (nouvel onglet)",
+    "adresseTitre": "L’atelier",
+    "contactTitre": "Contact",
+    "donnees": "Vos données servent seulement à répondre à votre demande (loi fédérale sur la protection des données). Politique de confidentialité : à compléter.",
+    "simule": "Demande simulée : rien n’a été envoyé. Sur le site final, elle partira vers Peekaboo.",
+    "planBiblio1": "Bibliothèque",
+    "planBiblio2": "des jeunes",
+    "planRue": "Ch. de Crève-Cœur",
+    "glisser": "Faites glisser la tringle →",
+    "glisserSouris": "Faites défiler la tringle →",
+    "notesAcompleter": "à compléter"
+  },
+  "pages": {
+    "accueil": {
+      "titre": "Peekaboo : cours de couture et de stylisme à Nyon",
+      "description": "Cours de couture et de stylisme, stages de vacances et ateliers pour enfants, ados et adultes, avec la styliste Melody, à Nyon.",
+      "nav": "Accueil",
+      "partageAlt": "Peekaboo, ateliers de couture à Nyon : table de coupe et patron",
+      "accroche": "Coudre son idée, de A à Z"
+    },
+    "cours": {
+      "titre": "Cours & stages : Peekaboo, Nyon",
+      "description": "Couture et stylisme enfants et ados (1100.– par an), couture adultes (175.– les 5 cours), stage de vacances click! (380.– la semaine), ateliers du weekend, conditions d’inscription.",
+      "nav": "Cours & stages",
+      "partageAlt": "Cours et stages de Peekaboo : mètre ruban sur papier kraft",
+      "accroche": "Cours et stages pour enfants, ados et adultes"
+    },
+    "melody": {
+      "titre": "Melody & MADEBYMELODY : Peekaboo, Nyon",
+      "description": "Melody, styliste, artiste et enseignante, et sa marque MADEBYMELODY : pièces uniques et numérotées, sur-mesure, made in Nyon depuis 2010.",
+      "nav": "Melody",
+      "partageAlt": "Melody et sa marque MADEBYMELODY",
+      "accroche": "Styliste, artiste et enseignante"
+    },
+    "inscription": {
+      "titre": "Demande d’inscription : Peekaboo, Nyon",
+      "description": "Demandez votre inscription à un cours, un stage ou un atelier Peekaboo : Peekaboo vous envoie ensuite le formulaire d’inscription.",
+      "nav": "Inscription",
+      "partageAlt": "Demande d’inscription chez Peekaboo",
+      "accroche": "Une place à l’atelier"
+    },
+    "contact": {
+      "titre": "Contact : Peekaboo, Nyon",
+      "description": "Ateliers Peekaboo, ch. de Crève-Cœur 3, 1260 Nyon, à côté de la bibliothèque des jeunes. 076 396 91 74.",
+      "nav": "Contact",
+      "partageAlt": "Contact de l’atelier Peekaboo à Nyon",
+      "accroche": "076 396 91 74"
+    },
+    "404": {
+      "titre": "Un point a sauté : Peekaboo",
+      "description": "Cette page n’existe pas ou plus.",
+      "nav": "Page introuvable",
+      "partageAlt": "Page introuvable",
+      "accroche": "Un point a sauté"
+    }
+  },
+  "accueil": {
+    "hero": {
+      "mot": "PEEKABOO",
+      "sous": "Cours de couture et de stylisme à Nyon",
+      "texte": "Pour enfants, ados et adultes : chacun repart avec sa réalisation unique, qu’il aura lui-même imaginée.",
+      "action": "Demander une inscription",
+      "info": "Inscription possible en cours d’année",
+      "planning": "Voir les cours",
+      "droitFil": "droit-fil",
+      "couper": "couper ici",
+      "tag": "Ateliers d’arts plastiques pour designers en herbe",
+      "alt": "Matériel d’atelier créatif : feutrine, boutons, rubans, laines et bobines"
+    },
+    "galon": "Couture · Stylisme · Stages de vacances · Ateliers du weekend · Made in Nyon ·",
+    "cours": {
+      "surtitre": "Les cours",
+      "titre": "Un fil pour chacun",
+      "texte": "Stylisme et couture ou ateliers de création, pour ados, enfants et adultes, tout au long de l’année.",
+      "plus": "Tout savoir",
+      "inscrire": "S’inscrire"
+    },
+    "esprit": {
+      "surtitre": "L’esprit de l’atelier",
+      "m1": "L’écoute",
+      "m2": "l’attention",
+      "m3": "la sensibilité",
+      "texte": "Un enseignement basé sur l’écoute, l’attention et la sensibilité de chaque élève, pour lui permettre de trouver les moyens de développer sa propre pensée créatrice.",
+      "note": "chaque élève est unique",
+      "alt": "Table de coupe vue de dessus : patron en papier, lin plié, craie et épingles"
+    },
+    "etapes": {
+      "surtitre": "Du croquis au vêtement",
+      "titre": "Une idée, cinq étapes",
+      "texte": "C’est le chemin du stage « click! » : du croquis à la pièce que l’on porte.",
+      "e1t": "Le croquis",
+      "e1": "On dessine son idée : un vêtement, un accessoire, un bijou.",
+      "e2t": "Le patron",
+      "e2": "L’idée devient des pièces de papier, avec leurs crans et leur droit-fil.",
+      "e3t": "La coupe",
+      "e3": "On épingle, on trace à la craie, on taille le tissu.",
+      "e4t": "La couture",
+      "e4": "On assemble, point après point, à la main ou à la machine.",
+      "e5t": "L’essayage",
+      "e5": "On ajuste, puis on repart avec sa création.",
+      "etape": "Étape",
+      "region": "Les cinq étapes, du croquis au vêtement"
+    },
+    "melody": {
+      "surtitre": "Qui enseigne",
+      "titre": "Melody, styliste et enseignante",
+      "texte": "Arts visuels, LISAA Paris, HEAD Genève, un stage aux ateliers Galliano, des costumes pour la scène, puis un diplôme d’enseignante à la HEPL : les deux facettes, artistique et pédagogique, au service des élèves.",
+      "citation": "J’aime sensibiliser, encourager, documenter et accompagner mes élèves même quand tout semble refléter l’impossible !",
+      "langues": "Français, anglais, italien et espagnol",
+      "lien": "Son parcours",
+      "alt": "Melody, styliste et enseignante, dans son atelier"
+    },
+    "marque": {
+      "surtitre": "MADEBYMELODY",
+      "titre": "La marque cousue à Nyon",
+      "texte": "Depuis 2010, des pièces uniques et numérotées pour femmes et enfants, créées dans les ateliers Peekaboo. Les années 60, 70 et 90, la musique, la nature et les animaux.",
+      "boutique": "La boutique MADEBYMELODY (nouvel onglet)",
+      "boutiqueCourt": "Voir la boutique",
+      "plus": "La marque et le sur-mesure",
+      "region": "Pièces MADEBYMELODY",
+      "alt": "Robe bustier rouge MADEBYMELODY sur un mannequin de couture"
+    },
+    "pratique": {
+      "surtitre": "Infos pratiques",
+      "titre": "Où coudre ?",
+      "lieu": "Ateliers Peekaboo",
+      "repere": "À côté de la bibliothèque des jeunes",
+      "c1t": "Le tissu",
+      "c1": "Non compris : tissus à prix préférentiels à l’atelier, et 20 % de réduction au magasin ALJA de Nyon.",
+      "c2t": "Le paiement",
+      "c2": "Dans les 10 jours après l’inscription.",
+      "c3t": "L’assurance",
+      "c3": "Une responsabilité civile suffisante est demandée à chaque participant.",
+      "plan": "Plan schématique : l’atelier est à côté de la bibliothèque des jeunes.",
+      "carte": "Plan schématique de l’accès à l’atelier",
+      "conditions": "Toutes les conditions",
+      "itineraire": "Nous écrire ou venir"
+    },
+    "fin": {
+      "titre": "Une idée en tête ?",
+      "texte": "Envoyez une demande : Peekaboo vous répond avec le formulaire d’inscription.",
+      "action": "Demander une inscription",
+      "appeler": "Appeler l’atelier",
+      "alt": "Petit atelier de couture lumineux, étagères de tissus et bobines"
+    }
+  },
+  "cours": {
+    "tete": {
+      "surtitre": "Couture et stylisme",
+      "titre": "Cours & stages",
+      "texte": "Toute l’année à Nyon, pour enfants, ados et adultes. Inscription possible en cours d’année.",
+      "action": "Demander une inscription",
+      "ruban": "Les tarifs, au centimètre près",
+      "alt": "Mètre ruban déroulé sur un papier de patron kraft, ciseaux et épingles"
+    },
+    "fiches": {
+      "titre": "Choisir son cours",
+      "texte": "Les cours se font en fonction des élèves, de leurs envies du jour et de leur autonomie.",
+      "inscrire": "S’inscrire à ce cours",
+      "prixSur": "Tarif"
+    },
+    "planning": {
+      "surtitre": "Planning 2026-2027",
+      "titre": "La semaine à l’atelier",
+      "texte": "En dehors des cours, l’atelier est en location libre pour vos cours et ateliers.",
+      "tous": "Tous",
+      "adultes": "Adultes",
+      "filtre": "Afficher",
+      "region": "Planning de la semaine",
+      "ados": "Ados",
+      "yoga": "Yoga",
+      "location": "Location libre pour vos cours et ateliers",
+      "avec": "avec",
+      "note": "Le flyer du yoga indique d’autres horaires (mercredi 18 h 30, jeudi 19 h 30, vendredi 9 h et 10 h 30) : à confirmer avec Heidi.",
+      "source": "Transcrit du planning 2026-2027 du site actuel, âges à compléter."
+    },
+    "stage": {
+      "surtitre": "Vacances",
+      "titre": "Stage « click! »",
+      "texte": "Une semaine créative, du croquis à la réalisation de vêtements, d’accessoires ou de bijoux, selon le projet de chaque participant.",
+      "horaire": "Chaque matin, 9 h 15 – 11 h 45",
+      "prix": "380.– la semaine, tissu non compris",
+      "dates": "Prochaines dates",
+      "datesVide": "Les dates des prochains stages sont à compléter.",
+      "inscrire": "S’inscrire au stage"
+    },
+    "tissu": {
+      "surtitre": "Le tissu et le matériel",
+      "titre": "Tout est là, sauf le tissu",
+      "texte": "Tous les outils nécessaires à la réalisation sont à disposition. Le tissu n’est pas compris : l’atelier en propose à prix préférentiels, et les élèves ont 20 % de réduction au magasin ALJA de Nyon. Chacun peut aussi apporter le sien.",
+      "alt": "Étagères de cotons pliés, imprimés et unis"
+    },
+    "conditions": {
+      "surtitre": "Conditions d’inscription",
+      "titre": "Avant de s’inscrire",
+      "alt": "Bobines de fil de toutes les couleurs alignées sur du lin"
+    },
+    "yoga": {
+      "surtitre": "Aussi à l’atelier",
+      "titre": "Yoga avec Heidi",
+      "texte": "Esprit Samadhi : « le yoga, c’est bien plus que des postures ». Mardi 19 h – 20 h 30, mercredi 18 h 30 – 20 h, jeudi 19 h 30 – 20 h 30 (d’après le planning). Tarifs à compléter. Renseignements auprès de Heidi :",
+      "alt": "Affiche du yoga Esprit Samadhi"
+    },
+    "fin": {
+      "titre": "Prêt à coudre ?",
+      "texte": "Envoyez une demande : Peekaboo vous répond avec le formulaire d’inscription.",
+      "action": "Demander une inscription"
+    },
+    "agenda": {
+      "surtitre": "Ateliers du weekend",
+      "titre": "Les prochains ateliers",
+      "texte": "Dates relevées sur les affiches du site actuel : année et tarifs à compléter.",
+      "avenir": "Date à confirmer",
+      "termine": "Terminé",
+      "aujourdhui": "Aujourd’hui",
+      "inscrire": "S’inscrire à cet atelier",
+      "alt-atelier-bois": "Affiche de l’atelier bois : fabriquer une mangeoire pour les oiseaux, dès 7 ans",
+      "alt-atelier-noel": "Affiche de l’atelier de Noël : guirlande lumineuse en tissu"
+    },
+    "location": {
+      "surtitre": "Louer l’atelier",
+      "titre": "Location libre",
+      "texte": "En dehors des cours, l’atelier se loue pour vos propres cours et ateliers : conditions et tarifs à compléter.",
+      "action": "Demander les conditions"
+    }
+  },
+  "melody": {
+    "tete": {
+      "surtitre": "La créatrice de Peekaboo et de MADEBYMELODY",
+      "titre": "Melody",
+      "texte": "Styliste, artiste et enseignante passionnée : elle a créé les ateliers Peekaboo et sa marque de vêtements, entièrement réalisée à Nyon.",
+      "info": "MADEBYMELODY depuis 2010",
+      "action": "Voir les pièces",
+      "alt": "Portrait de Melody",
+      "altFond": "Bureau de styliste vu de dessus : carnet, crayons, échantillons et mètre ruban",
+      "polaroid": "Photo de Melody à fournir"
+    },
+    "parcours": {
+      "surtitre": "Le parcours",
+      "titre": "Voyager, puis revenir",
+      "texte": "« Mon parcours m’a fait voyager, puis revenir… »"
+    },
+    "enseigner": {
+      "surtitre": "Enseigner",
+      "titre": "Deux facettes, un atelier",
+      "texte": "La passion de l’enseignement s’est installée petit à petit : d’où le diplôme d’enseignante à la HEPL. Le parcours artistique et la pédagogie se retrouvent dans chaque cours.",
+      "langues": "Langue maternelle française ; elle parle couramment l’anglais, l’italien et l’espagnol.",
+      "alt": "Mains qui coupent un coton le long d’un trait de craie"
+    },
+    "marque": {
+      "surtitre": "MADEBYMELODY",
+      "titre": "Des pièces uniques, parce que vous êtes unique",
+      "texte": "Prêt-à-porter et sur-mesure, en pièces uniques et numérotées pour femmes et enfants. Chaque collection représente une envie, un état d’esprit : une mode intemporelle, inspirée des années 60, 70 et 90, de la musique, de la nature et des animaux.",
+      "vente": "En vente sur madebymelody.ch et sur rendez-vous à l’atelier.",
+      "boutique": "La boutique MADEBYMELODY (nouvel onglet)",
+      "prix": "Prix en CHF relevés sur madebymelody.ch, à vérifier.",
+      "region": "Pièces MADEBYMELODY, faites défiler",
+      "instagram": "Instagram de MADEBYMELODY (nouvel onglet)"
+    },
+    "mesure": {
+      "surtitre": "Sur-mesure",
+      "titre": "Du quotidien à la robe de mariée",
+      "texte": "La styliste dessine et crée la pièce de A à Z, à partir d’une idée ou d’un besoin, et conseille sur le choix des tissus et les derniers ajustements.",
+      "e1": "Une idée ou un besoin",
+      "e2": "Le choix des tissus",
+      "e3": "La création de A à Z",
+      "e4": "Les derniers ajustements",
+      "action": "Prendre rendez-vous",
+      "alt": "Mannequin de couture avec une soie ivoire drapée et épinglée"
+    },
+    "fin": {
+      "titre": "Une pièce à imaginer ?",
+      "texte": "Sur rendez-vous à l’atelier, à Nyon.",
+      "action": "Prendre rendez-vous"
+    }
+  },
+  "inscription": {
+    "tete": {
+      "surtitre": "Fiche d’inscription",
+      "titre": "Demande d’inscription",
+      "texte": "Quatre étapes, deux minutes. Peekaboo vous envoie ensuite le formulaire d’inscription, qui valide la place.",
+      "info": "Inscription possible en cours d’année",
+      "tampon": "Peekaboo · Nyon",
+      "alt": "Pelote à épingles et bobine de fil rouge sur un coton bleu marqué à la craie",
+      "tamponTour": "PEEKABOO · NYON · ATELIERS DE COUTURE · ",
+      "action": "Commencer la demande"
+    },
+    "form": {
+      "e1": "Activité",
+      "e1q": "Quelle activité vous tente ?",
+      "e2": "Participant",
+      "e2q": "Qui vient coudre ?",
+      "e3": "Coordonnées",
+      "e3q": "Comment vous joindre ?",
+      "e4": "Récapitulatif",
+      "e4q": "Tout est juste ?",
+      "activite": "Activité",
+      "autre": "Autre demande",
+      "autreTexte": "Une question, un atelier, un anniversaire ?",
+      "prenomParticipant": "Prénom du participant",
+      "age": "Âge du participant",
+      "ageAide": "Pour proposer le bon cours.",
+      "niveau": "Expérience en couture",
+      "n1": "Première fois",
+      "n2": "A déjà un peu cousu",
+      "n3": "Coud régulièrement",
+      "prenom": "Votre prénom",
+      "nom": "Votre nom",
+      "email": "E-mail",
+      "tel": "Téléphone",
+      "message": "Message (facultatif)",
+      "accord": "J’ai lu les conditions d’inscription : paiement dans les 10 jours, tissu non compris, responsabilité civile obligatoire.",
+      "precedent": "Retour",
+      "suivant": "Continuer",
+      "envoyer": "Envoyer la demande",
+      "fin": "Merci !",
+      "recommencer": "Nouvelle demande",
+      "yogaTexte": "Avec Heidi, tarifs à compléter"
+    },
+    "rappel": {
+      "titre": "À savoir",
+      "r1": "Cette demande n’est pas encore l’inscription : elle est validée à réception du formulaire envoyé par Peekaboo, et engage pour l’activité choisie (stage, semestre ou année).",
+      "r2": "Paiement dans les 10 jours après l’inscription.",
+      "r3": "Tissu non compris : −20 % chez ALJA Nyon.",
+      "lien": "Toutes les conditions",
+      "r4": "Pas de remboursement en cas d’absence, sauf certificat médical.",
+      "r5": "Responsabilité civile obligatoire.",
+      "alt": "Bobines de fil alignées sur du lin"
+    }
+  },
+  "contact": {
+    "tete": {
+      "surtitre": "Contact",
+      "titre": "Appelez l’atelier",
+      "texte": "Ou écrivez à",
+      "alt": "Fenêtre d’un atelier de couture",
+      "info": "Ch. de Crève-Cœur 3, 1260 Nyon"
+    },
+    "infos": {
+      "titre": "Venir à l’atelier",
+      "repere": "À côté de la bibliothèque des jeunes",
+      "acces": "Accès en transports publics et stationnement : à compléter.",
+      "horaires": "Horaires d’ouverture : sur rendez-vous et selon le planning des cours (à compléter).",
+      "plan": "Plan schématique, à remplacer par une carte définitive."
+    },
+    "form": {
+      "titre": "Demande d’informations",
+      "prenom": "Prénom",
+      "nom": "Nom de famille",
+      "email": "E-mail",
+      "tel": "Téléphone (facultatif)",
+      "sujet": "Je voudrais des infos sur…",
+      "s1": "Les cours enfants et ados",
+      "s2": "Les cours adultes",
+      "s3": "Le stage click!",
+      "s4": "Les ateliers du weekend",
+      "s5": "Le sur-mesure MADEBYMELODY",
+      "s6": "Autre chose",
+      "message": "Message",
+      "envoyer": "Envoyer la demande"
+    },
+    "reseaux": {
+      "titre": "Suivre l’atelier",
+      "yoga": "Yoga avec Heidi : 078 214 54 74"
+    }
+  },
+  "introuvable": {
+    "titre": "Un point a sauté",
+    "texte": "Cette page n’existe pas ou plus. On reprend le fil ?",
+    "retour": "Revenir à l’accueil",
+    "alt": "Couture interrompue, un fil rouge qui pend"
+  }
+}

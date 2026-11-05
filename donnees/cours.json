@@ -1,0 +1,86 @@
+[
+  {
+    "cle": "enfants-ados",
+    "etiquette": {
+      "fr": "Enfants et ados"
+    },
+    "titre": {
+      "fr": "Couture et stylisme"
+    },
+    "prix": "1100.–",
+    "unite": {
+      "fr": "par an"
+    },
+    "texte": {
+      "fr": "Toute l’année scolaire. Le cours suit les envies du jour et l’autonomie de chaque élève : chacun repart avec la pièce qu’il a imaginée."
+    },
+    "horaire": {
+      "fr": "Lundi 18 h – 19 h, mardi 17 h – 18 h, jeudi 17 h – 18 h et 18 h – 19 h (cours ado)"
+    },
+    "image": "grok/accueil-enfants-ados",
+    "teinte": "fil"
+  },
+  {
+    "cle": "adultes",
+    "etiquette": {
+      "fr": "Adultes"
+    },
+    "titre": {
+      "fr": "Couture adultes"
+    },
+    "prix": "175.–",
+    "unite": {
+      "fr": "les 5 cours"
+    },
+    "texte": {
+      "fr": "Apprendre ou reprendre la couture avec une styliste : le cours s’adapte à votre projet et à votre autonomie."
+    },
+    "horaire": {
+      "fr": "Lundi 9 h 30 – 10 h 30, mardi 16 h – 17 h"
+    },
+    "image": "grok/accueil-adultes",
+    "teinte": "craie"
+  },
+  {
+    "cle": "stage-click",
+    "etiquette": {
+      "fr": "Vacances"
+    },
+    "titre": {
+      "fr": "Stage « click! »"
+    },
+    "prix": "380.–",
+    "unite": {
+      "fr": "la semaine, tissu non compris"
+    },
+    "texte": {
+      "fr": "Une semaine créative, du croquis à la réalisation : vêtement, accessoire ou bijou, selon le projet de chaque participant."
+    },
+    "horaire": {
+      "fr": "9 h 15 – 11 h 45"
+    },
+    "image": "grok/accueil-stage-click",
+    "teinte": "kraft"
+  },
+  {
+    "cle": "weekend",
+    "etiquette": {
+      "fr": "Weekend"
+    },
+    "titre": {
+      "fr": "Ateliers du weekend"
+    },
+    "prix": "",
+    "unite": {
+      "fr": "Tarif à compléter"
+    },
+    "texte": {
+      "fr": "Des ateliers ponctuels le weekend : atelier bois, atelier de Noël… L’atelier bois est ouvert dès 7 ans."
+    },
+    "horaire": {
+      "fr": "16 h – 17 h 30, dates dans l’agenda"
+    },
+    "image": "grok/cours-weekend",
+    "teinte": "sauge"
+  }
+]

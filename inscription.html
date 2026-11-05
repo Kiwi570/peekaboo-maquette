@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="fr" data-v="1" data-curseur>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Demande d’inscription : Peekaboo, Nyon</title>
+<meta name="description" content="Demandez votre inscription à un cours, un stage ou un atelier Peekaboo : Peekaboo vous envoie ensuite le formulaire d’inscription.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://peekaboo-maquette.vercel.app/inscription">
+<style>:root{--fond:#f4ecdd;--texte:#1f1b16;--voile-fond:#1f3170;--ouverture-fond:#b2261f;--menu-fond:#f4ecdd}:root { --entete-h: 72px; --barres-h: 0px; } html { background: var(--fond); color: var(--texte); scrollbar-gutter: stable; } body { margin: 0; background: var(--fond); } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime] { opacity: 0; } html.js:not(.calme):not(.secours):not([data-arrivee="retour"]) [data-anime].vu { opacity: 1; } [data-voile] { position: fixed; inset: 0; z-index: 900; background: var(--voile-fond); transform: translateY(100%); visibility: hidden; pointer-events: none; } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) [data-voile] { transform: none; visibility: visible; } html.calme [data-voile], html.secours [data-voile] { visibility: hidden !important; } .ouverture-panneau { position: fixed; inset: 0; z-index: 850; display: none; place-content: center; justify-items: center; background: var(--ouverture-fond, var(--voile-fond)); color: var(--fond); text-align: center; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) .ouverture-panneau { display: grid; } html.defilement-bloque, html.defilement-bloque body, html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie), html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) body, html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours), html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) body { overflow: hidden; } html.js[data-arrivee="intro"]:not(.calme):not(.secours):not(.intro-finie) { background-color: var(--ouverture-fond, var(--voile-fond)); } html[data-arrivee="voile"]:not(.voile-leve):not(.calme):not(.secours) { background-color: var(--voile-fond); }</style>
+<script>(function () {
+var d = document.documentElement, ss = null, ls = null;
+try { ss = window.sessionStorage; ls = window.localStorage; } catch (e) {}
+d.classList.add('js');
+var calme = false;
+try { calme = !!ls && ls.getItem('socle:calme') === 'oui'; } catch (e) {}
+if (!calme && window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) calme = true;
+if (calme) d.classList.add('calme');
+var nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+var type = nav ? nav.type : 'navigate';
+var depart = null;
+try { depart = JSON.parse(ss.getItem('socle:depart') || 'null'); ss.removeItem('socle:depart'); } catch (e) {}
+if (depart && !(Date.now() - depart.t < 15000)) depart = null;
+var retourSection = false;
+try { retourSection = !!ss.getItem('socle:calme-retour'); } catch (e) {}
+var mode = type === 'back_forward' || retourSection ? 'retour' : type === 'reload' ? 'intro' : depart ? 'voile' : 'intro';
+d.setAttribute('data-arrivee', mode);
+if (mode === 'voile' && depart.couleur) d.style.setProperty('--voile-fond', depart.couleur);
+if (type === 'reload' && 'scrollRestoration' in history) {
+if (!retourSection) history.scrollRestoration = 'manual';
+}
+try {
+var choisie = ls && ls.getItem('socle:langue');
+var langue = (d.lang || '').slice(0, 2);
+if (choisie && choisie !== langue && type === 'navigate' && !depart) {
+var alt = document.querySelector('link[rel="alternate"][hreflang="' + choisie + '"]');
+if (alt) location.replace(new URL(alt.href).pathname + location.search + location.hash);
+}
+} catch (e) {}
+setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('secours'); }, 2000);
+})();</script>
+<link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/socle.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
+<link rel="stylesheet" href="/assets/css/site.css?v=1">
+<link rel="modulepreload" href="/assets/js/site.js?v=1">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<script src="/assets/vendor/gsap.min.js" defer></script>
+<script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="/assets/vendor/SplitText.min.js" defer></script>
+<script type="module" src="/assets/js/site.js?v=1"></script>
+<meta name="theme-color" content="#f4ecdd">
+<link rel="icon" href="/assets/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Peekaboo">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:title" content="Demande d’inscription : Peekaboo, Nyon">
+<meta property="og:description" content="Demandez votre inscription à un cours, un stage ou un atelier Peekaboo : Peekaboo vous envoie ensuite le formulaire d’inscription.">
+<meta property="og:url" content="https://peekaboo-maquette.vercel.app/inscription">
+<meta property="og:image" content="https://peekaboo-maquette.vercel.app/assets/partage/inscription-fr.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Demande d’inscription chez Peekaboo">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
+</head>
+<body id="haut">
+<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Inscription</span></div></div>
+<div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
+  <div class="pan-tissu" data-effet="coucou">
+    <span class="pan-couture"></span>
+    <span class="pan-yeux"><span class="pan-oeil"></span><span class="pan-oeil"></span></span>
+    <span class="pan-etiquette"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span><small>Ateliers d’arts plastiques pour designers en herbe</small></span>
+    <span class="pan-coin"></span>
+  </div>
+</div>
+<a class="evitement" href="#contenu">Aller au contenu</a>
+<header data-entete>
+  <div class="entete-rangee">
+    <a class="entete-logo" href="/" data-libelle="Accueil">
+      <img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span>Peekaboo</span>
+    </a>
+    <nav data-nav aria-label="Navigation principale">
+      <ul><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription" aria-current="page">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div class="entete-actions">
+      <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+      <button type="button" data-menu-bouton aria-controls="menu" aria-expanded="false" data-libelle-ouvrir="Menu" data-libelle-fermer="Fermer"><span data-libelle-bouton>Menu</span></button>
+    </div>
+  </div>
+</header>
+<div id="menu" data-menu role="dialog" aria-modal="true" aria-label="Menu">
+  <ul><li style="--i:0"><a href="/" class="menu-lien" data-libelle="Accueil">Accueil</a></li><li style="--i:1"><a href="/cours" class="menu-lien" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li style="--i:2"><a href="/melody" class="menu-lien" data-libelle="Melody">Melody</a></li><li style="--i:3"><a href="/inscription" class="menu-lien" data-libelle="Inscription" aria-current="page">Inscription</a></li><li style="--i:4"><a href="/contact" class="menu-lien" data-libelle="Contact">Contact</a></li></ul>
+  <p><a class="bouton" href="tel:+41763969174">Appeler 076 396 91 74</a></p>
+  <p><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></p>
+</div>
+<main id="contenu" tabindex="-1" data-page="inscription">
+<section class="page-tete tete-inscription" id="debut">
+  <div class="cadre tete-inscription-grille">
+    <div class="fiche-tete">
+      <p class="surtitre" data-anime="gsap">Fiche d’inscription</p>
+      <h1 data-anime="gsap">Demande d’inscription</h1>
+      <p class="tete-intro" data-anime="gsap">Quatre étapes, deux minutes. Peekaboo vous envoie ensuite le formulaire d’inscription, qui valide la place.</p>
+      <p class="tete-actions-inscription" data-anime="gsap"><a class="bouton bouton--clair" href="#formulaire" data-sans-transition data-action-principale>Commencer la demande</a> <span class="hero-info" data-info-cle>Inscription possible en cours d’année</span></p>
+    </div>
+    <div class="tampon-cadre" aria-hidden="true" data-effet="tampon" data-visuel>
+      <svg class="tampon" viewBox="0 0 160 160" data-anime="gsap"><defs><path id="tampon-cercle" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
+        <circle cx="80" cy="80" r="74" fill="none" stroke="currentColor" stroke-width="3"/><circle cx="80" cy="80" r="44" fill="none" stroke="currentColor" stroke-width="1.5"/>
+        <text class="tampon-texte"><textPath href="#tampon-cercle" startOffset="0">PEEKABOO · NYON · ATELIERS DE COUTURE · </textPath></text>
+        <image href="/assets/images/logo-clair-240.webp" x="50" y="53" width="60" height="55"/></svg>
+    </div>
+    <figure class="media tete-inscription-media" data-grok style="--cadrage:50% 50%">
+  <picture><source media="(max-width: 760px) and (orientation: portrait)" srcset="/assets/images/grok/inscription-ouverture-mobile-640.webp 640w, /assets/images/grok/inscription-ouverture-mobile-1080.webp 1080w" sizes="(max-width: 760px) 92vw, 30vw">
+    <img src="/assets/images/grok/inscription-ouverture-1280.webp" srcset="/assets/images/grok/inscription-ouverture-640.webp 640w, /assets/images/grok/inscription-ouverture-1280.webp 1280w" sizes="(max-width: 760px) 92vw, 30vw" alt="Pelote à épingles et bobine de fil rouge sur un coton bleu marqué à la craie" width="1280" height="854" fetchpriority="high" loading="eager" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+  </div>
+</section>
+<section class="fpe" id="formulaire" data-module="formulaire-par-etapes">
+  <div class="cadre fpe-grille">
+    <div class="fpe__carton">
+      <form class="fpe__form" novalidate data-anime>
+        <fieldset class="fpe__etape" data-etape="Activité">
+          <legend class="fpe__legende"><h2 class="fpe__titre">Quelle activité vous tente ?</h2></legend>
+          <div class="fpe__groupe fpe__cartes" data-libelle="Activité">
+            <label class="fpe__carte"><input type="radio" name="activite" value="enfants-ados" required data-superpose><span class="fpe__carte-texte fpe__carte-onglet">Enfants et ados</span><span class="fpe__carte-titre">Couture et stylisme</span><span class="fpe__carte-texte" data-prix>CHF 1100.– par an</span></label><label class="fpe__carte"><input type="radio" name="activite" value="adultes" required data-superpose><span class="fpe__carte-texte fpe__carte-onglet">Adultes</span><span class="fpe__carte-titre">Couture adultes</span><span class="fpe__carte-texte" data-prix>CHF 175.– les 5 cours</span></label><label class="fpe__carte"><input type="radio" name="activite" value="stage-click" required data-superpose><span class="fpe__carte-texte fpe__carte-onglet">Vacances</span><span class="fpe__carte-titre">Stage « click ! »</span><span class="fpe__carte-texte" data-prix>CHF 380.– la semaine, tissu non compris</span></label><label class="fpe__carte"><input type="radio" name="activite" value="weekend" required data-superpose><span class="fpe__carte-texte fpe__carte-onglet">Weekend</span><span class="fpe__carte-titre">Ateliers du weekend</span><span class="fpe__carte-texte" data-prix>Tarif à compléter</span></label><label class="fpe__carte"><input type="radio" name="activite" value="yoga" required data-superpose><span class="fpe__carte-texte fpe__carte-onglet">Yoga</span><span class="fpe__carte-titre">Yoga avec Heidi</span><span class="fpe__carte-texte" data-prix>Avec Heidi, tarifs à compléter</span></label><label class="fpe__carte"><input type="radio" name="activite" value="autre" required data-superpose><span class="fpe__carte-titre">Autre demande</span><span class="fpe__carte-texte" data-prix>Une question, un atelier, un anniversaire ?</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="fpe__etape" data-etape="Participant">
+          <legend class="fpe__legende"><h2 class="fpe__titre">Qui vient coudre ?</h2></legend>
+          <div class="fpe__champ"><label for="i-participant">Prénom du participant</label><input id="i-participant" name="participant" autocomplete="off" required></div>
+          <div class="fpe__champ"><label for="i-age">Âge du participant</label><input id="i-age" name="age" type="number" min="4" max="99" inputmode="numeric" aria-describedby="i-age-aide" required><p class="fpe__aide" id="i-age-aide">Pour proposer le bon cours.</p></div>
+          <div class="fpe__groupe fpe__puces" data-libelle="Expérience en couture" role="radiogroup" aria-label="Expérience en couture">
+            <label class="fpe__puce"><input type="radio" name="niveau" value="n1" required data-superpose><span>Première fois</span></label><label class="fpe__puce"><input type="radio" name="niveau" value="n2" data-superpose><span>A déjà un peu cousu</span></label><label class="fpe__puce"><input type="radio" name="niveau" value="n3" data-superpose><span>Coud régulièrement</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="fpe__etape" data-etape="Coordonnées">
+          <legend class="fpe__legende"><h2 class="fpe__titre">Comment vous joindre ?</h2></legend>
+          <div class="fpe__ligne">
+            <div class="fpe__champ"><label for="i-prenom">Votre prénom</label><input id="i-prenom" name="prenom" autocomplete="given-name" required></div>
+            <div class="fpe__champ"><label for="i-nom">Votre nom</label><input id="i-nom" name="nom" autocomplete="family-name" required></div>
+          </div>
+          <div class="fpe__ligne">
+            <div class="fpe__champ"><label for="i-email">E-mail</label><input id="i-email" name="email" type="email" autocomplete="email" required></div>
+            <div class="fpe__champ"><label for="i-tel">Téléphone</label><input id="i-tel" name="tel" type="tel" autocomplete="tel" pattern="[0-9 +().-]{9,}" required></div>
+          </div>
+          <div class="fpe__champ"><label for="i-message">Message (facultatif)</label><textarea id="i-message" name="message" rows="3"></textarea></div>
+        </fieldset>
+        <fieldset class="fpe__etape" data-etape="Récapitulatif" data-recap>
+          <legend class="fpe__legende"><h2 class="fpe__titre">Tout est juste ?</h2></legend>
+          <div class="fpe__recap"></div>
+          <label class="fpe__case"><input type="checkbox" name="accord" value="oui" required data-hors-recap data-superpose><span>J’ai lu les conditions d’inscription : paiement dans les 10 jours, tissu non compris, responsabilité civile obligatoire.</span></label>
+          <p class="mention-donnees">Vos données servent seulement à répondre à votre demande (loi fédérale sur la protection des données). Politique de confidentialité : à compléter.</p>
+        </fieldset>
+        <div class="fpe__nav"><button type="button" class="bouton bouton--contour" data-precedent>Retour</button><button type="button" class="bouton" data-suivant>Continuer</button><button type="submit" class="bouton">Envoyer la demande</button></div>
+      </form>
+      <div class="fpe__fin" hidden tabindex="-1"><h2>Merci !</h2><p data-resume></p><p class="mention-simule">Demande simulée : rien n’a été envoyé. Sur le site final, elle partira vers Peekaboo.</p><button type="button" class="bouton bouton--contour" data-recommencer>Nouvelle demande</button></div>
+    </div>
+    <aside class="rappel" aria-labelledby="rappel-titre">
+      <figure class="media rappel-media" data-grok style="--cadrage:50% 50%">
+  <picture>
+    <img src="/assets/images/grok/cours-conditions-1280.webp" srcset="/assets/images/grok/cours-conditions-640.webp 640w, /assets/images/grok/cours-conditions-1280.webp 1280w" sizes="(max-width: 900px) 92vw, 320px" alt="Bobines de fil alignées sur du lin" width="1280" height="854" loading="lazy" decoding="async">
+  </picture><figcaption class="mention-ia">Illustration générée</figcaption>
+</figure>
+      <h2 id="rappel-titre" class="rappel-titre">À savoir</h2>
+      <ul data-anime="cascade"><li>Cette demande n’est pas encore l’inscription : elle est validée à réception du formulaire envoyé par Peekaboo, et engage pour l’activité choisie (stage, semestre ou année).</li><li>Paiement dans les 10 jours après l’inscription.</li><li>Tissu non compris : −20 % chez ALJA Nyon.</li><li>Pas de remboursement en cas d’absence, sauf certificat médical.</li><li>Responsabilité civile obligatoire.</li></ul>
+      <p><a href="/cours#conditions" class="lien-fleche" data-libelle="Cours &amp; stages">Toutes les conditions</a></p>
+      <p class="rappel-contact"><a href="tel:+41763969174">076 396 91 74</a><br><a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+    </aside>
+  </div>
+</section>
+</main>
+<footer class="pied" id="pied">
+  <div class="conteneur pied-grille">
+    <div>
+      <p><strong>Peekaboo</strong></p>
+      <p>Ch. de Crève-Cœur 3, 1260 Nyon<br>à côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a><br><a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></p>
+      <p class="pied-reseaux"><a href="https://www.instagram.com/peekaboonyon/" target="_blank" rel="noopener" aria-label="Instagram de Peekaboo (nouvel onglet)">Instagram</a> <a href="https://www.facebook.com/melody.nelson.94801/" target="_blank" rel="noopener" aria-label="Facebook de Peekaboo (nouvel onglet)">Facebook</a></p>
+    </div>
+    <nav aria-label="Sommaire">
+      <p><strong>Sommaire</strong></p>
+      <ul><li><a href="/" data-libelle="Accueil">Accueil</a></li><li><a href="/cours" data-libelle="Cours &amp; stages">Cours &amp; stages</a></li><li><a href="/melody" data-libelle="Melody">Melody</a></li><li><a href="/inscription" data-libelle="Inscription" aria-current="page">Inscription</a></li><li><a href="/contact" data-libelle="Contact">Contact</a></li></ul>
+    </nav>
+    <div>
+      <p><strong>Confort de lecture</strong></p>
+      <ul>
+        <li><button type="button" class="lien" data-calme-bascule data-libelle-reduire="Réduire les animations" data-libelle-retablir="Rétablir les animations" data-libelle-systeme="Animations réduites par le réglage de votre appareil"><span data-libelle-bouton>Réduire les animations</span></button></li>
+        <li><a href="#haut" data-sans-transition>Retour en haut</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="conteneur pied-bas"><p>Maquette : les informations marquées « à compléter » seront fournies par Peekaboo.</p><p>Mentions légales · Politique de confidentialité : à compléter</p><p>© Peekaboo</p></div>
+</footer>
+<div data-barre-fixe>
+  <a class="bouton bouton--contour" href="tel:+41763969174">Appeler</a>
+  <a class="bouton" href="/inscription" data-libelle="Inscription">S’inscrire</a>
+</div>
+</body>
+</html>
