@@ -6,13 +6,13 @@
       "langue": "fr",
       "fichier": "assets/partage/accueil-fr.jpg",
       "gabarit": "droite",
-      "image": "grok/accueil-tissu-1280.webp",
-      "poids": 60150,
+      "image": "grok/accueil-ouverture-1280.webp",
+      "poids": 41900,
       "sujet": {
         "x": 600,
         "y": 0,
         "l": 600,
-        "h": 403
+        "h": 597
       },
       "textes": [
         {
@@ -112,7 +112,7 @@
       "fichier": "assets/partage/inscription-fr.jpg",
       "gabarit": "droite",
       "image": "grok/inscription-ouverture-1280.webp",
-      "poids": 83503,
+      "poids": 83498,
       "sujet": {
         "x": 600,
         "y": 0,

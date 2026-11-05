@@ -1,10 +1,18 @@
 /* Accueil : intro « coucou ! » (pan de lin qui se soulève, patron tracé puis découpé), étiquettes cousues,
    esprit de l'atelier à la craie, du croquis au vêtement épinglé, Melody, tringle MADEBYMELODY, infos pratiques. */
 import { html, brut } from '../../outils/gabarit.mjs';
-import { PATRON, ciseaux, croquis, bouton, aiguille, plan } from '../gabarits/dessins.mjs';
+import { PATRON, PATRON_D, CISEAUX_LAMES, ciseaux, croquis, bouton, aiguille, plan } from '../gabarits/dessins.mjs';
 
 export const page = { cle: 'accueil', fichier: 'index', imagePartage: 'grok/accueil-ouverture-1280.webp' };
 
+/* Outils qui agissent sur les photos des étapes (repère 300 × 400, celui du cadre 3:4). */
+const ZIGZAG = Array.from({ length: 25 }, (_, i) => `${(i * 12.5).toFixed(1)},${i % 2 ? 12 : 2}`).join(' ');
+const OUTILS = {
+  patron: brut(`<svg class="outil outil-patron" viewBox="0 0 300 400" aria-hidden="true" data-superpose><g transform="translate(62 66) scale(.44)"><path class="outil-trait" pathLength="1" d="${PATRON_D}"/></g><path class="outil-cran" d="M88 238 l10 3 M212 241 l10 -3 M148 291 v10"/></svg>`),
+  coupe: brut(`<svg class="outil outil-coupe" viewBox="0 0 300 400" aria-hidden="true" data-superpose><path class="outil-craie" pathLength="1" d="M28 338 C 96 300, 176 236, 274 130"/><g class="outil-ciseaux">${CISEAUX_LAMES}</g></svg>`),
+  couture: brut(`<svg class="outil outil-couture" viewBox="0 0 300 400" aria-hidden="true" data-superpose><defs><mask id="couture-masque" maskUnits="userSpaceOnUse" x="0" y="0" width="300" height="400"><path class="outil-masque" pathLength="1" d="M18 246 C 84 206, 170 286, 284 226" fill="none" stroke="#fff" stroke-width="14"/></mask></defs><path class="outil-points" d="M18 246 C 84 206, 170 286, 284 226" mask="url(#couture-masque)"/><g class="outil-aiguille"><path d="M-30 -1.6 L20 -1.2 L28 0 L20 1.2 L-30 1.6 Q-34 0 -30 -1.6 Z" fill="#9a9ca2"/><ellipse cx="-25" cy="0" rx="3.4" ry=".9" fill="#f4ecdd"/></g></svg>`),
+  essayage: brut(`<svg class="outil outil-essayage" viewBox="0 0 300 400" aria-hidden="true" data-superpose>${[[128, 118, -30], [176, 132, 20], [112, 214, -12], [190, 232, 28], [150, 298, -6]].map(([x, y, r]) => `<g class="outil-epingle" transform="translate(${x} ${y}) rotate(${r})"><g class="epingle-corps"><line x1="0" y1="0" x2="0" y2="34"/><circle r="6.5"/></g></g>`).join('')}</svg>`),
+};
 const lettres = (mot) => [...mot].map((l, i) => html`<span class="lettre" style="--i:${i}">${l}</span>`);
 
 export const etiquette = (c, x, { id = '' } = {}) => html`<li class="etiquette etiquette--${x.teinte}"${id ? brut(` id="${id}"`) : ''} data-effet="etiquettes-cousues">
@@ -43,7 +51,7 @@ export default (c) => html`
     </p>
   </div>
   <div class="hero-patron">
-    ${c.media({ nom: 'grok/cours-weekend', alt: c.s('accueil.hero.alt'), cadrage: '50% 52%', priorite: true, classe: 'hero-media', sizes: '(max-width: 760px) 80vw, 40vw' })}
+    ${c.media({ nom: 'grok/cours-weekend', alt: c.s('accueil.hero.alt'), cadrage: '50% 52%', priorite: true, classe: 'hero-media', sizes: '(max-width: 760px) 80vw, 40vw', attrs: 'data-effet="tissu-vivant"' })}
     <svg class="patron-svg" viewBox="0 0 400 520" preserveAspectRatio="none" aria-hidden="true" data-effet="patron-ciseaux">
       <defs>
         <pattern id="patron-grille" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#2747a8" stroke-opacity=".16" stroke-width=".8"/></pattern>
@@ -75,7 +83,7 @@ export default (c) => html`
   <div class="cadre">
     <div class="tete-section">
       <p class="surtitre">${c.t('accueil.cours.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('accueil.cours.titre')}</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>${c.t('accueil.cours.titre')}</h2>
       <p data-anime>${c.t('accueil.cours.texte')}</p>
     </div>
     <ul class="etiquettes">${c.donnees.cours.filter((x) => x.cle !== 'weekend').map((x) => etiquette(c, x))}</ul>
@@ -87,7 +95,7 @@ export default (c) => html`
   <div class="cadre esprit-grille">
     <div class="esprit-texte">
       <p class="surtitre">${c.t('accueil.esprit.surtitre')}</p>
-      <h2 class="esprit-phrase" data-anime>${['m1', 'm2', 'm3'].map((m, i) => html`<span class="craie-mot">${c.t('accueil.esprit.' + m)}${i < 2 ? ',' : ''}<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="${brut(['M4 14 C 50 6, 120 20, 196 9', 'M4 10 C 60 20, 130 4, 196 14', 'M4 13 C 70 5, 110 21, 196 8'][i])}"/></svg></span> `)}</h2>
+      <h2 class="esprit-phrase titre-noue" data-anime data-fil-repere>${['m1', 'm2', 'm3'].map((m, i) => html`<span class="craie-mot">${c.t('accueil.esprit.' + m)}${i < 2 ? ',' : ''}<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="${brut(['M4 14 C 50 6, 120 20, 196 9', 'M4 10 C 60 20, 130 4, 196 14', 'M4 13 C 70 5, 110 21, 196 8'][i])}"/></svg></span> `)}</h2>
       <p data-anime>${c.t('accueil.esprit.texte')}</p>
     </div>
     <div class="esprit-visuel">
@@ -108,7 +116,7 @@ export default (c) => html`
     </div>
     <div class="etapes-scene" data-effet="croquis-vetement" tabindex="0" role="region" aria-label="${c.s('accueil.etapes.region')}">
       <div class="etapes-cadre etapes-cadre--croquis" data-visuel>${croquis()}<span class="etapes-legende craie" aria-hidden="true">${c.t('accueil.etapes.e1t')}</span></div>
-      ${['patron', 'coupe', 'couture', 'essayage'].map((n, i) => html`<div class="etapes-cadre">${c.media({ nom: `grok/accueil-etape-${n}`, alt: c.s(`accueil.etapes.e${i + 2}t`), classe: 'etapes-media', sizes: '(max-width: 760px) 70vw, 36vw' })}</div>`)}
+      ${['patron', 'coupe', 'couture', 'essayage'].map((n, i) => html`<div class="etapes-cadre etapes-cadre--${n}">${c.media({ nom: `grok/accueil-etape-${n}`, alt: c.s(`accueil.etapes.e${i + 2}t`), classe: 'etapes-media', sizes: '(max-width: 760px) 70vw, 36vw' })}${OUTILS[n]}<svg class="ourlet" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><polyline points="${brut(ZIGZAG)}"/></svg></div>`)}
     </div>
   </div>
 </section>
@@ -117,7 +125,7 @@ export default (c) => html`
   <div class="cadre melody-grille">
     <div class="melody-texte">
       <p class="surtitre">${c.t('accueil.melody.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('accueil.melody.titre')}</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>${c.t('accueil.melody.titre')}</h2>
       <p data-anime>${c.t('accueil.melody.texte')}</p>
       <blockquote class="citation craie-citation" data-anime><p>${c.t('accueil.melody.citation')}</p></blockquote>
       <p class="melody-langues" data-anime>${c.t('accueil.melody.langues')}</p>
@@ -131,7 +139,7 @@ export default (c) => html`
   <div class="cadre marque-grille">
     <div class="marque-texte">
       <p class="surtitre"><img class="marque-logo" src="/assets/images/madebymelody-480.webp" alt="${c.t('accueil.marque.surtitre')}" width="480" height="72"></p>
-      <h2 data-anime="lignes">${c.t('accueil.marque.titre')}</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>${c.t('accueil.marque.titre')}</h2>
       <p data-anime>${c.t('accueil.marque.texte')}</p>
       <p class="marque-actions" data-anime>
         <a class="bouton" href="${c.site.contact.boutique}" target="_blank" rel="noopener" aria-label="${c.s('accueil.marque.boutique')}">${c.t('accueil.marque.boutiqueCourt')}</a>
@@ -148,7 +156,7 @@ export default (c) => html`
     <div class="pratique-carte">${plan(c)}<p class="pratique-legende">${c.t('accueil.pratique.plan')}</p></div>
     <div class="pratique-texte">
       <p class="surtitre">${c.t('accueil.pratique.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('accueil.pratique.titre')}</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>${c.t('accueil.pratique.titre')}</h2>
       <address class="pratique-adresse" data-anime><strong>${c.t('accueil.pratique.lieu')}</strong><br>${c.site.contact.adresse}<br>${c.t('accueil.pratique.repere')}<br><a href="tel:${c.site.contact.telephoneLien}">${c.site.contact.telephone}</a> · <a href="mailto:${c.site.contact.email}">${c.site.contact.email}</a></address>
       <ul class="conditions" data-anime="cascade">${[1, 2, 3].map((n) => html`<li><strong>${c.t(`accueil.pratique.c${n}t`)}</strong> ${c.t(`accueil.pratique.c${n}`)}</li>`)}</ul>
       <p data-anime>${c.lien('cours', { ancre: 'conditions', classe: 'lien-fleche', texte: c.t('accueil.pratique.conditions') })}</p>
@@ -160,7 +168,7 @@ export default (c) => html`
   <div class="cadre fin-grille">
     ${c.media({ nom: 'grok/accueil-atelier', alt: c.s('accueil.fin.alt'), cadrage: '30% 55%', classe: 'fin-media', sizes: '(max-width: 760px) 92vw, 46vw', attrs: 'data-fx="parallaxe"' })}
     <div>
-      <h2 data-anime="lignes">${c.t('accueil.fin.titre')}</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>${c.t('accueil.fin.titre')}</h2>
       <p data-anime>${c.t('accueil.fin.texte')}</p>
       <p class="fin-actions" data-anime>
         ${c.lien('inscription', { classe: 'bouton', texte: c.t('accueil.fin.action'), attrs: 'data-survol="magnetique"' })}

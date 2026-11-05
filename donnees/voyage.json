@@ -1,0 +1,7 @@
+[
+  { "lieu": "Nyon", "x": 51, "y": 27.4, "titre": { "fr": "Le départ" }, "texte": { "fr": "Les arts visuels au gymnase, puis l’envie de vivre un rêve : devenir styliste de mode." } },
+  { "lieu": "Barcelone", "x": 29.4, "y": 64, "titre": { "fr": "Premier envol" }, "texte": { "fr": "Le voyage commence à Barcelone." } },
+  { "lieu": "Paris", "x": 30.3, "y": 12, "titre": { "fr": "LISAA et les ateliers Galliano" }, "texte": { "fr": "L’école LISAA, et en 2009 un stage aux ateliers Galliano : les coulisses de « ce monde de magie (et de travail… !) »." } },
+  { "lieu": "Genève", "x": 46.5, "y": 33, "titre": { "fr": "La HEAD" }, "texte": { "fr": "La Haute école d’art et de design, à Genève." } },
+  { "lieu": "Nyon", "x": 56, "y": 23, "titre": { "fr": "Revenir" }, "texte": { "fr": "Costumière pour le théâtre et le court métrage, divers prix de mode (à préciser), la marque MADEBYMELODY en 2010 dans les ateliers Peekaboo, puis le diplôme d’enseignante à la HEPL." } }
+]

@@ -1,7 +1,6 @@
 /* Melody & MADEBYMELODY : ouverture centrée sur papier crème, polaroïd épinglé et croquis tracé autour (polaroid),
    parcours en boutonnières, enseignement, tringle des pièces, sur-mesure. */
 import { html } from '../../outils/gabarit.mjs';
-import { bouton } from '../gabarits/dessins.mjs';
 import { tringle } from './accueil.mjs';
 
 export const page = { cle: 'melody', fichier: 'melody', imagePartage: 'grok/melody-ouverture-1280.webp' };
@@ -27,17 +26,31 @@ export default (c) => html`
   </div>
 </section>
 
-<section class="bloc-page parcours" id="parcours">
-  <div class="cadre">
-    <div class="tete-section">
-      <p class="surtitre">${c.t('melody.parcours.surtitre')}</p>
-      <h2 data-anime="lignes">${c.t('melody.parcours.titre')}</h2>
-      <p data-anime>${c.t('melody.parcours.texte')}</p>
+<section class="cic parcours-voyage" id="parcours" data-module="carte-itineraire-collante" data-epingle aria-labelledby="voyage-titre">
+  <div class="cic__tete cadre">
+    <p class="surtitre">${c.t('melody.parcours.surtitre')}</p>
+    <h2 class="cic__titre" id="voyage-titre" data-anime="lignes">${c.t('melody.parcours.titre')}</h2>
+    <p class="cic__intro citation-courte">${c.t('melody.parcours.texte')}</p>
+  </div>
+  <div class="cic__corps cadre">
+    <ol class="cic__etapes">${c.donnees.voyage.map((v, i) => html`<li class="cic__etape" id="etape-${i + 1}" data-x="${v.x}" data-y="${v.y}">
+      <p class="cic__n"><b>0${i + 1}</b><span>${v.lieu}</span></p>
+      <div class="cic__texte"><h3>${v.titre}</h3><p>${v.texte}</p></div>
+    </li>`)}</ol>
+    <div class="cic__carte" data-tient>
+      <div class="cic__plan">
+        <svg class="cic__svg" viewBox="0 0 100 75" aria-hidden="true" data-effet="fil-rouge">
+          <defs><pattern id="voyage-grille" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M5 0H0V5" fill="none" stroke="#2747a8" stroke-opacity=".12" stroke-width=".2"/></pattern></defs>
+          <rect class="cic__fond" width="100" height="75"/>
+          <rect width="100" height="75" fill="url(#voyage-grille)"/>
+          <g class="voyage-meridiens"><path d="M20 0 V75 M45 0 V75 M70 0 V75 M0 20 H100 M0 45 H100"/></g>
+          <path class="voyage-lac" d="M47.2 31.6 C 48.6 29.4, 51.6 27.6, 55 26.6 C 57.6 25.9, 60.4 26.4, 61.2 27.8 C 59.4 28.2, 57.4 28.4, 55.4 29.2 C 52.8 30.2, 50.2 31.6, 48.4 32.8 Z"/>
+        </svg>
+        <ul class="voyage-villes" aria-hidden="true">${c.donnees.voyage.filter((v, i, t) => t.findIndex((w) => w.lieu === v.lieu) === i).map((v) => html`<li class="voyage-ville" style="left:${v.x + 3}%;top:${((v.y + (v.lieu === 'Genève' ? 6 : -4)) / 75 * 100).toFixed(1)}%">${v.lieu}</li>`)}</ul>
+        <p class="cic__compteur">${c.t('melody.parcours.etape')} <b data-cic-n>1</b> / <span data-cic-total>5</span></p>
+        <p class="cic__legende" data-tient>${c.t('melody.parcours.legende')}</p>
+      </div>
     </div>
-    <ol class="frise" data-visuel>
-      <svg class="frise-fil" viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="fil-rouge"><path data-fx-trait d="M5 0 C 9 20, 1 30, 5 50 S 9 80, 5 100" fill="none" stroke="#b2261f" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
-      ${c.donnees.parcours.map((p, i) => html`<li class="frise-etape${i % 2 ? ' frise-etape--droite' : ''}" data-anime>${bouton()}<span class="boutonniere-repere">${p.repere}</span><strong>${p.titre}</strong><span>${p.texte}</span></li>`)}
-    </ol>
   </div>
 </section>
 

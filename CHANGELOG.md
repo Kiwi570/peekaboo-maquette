@@ -1,5 +1,19 @@
 # Journal des versions
 
+## v2 — 5 novembre 2026
+
+Plus de vie sur chaque page : huit effets nouveaux, choisis sur la liste proposée.
+
+- **Partout** : transition « fermeture éclair » entre les pages (deux pans de tissu, leur tirette et l'étiquette de la page d'arrivée), à la place du voile bleu uni.
+- **Accueil** : tissu vivant en WebGL dans le patron (il ondule tout seul et sous le curseur ou le doigt) ; « Une idée, cinq étapes » cousue (patron tracé à la craie sur la photo, ciseaux qui coupent le long d'un trait, aiguille qui pique une couture rouge, épingles qui se plantent ; photos qui se succèdent derrière un ourlet en zigzag).
+- **Cours & stages** : fiches qui se retournent (recto : image, titre, prix ; verso : horaires, âge à compléter, tarif, tissu, bouton d'inscription).
+- **Melody** : le parcours devient une carte du voyage (module de la bibliothèque) : le fil part de Nyon, passe par Barcelone, Paris et Genève, puis revient, étape par étape au défilement ; carte collante sur téléphone.
+- **Inscription** : le prénom du participant se brode en direct sur une étiquette tissée « fait main à l'atelier par… ».
+- **Contact** : le numéro 076 396 91 74 se brode en point de croix, colonne par colonne.
+- Fil rouge : même épaisseur qu'en v1 et sans tracé fantôme, pour garder un défilement fluide (moins de 3 % d'images lentes sur un processeur ralenti) ; les titres sont noués à son passage.
+- Images de partage refaites (accueil : table de coupe et patron).
+- Numéro de version des fichiers passé à 2 dans les pages et tous les scripts (le navigateur recharge les nouveaux styles et scripts) ; aucun fichier retiré, quatre ajoutés (`assets/js/v2.js`, le module de la carte, `donnees/voyage.json`).
+
 ## v1 — 5 novembre 2026
 
 La base de la maquette.

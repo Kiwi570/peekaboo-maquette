@@ -5,11 +5,12 @@ import { html, brut } from '../../outils/gabarit.mjs';
 export const PATRON_D = 'M100 30 L150 18 Q200 70 250 18 L300 30 Q296 118 332 150 L384 496 Q200 528 16 496 L68 150 Q104 118 100 30 Z';
 export const PATRON = brut(PATRON_D);
 
-export const ciseaux = () => brut(`<g class="ciseaux" transform="translate(352 478) rotate(-24)" aria-hidden="true">
+export const CISEAUX_LAMES = `
   <g class="lame lame-a"><path d="M-4 -2.2 L58 -5 Q62 -3.6 58 -1.6 L-4 2 Z"/><path class="branche" d="M-4 -1 L-14 -9"/><ellipse class="anneau" cx="-22" cy="-13" rx="10" ry="7" transform="rotate(-24 -22 -13)"/></g>
   <g class="lame lame-b"><path d="M-4 2.2 L58 5 Q62 3.6 58 1.6 L-4 -2 Z"/><path class="branche" d="M-4 1 L-14 9"/><ellipse class="anneau" cx="-22" cy="13" rx="10" ry="7" transform="rotate(24 -22 13)"/></g>
   <circle class="pivot" r="2.6"/>
-</g>`);
+`;
+export const ciseaux = () => brut(`<g class="ciseaux" transform="translate(352 478) rotate(-24)" aria-hidden="true">${CISEAUX_LAMES}</g>`);
 
 /* Croquis de mode au trait : une robe sur cintre, sans personnage ni visage. */
 export const croquis = (attrs = '') => brut(`<svg class="croquis" viewBox="0 0 300 400" aria-hidden="true" ${attrs}>

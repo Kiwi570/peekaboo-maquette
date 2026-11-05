@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-curseur>
+<html lang="fr" data-v="2" data-curseur>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,16 +41,17 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
-<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=2">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=2">
+<link rel="stylesheet" href="/assets/js/modules/carte-itineraire-collante/module.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#f4ecdd">
 <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -68,7 +69,12 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
 </head>
 <body id="haut">
-<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Melody</span></div></div>
+<div data-voile aria-hidden="true" data-effet="fermeture-eclair">
+  <span class="zip-pan zip-pan--g"></span><span class="zip-pan zip-pan--d"></span>
+  <span class="zip-joint"></span>
+  <span class="zip-tirette"><svg viewBox="0 0 40 90"><rect x="8" y="0" width="24" height="22" rx="4"/><path d="M12 22 h16 l-3 60 a5 5 0 0 1 -10 0 z"/><circle cx="20" cy="72" r="4.5"/></svg></span>
+  <div class="voile-contenu"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Melody</span></div>
+</div>
 <div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
   <div class="pan-tissu" data-effet="coucou">
     <span class="pan-couture"></span>
@@ -121,17 +127,43 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <p class="tete-actions" data-anime="gsap"><a href="/melody#marque" class="bouton" data-libelle="Melody" data-action-principale>Voir les pièces</a> <span class="hero-info" data-info-cle>MADEBYMELODY depuis 2010</span></p>
   </div>
 </section>
-<section class="bloc-page parcours" id="parcours">
-  <div class="cadre">
-    <div class="tete-section">
-      <p class="surtitre">Le parcours</p>
-      <h2 data-anime="lignes">Voyager, puis revenir</h2>
-      <p data-anime>« Mon parcours m’a fait voyager, puis revenir… »</p>
+<section class="cic parcours-voyage" id="parcours" data-module="carte-itineraire-collante" data-epingle aria-labelledby="voyage-titre">
+  <div class="cic__tete cadre">
+    <p class="surtitre">Le parcours</p>
+    <h2 class="cic__titre" id="voyage-titre" data-anime="lignes">Voyager, puis revenir</h2>
+    <p class="cic__intro citation-courte">« Mon parcours m’a fait voyager, puis revenir… »</p>
+  </div>
+  <div class="cic__corps cadre">
+    <ol class="cic__etapes"><li class="cic__etape" id="etape-1" data-x="51" data-y="27.4">
+      <p class="cic__n"><b>01</b><span>Nyon</span></p>
+      <div class="cic__texte"><h3>Le départ</h3><p>Les arts visuels au gymnase, puis l’envie de vivre un rêve : devenir styliste de mode.</p></div>
+    </li><li class="cic__etape" id="etape-2" data-x="29.4" data-y="64">
+      <p class="cic__n"><b>02</b><span>Barcelone</span></p>
+      <div class="cic__texte"><h3>Premier envol</h3><p>Le voyage commence à Barcelone.</p></div>
+    </li><li class="cic__etape" id="etape-3" data-x="30.3" data-y="12">
+      <p class="cic__n"><b>03</b><span>Paris</span></p>
+      <div class="cic__texte"><h3>LISAA et les ateliers Galliano</h3><p>L’école LISAA, et en 2009 un stage aux ateliers Galliano : les coulisses de « ce monde de magie (et de travail… !) ».</p></div>
+    </li><li class="cic__etape" id="etape-4" data-x="46.5" data-y="33">
+      <p class="cic__n"><b>04</b><span>Genève</span></p>
+      <div class="cic__texte"><h3>La HEAD</h3><p>La Haute école d’art et de design, à Genève.</p></div>
+    </li><li class="cic__etape" id="etape-5" data-x="56" data-y="23">
+      <p class="cic__n"><b>05</b><span>Nyon</span></p>
+      <div class="cic__texte"><h3>Revenir</h3><p>Costumière pour le théâtre et le court métrage, divers prix de mode (à préciser), la marque MADEBYMELODY en 2010 dans les ateliers Peekaboo, puis le diplôme d’enseignante à la HEPL.</p></div>
+    </li></ol>
+    <div class="cic__carte" data-tient>
+      <div class="cic__plan">
+        <svg class="cic__svg" viewBox="0 0 100 75" aria-hidden="true" data-effet="fil-rouge">
+          <defs><pattern id="voyage-grille" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M5 0H0V5" fill="none" stroke="#2747a8" stroke-opacity=".12" stroke-width=".2"/></pattern></defs>
+          <rect class="cic__fond" width="100" height="75"/>
+          <rect width="100" height="75" fill="url(#voyage-grille)"/>
+          <g class="voyage-meridiens"><path d="M20 0 V75 M45 0 V75 M70 0 V75 M0 20 H100 M0 45 H100"/></g>
+          <path class="voyage-lac" d="M47.2 31.6 C 48.6 29.4, 51.6 27.6, 55 26.6 C 57.6 25.9, 60.4 26.4, 61.2 27.8 C 59.4 28.2, 57.4 28.4, 55.4 29.2 C 52.8 30.2, 50.2 31.6, 48.4 32.8 Z"/>
+        </svg>
+        <ul class="voyage-villes" aria-hidden="true"><li class="voyage-ville" style="left:54%;top:31.2%">Nyon</li><li class="voyage-ville" style="left:32.4%;top:80.0%">Barcelone</li><li class="voyage-ville" style="left:33.3%;top:10.7%">Paris</li><li class="voyage-ville" style="left:49.5%;top:52.0%">Genève</li></ul>
+        <p class="cic__compteur">Étape <b data-cic-n>1</b> / <span data-cic-total>5</span></p>
+        <p class="cic__legende" data-tient>Carte illustrative, positions approximatives</p>
+      </div>
     </div>
-    <ol class="frise" data-visuel>
-      <svg class="frise-fil" viewBox="0 0 10 100" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="fil-rouge"><path data-fx-trait d="M5 0 C 9 20, 1 30, 5 50 S 9 80, 5 100" fill="none" stroke="#b2261f" stroke-width="2.4" vector-effect="non-scaling-stroke"/></svg>
-      <li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Gymnase</span><strong>Arts visuels</strong><span>Le premier pas vers le dessin et la création.</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Barcelone</span><strong>Le départ</strong><span>Premier envol, loin de Nyon.</span></li><li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Paris</span><strong>LISAA</strong><span>École d’arts appliqués, mode et stylisme.</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Genève</span><strong>HEAD</strong><span>Haute école d’art et de design.</span></li><li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">2009</span><strong>Ateliers Galliano</strong><span>Un stage dans les coulisses de la haute couture, « ce monde de magie (et de travail… !) ».</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">Scène</span><strong>Costumière</strong><span>Collaborations avec des professionnels du théâtre et du court métrage, et divers prix de mode (à préciser).</span></li><li class="frise-etape" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">2010</span><strong>MADEBYMELODY</strong><span>La marque naît à Nyon, dans les ateliers Peekaboo.</span></li><li class="frise-etape frise-etape--droite" data-anime><svg class="bouton-cousu " viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17"/><circle class="bord" cx="20" cy="20" r="13"/><circle class="trou" cx="15" cy="15" r="2.4"/><circle class="trou" cx="25" cy="15" r="2.4"/><circle class="trou" cx="15" cy="25" r="2.4"/><circle class="trou" cx="25" cy="25" r="2.4"/><path class="fil-x" d="M15 15 L15 25 M25 15 L25 25"/></svg><span class="boutonniere-repere">HEPL</span><strong>Enseignante</strong><span>Retour sur les bancs pour un diplôme d’enseignante : l’art et la pédagogie réunis.</span></li>
-    </ol>
   </div>
 </section>
 <section class="bloc-page enseigner" id="enseigner">

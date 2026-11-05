@@ -1,6 +1,21 @@
 {
   "echecs": [],
-  "aRegarder": [],
+  "aRegarder": [
+    {
+      "niveau": "regarder",
+      "controle": "effet qui ne bouge pas au défilement",
+      "detail": "trace : il ne bouge ni au défilement ni tout seul à cette taille (effet au survol, au clic, ou réservé à l'ordinateur ?) ; il ne compte pas comme effet de section",
+      "etape": "mouvement",
+      "page": "/",
+      "taille": "1366×768",
+      "mode": "normal",
+      "selecteur": "svg",
+      "lieux": [
+        "1366×768 normal",
+        "390×844 normal"
+      ]
+    }
+  ],
   "nonLances": [],
   "oks": {
     "vercel.json": 1,
@@ -8,12 +23,15 @@
     "robots.txt": 1,
     "numéro de version": 1,
     "langues": 1,
-    "mesures": 33,
-    "balayage": 2
+    "mesures": 11,
+    "balayage": 1,
+    "mouvement": 2,
+    "effets du plan": 16,
+    "souris immobile": 2
   },
   "infos": [
-    "Numéro de version des fichiers : ?v=1",
-    "Audit standard : étapes lourdes sur /, /cours.",
+    "Numéro de version des fichiers : ?v=2",
+    "Audit standard : étapes lourdes sur /.",
     "Accessibilité : axe-core 4.12.1 en plus des contrôles intégrés."
   ]
 }

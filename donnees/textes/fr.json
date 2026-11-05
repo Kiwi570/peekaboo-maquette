@@ -181,7 +181,15 @@
       "titre": "Choisir son cours",
       "texte": "Les cours se font en fonction des élèves, de leurs envies du jour et de leur autonomie.",
       "inscrire": "S’inscrire à ce cours",
-      "prixSur": "Tarif"
+      "prixSur": "Tarif",
+      "horaires": "Quand",
+      "age": "Âge",
+      "ageCompleter": "à compléter",
+      "tarif": "Tarif",
+      "tissu": "Tissu",
+      "tissuTexte": "Non compris, −20 % chez ALJA Nyon",
+      "voirDetail": "Retourner la fiche",
+      "voirRecto": "Revenir au recto"
     },
     "planning": {
       "surtitre": "Planning 2026-2027",
@@ -262,7 +270,9 @@
     "parcours": {
       "surtitre": "Le parcours",
       "titre": "Voyager, puis revenir",
-      "texte": "« Mon parcours m’a fait voyager, puis revenir… »"
+      "texte": "« Mon parcours m’a fait voyager, puis revenir… »",
+      "etape": "Étape",
+      "legende": "Carte illustrative, positions approximatives"
     },
     "enseigner": {
       "surtitre": "Enseigner",
@@ -339,7 +349,10 @@
       "envoyer": "Envoyer la demande",
       "fin": "Merci !",
       "recommencer": "Nouvelle demande",
-      "yogaTexte": "Avec Heidi, tarifs à compléter"
+      "yogaTexte": "Avec Heidi, tarifs à compléter",
+      "brodeHaut": "fait main à l’atelier par",
+      "brodeAttente": "votre prénom ici",
+      "brodeBas": "PEEKABOO · NYON"
     },
     "rappel": {
       "titre": "À savoir",

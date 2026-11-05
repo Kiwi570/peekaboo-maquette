@@ -9,7 +9,7 @@
 //   data-fil-repere                  sur un élément : perle posée sur le fil à sa hauteur, sans détour
 //   template[data-fil-objet]         dans la racine : SVG de l'objet au bout du fil (centré sur 0 0), sinon une tête ronde
 // Chaque élément accroché reçoit la classe est-atteinte quand le fil l'atteint.
-import { pret } from '../pret.js?v=1';
+import { pret } from '../pret.js?v=2';
 
 const NS = 'http://www.w3.org/2000/svg';
 const f = n => n.toFixed(1);

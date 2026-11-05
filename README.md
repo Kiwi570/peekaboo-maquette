@@ -1,4 +1,4 @@
-# Peekaboo — maquette v1
+# Peekaboo — maquette v2
 
 Maquette du futur site des ateliers Peekaboo (Nyon) : direction « Le patron ».
 Adresse prévue : https://peekaboo-maquette.vercel.app (noindex, pour ne pas concurrencer peekaboo-nyon.com).
@@ -7,12 +7,14 @@ Adresse prévue : https://peekaboo-maquette.vercel.app (noindex, pour ne pas con
 
 | Page | Ouverture | Effets propres |
 |---|---|---|
-| Accueil `/` | pan de lin rouge « coucou ! » qui se soulève, patron tracé puis découpé aux ciseaux sur la photo | coucou, patron-ciseaux, fil-rouge (module fil-conducteur), etiquettes-cousues, craie, croquis-vetement (section épinglée), tringle |
-| Cours & stages `/cours` | scindée sur kraft, mètre ruban qui porte les trois tarifs | metre-ruban, planning filtrable (adresse `?public=ados`), agenda à statuts automatiques |
-| Melody `/melody` | centrée sur papier, polaroïd épinglé, croquis tracé autour | polaroid, frise cousue, tringle |
-| Inscription `/inscription` | compacte sur bleu craie quadrillé, tampon Peekaboo | tampon, formulaire en 4 étapes (module formulaire-par-etapes), prérempli par `?activite=` |
-| Contact `/contact` | numéro en très grand, contour piqué point par point | numero-cousu, formulaire prérempli par `?sujet=` |
+| Accueil `/` | pan de lin rouge « coucou ! » qui se soulève, patron tracé puis découpé aux ciseaux sur la photo | coucou, patron-ciseaux, tissu-vivant (WebGL), fil-rouge (module fil-conducteur, titres noués), etiquettes-cousues, craie, croquis-vetement (étapes cousues, section épinglée), tringle |
+| Cours & stages `/cours` | scindée sur kraft, mètre ruban qui porte les trois tarifs | metre-ruban, fiche-retournee, planning filtrable (adresse `?public=ados`), agenda à statuts automatiques |
+| Melody `/melody` | centrée sur papier, polaroïd épinglé, croquis tracé autour | polaroid, carte du voyage (module carte-itineraire-collante), tringle |
+| Inscription `/inscription` | compacte sur bleu craie quadrillé, tampon Peekaboo | tampon, prenom-brode, formulaire en 4 étapes (module formulaire-par-etapes), prérempli par `?activite=` |
+| Contact `/contact` | numéro brodé en point de croix, contour piqué | point-de-croix, numero-cousu, formulaire prérempli par `?sujet=` |
 | 404 | « Un point a sauté » | — |
+
+Entre les pages : fermeture-eclair (le voile du socle habillé de deux pans et d'une tirette, `assets/js/v2.js`).
 
 ## Fabriquer
 

@@ -2,7 +2,8 @@
    les boucles et la bibliothèque d'effets ; ici, seulement ce qui est propre au client, chaque effet marqué data-effet :
    coucou (pan de lin qui se soulève), patron-ciseaux, fil-rouge, etiquettes-cousues, craie (soulignés, via trace),
    croquis-vetement, tringle, metre-ruban, polaroid, tampon, numero-cousu, planning (filtres) et agenda (statuts). */
-import { demarrer, boucle, etat } from './socle/index.js?v=1';
+import { demarrer, boucle, etat } from './socle/index.js?v=2';
+import { fermetureEclair, etapesCousues, tissuVivant, fichesRetournees, prenomBrode, pointDeCroix, pointDeCroixFinal } from './v2.js?v=2';
 
 const gsap = window.gsap;
 const ST = window.ScrollTrigger;
@@ -100,15 +101,17 @@ function ouverturePage(tl, t) {
   }
   if (page === 'contact') {  /* numero-cousu : le contour du numéro se pique point par point */
     tl.fromTo('.numero', { '--p': 0 }, { '--p': 1, duration: 1.1, ease: 'power2.inOut' }, t)
-      .fromTo('.numero-chiffres', { y: 24, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }, t + 0.05);
+;
+    pointDeCroix(tl, t + 0.1);
   }
   if (page === '404') tl.fromTo('.page-404 .media', { rotation: -3, y: 20, opacity: 0 }, { rotation: 0, y: 0, opacity: 1, duration: 0.6 }, t);
-  if (page !== 'accueil') tl.fromTo('.page-tete [data-anime="gsap"]:not(.metre):not(.polaroid):not(.tampon):not(.numero-chiffres):not(.media)', { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.08, ease: 'power3.out' }, t + 0.1);
+  if (page !== 'accueil') tl.fromTo('.page-tete [data-anime="gsap"]:not(.metre):not(.polaroid):not(.tampon):not(.point-de-croix):not(.media)', { y: 18, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, stagger: 0.08, ease: 'power3.out' }, t + 0.1);
   return t + 1.2;
 }
 function ouverturesFinales() {
   if (!gsap) return;
-  gsap.set('.ouverture-panneau, .metre, .metre-repere, .polaroid, .polaroid-epingle, .tete-croquis path, .tampon, .fiche-tete, .numero-chiffres, .page-404 .media, .page-tete [data-anime="gsap"], .page-tete h1, .hero-mot .lettre, .hero-coucou, .hero-tag, .hero-sous, .hero-intro, .hero-actions', { clearProps: 'all' });
+  pointDeCroixFinal();
+  gsap.set('.ouverture-panneau, .metre, .metre-repere, .polaroid, .polaroid-epingle, .tete-croquis path, .tampon, .fiche-tete, .page-404 .media, .page-tete [data-anime="gsap"], .page-tete h1, .hero-mot .lettre, .hero-coucou, .hero-tag, .hero-sous, .hero-intro, .hero-actions', { clearProps: 'all' });
   $$('.numero').forEach((n) => n.style.removeProperty('--p'));
 }
 
@@ -141,10 +144,7 @@ function croquisVetement() {
     onUpdate: (s) => { activer(Math.min(4, Math.floor(s.progress * 5 - 0.0001 + 0.0001))); },
   } });
   tl.fromTo(traits, { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.8, stagger: 0.04 }, 0);
-  cadres.forEach((cd, i) => {
-    tl.fromTo(cd, { clipPath: 'inset(100% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 0.6 }, 1 + i)
-      .fromTo($('.media img', cd), { scale: 1.06 }, { scale: 1, duration: 0.9 }, 1 + i);
-  });
+  etapesCousues(tl, cadres);
   tl.fromTo(barre, { scaleX: 0 }, { scaleX: 1, duration: 5, ease: 'none' }, 0);
   activer(0);
 }
@@ -193,7 +193,7 @@ function polaroidAuDefilement() {
 }
 function numeroAuDefilement() {
   if (!$('.numero')) return;
-  gsap.fromTo('.numero-chiffres', { letterSpacing: '0em' }, { letterSpacing: '.06em', ease: 'none', scrollTrigger: { trigger: '.page-tete', start: 'top top', end: 'bottom top', scrub: 0.4 } });
+  gsap.fromTo('.point-de-croix', { x: 0 }, { x: -24, ease: 'none', scrollTrigger: { trigger: '.page-tete', start: 'top top', end: 'bottom top', scrub: 0.4 } });
 }
 
 /* ---------- planning : filtres (Tous, Ados, Adultes, Yoga), sans vide ni saut ---------- */
@@ -233,19 +233,27 @@ function agenda() {
 async function modules() {
   const main = $('main');
   if (page === 'accueil' && main) {
-    try { const { init } = await import('./modules/fil-conducteur/module.js?v=1'); await init(main, { cadre: '.cadre', onde: 14, boucle: 30, orienter: true, regard: 0.66 }); main.querySelector('.fic__svg')?.setAttribute('data-effet', 'fil-rouge'); } catch (err) { console.error('[fil-rouge]', err); }
+    try { const { init } = await import('./modules/fil-conducteur/module.js?v=2'); await init(main, { cadre: '.cadre', onde: 14, boucle: 30, orienter: true, regard: 0.66, rail: false }); main.querySelector('.fic__svg')?.setAttribute('data-effet', 'fil-rouge'); } catch (err) { console.error('[fil-rouge]', err); }
+  }
+  const carte = $('.cic');
+  if (carte) {
+    try { const { init } = await import('./modules/carte-itineraire-collante/module.js?v=2'); await init(carte, { lecture: '58%', tension: 0.45, duree: 1.1 }); } catch (err) { console.error('[carte]', err); }
   }
   const fpe = $('.fpe');
   if (fpe) {
     /* Choix déjà fait selon le bouton d'où l'on vient : ?activite=stage-click */
     const voulu = new URLSearchParams(location.search).get('activite');
     if (voulu) { const r = fpe.querySelector(`input[name="activite"][value="${CSS.escape(voulu)}"]`); if (r) r.checked = true; }
-    try { const { init } = await import('./modules/formulaire-par-etapes/module.js?v=1'); init(fpe, {}); } catch (err) { console.error('[formulaire]', err); }
+    try { const { init } = await import('./modules/formulaire-par-etapes/module.js?v=2'); init(fpe, {}); } catch (err) { console.error('[formulaire]', err); }
   }
 }
 
 demarrer({
   preparer() {
+    fermetureEclair();
+    fichesRetournees();
+    prenomBrode();
+    tissuVivant();
     agenda();
     planning();
     modules();

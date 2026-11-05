@@ -1,5 +1,28 @@
 {
   "siteActuel": "peekaboo-nyon.com",
-  "pagesTypes": ["/", "/cours", "/melody", "/inscription", "/contact"],
-  "effets": ["coucou", "patron-ciseaux", "fil-rouge", "etiquettes-cousues", "craie", "croquis-vetement", "tringle", "metre-ruban", "polaroid", "tampon", "numero-cousu"]
+  "pagesTypes": [
+    "/",
+    "/cours",
+    "/melody",
+    "/inscription",
+    "/contact"
+  ],
+  "effets": [
+    "coucou",
+    "craie",
+    "croquis-vetement",
+    "etiquettes-cousues",
+    "fermeture-eclair",
+    "fiche-retournee",
+    "fil-rouge",
+    "metre-ruban",
+    "patron-ciseaux",
+    "point-de-croix",
+    "polaroid",
+    "prenom-brode",
+    "tampon",
+    "tissu-vivant",
+    "tringle",
+    "numero-cousu"
+  ]
 }

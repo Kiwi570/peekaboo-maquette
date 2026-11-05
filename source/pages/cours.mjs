@@ -1,7 +1,6 @@
 /* Cours & stages : ouverture scindée sur kraft avec mètre ruban (metre-ruban), fiches cousues, planning filtrable,
    ateliers du weekend (statuts automatiques), stage click!, tissu, conditions, yoga. */
 import { html } from '../../outils/gabarit.mjs';
-import { etiquette } from './accueil.mjs';
 import { croquis } from '../gabarits/dessins.mjs';
 
 export const page = { cle: 'cours', fichier: 'cours', imagePartage: 'grok/cours-ouverture-1280.webp' };
@@ -9,6 +8,31 @@ export const page = { cle: 'cours', fichier: 'cours', imagePartage: 'grok/cours-
 const heure = (h) => { const e = Math.floor(h), m = Math.round((h - e) * 60); return m ? `${e} h ${String(m).padStart(2, '0')}` : `${e} h`; };
 /* Échelle repliée : 9 h – 11 h, pli de 11 h à 16 h (aucun cours), puis 16 h – 21 h. */
 const pos = (h) => (h <= 11 ? h - 9 : h >= 16 ? 2.6 + (h - 16) : 2 + ((h - 11) / 5) * 0.6) / 7.6;
+
+/* Fiche qui se retourne : recto (image, titre, prix), verso (horaires, contenu, âge, inscription). */
+const fiche = (c, x) => html`<li class="etiquette etiquette--${x.teinte} fiche" id="fiche-${x.cle}" data-effet="etiquettes-cousues">
+  <span class="etiquette-couture" aria-hidden="true" data-audit-ignorer></span>
+  <span class="etiquette-onglet">${x.etiquette}</span>
+  <div class="fiche-carte" data-effet="fiche-retournee">
+    <div class="fiche-face fiche-recto">
+      ${c.media({ nom: x.image, alt: x.titre, classe: 'etiquette-media', sizes: '(max-width: 760px) 88vw, 24vw' })}
+      <h3 class="etiquette-titre">${x.titre}</h3>
+      <p class="etiquette-prix" data-prix>${x.prix ? html`<strong>CHF ${x.prix}</strong> ` : ''}<span>${x.unite}</span></p>
+      <p class="fiche-accroche">${x.texte}</p>
+    </div>
+    <div class="fiche-face fiche-verso" id="verso-${x.cle}">
+      <p class="fiche-verso-titre">${x.titre}</p>
+      <dl class="fiche-details">
+        <div><dt>${c.t('cours.fiches.horaires')}</dt><dd>${x.horaire}</dd></div>
+        <div><dt>${c.t('cours.fiches.age')}</dt><dd>${c.t('cours.fiches.ageCompleter')}</dd></div>
+        <div><dt>${c.t('cours.fiches.tarif')}</dt><dd data-prix>${x.prix ? `CHF ${x.prix} ` : ''}${x.unite}</dd></div>
+        <div><dt>${c.t('cours.fiches.tissu')}</dt><dd>${c.t('cours.fiches.tissuTexte')}</dd></div>
+      </dl>
+      <p class="fiche-actions">${c.lien('inscription', { params: `activite=${x.cle}`, classe: 'bouton bouton--petit', texte: c.t('cours.fiches.inscrire') })}</p>
+    </div>
+  </div>
+  <button type="button" class="fiche-tourner" aria-expanded="false" aria-controls="verso-${x.cle}" data-libelle-recto="${c.s('cours.fiches.voirDetail')}" data-libelle-verso="${c.s('cours.fiches.voirRecto')}"><span data-libelle-bouton>${c.t('cours.fiches.voirDetail')}</span></button>
+</li>`;
 
 export default (c) => {
   const P = c.donnees.planning;
@@ -37,7 +61,7 @@ export default (c) => {
       <h2 data-anime="lignes">${c.t('cours.fiches.titre')}</h2>
       <p data-anime>${c.t('cours.fiches.texte')}</p>
     </div>
-    <ul class="etiquettes etiquettes--quatre">${c.donnees.cours.map((x) => etiquette(c, x, { id: `fiche-${x.cle}` }))}</ul>
+    <ul class="etiquettes etiquettes--quatre fiches">${c.donnees.cours.map((x) => fiche(c, x))}</ul>
   </div>
 </section>
 

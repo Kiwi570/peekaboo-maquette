@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" data-v="1" data-curseur>
+<html lang="fr" data-v="2" data-curseur>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -41,16 +41,17 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 })();</script>
 <link rel="preload" href="/assets/polices/bricolage-grotesque-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/polices/instrument-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/css/socle.css?v=1">
-<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=1">
-<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=1">
-<link rel="stylesheet" href="/assets/css/site.css?v=1">
-<link rel="modulepreload" href="/assets/js/site.js?v=1">
-<link rel="modulepreload" href="/assets/js/socle/index.js?v=1">
+<link rel="stylesheet" href="/assets/css/socle.css?v=2">
+<link rel="stylesheet" href="/assets/js/modules/fil-conducteur/module.css?v=2">
+<link rel="stylesheet" href="/assets/js/modules/formulaire-par-etapes/module.css?v=2">
+<link rel="stylesheet" href="/assets/js/modules/carte-itineraire-collante/module.css?v=2">
+<link rel="stylesheet" href="/assets/css/site.css?v=2">
+<link rel="modulepreload" href="/assets/js/site.js?v=2">
+<link rel="modulepreload" href="/assets/js/socle/index.js?v=2">
 <script src="/assets/vendor/gsap.min.js" defer></script>
 <script src="/assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="/assets/vendor/SplitText.min.js" defer></script>
-<script type="module" src="/assets/js/site.js?v=1"></script>
+<script type="module" src="/assets/js/site.js?v=2"></script>
 <meta name="theme-color" content="#f4ecdd">
 <link rel="icon" href="/assets/images/favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
@@ -68,7 +69,12 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Peekaboo","description":"Cours de couture et de stylisme, stages de vacances et ateliers créatifs pour enfants, ados et adultes à Nyon.","url":"https://peekaboo-maquette.vercel.app/","telephone":"+41763969174","email":"melody_j8@hotmail.com","address":{"@type":"PostalAddress","streetAddress":"Ch. de Crève-Cœur 3","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/peekaboonyon/","https://www.facebook.com/melody.nelson.94801/"]}</script>
 </head>
 <body id="haut">
-<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Accueil</span></div></div>
+<div data-voile aria-hidden="true" data-effet="fermeture-eclair">
+  <span class="zip-pan zip-pan--g"></span><span class="zip-pan zip-pan--d"></span>
+  <span class="zip-joint"></span>
+  <span class="zip-tirette"><svg viewBox="0 0 40 90"><rect x="8" y="0" width="24" height="22" rx="4"/><path d="M12 22 h16 l-3 60 a5 5 0 0 1 -10 0 z"/><circle cx="20" cy="72" r="4.5"/></svg></span>
+  <div class="voile-contenu"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span data-voile-libelle>Accueil</span></div>
+</div>
 <div class="ouverture-panneau" data-ouverture data-gouttiere="#b2261f" aria-hidden="true">
   <div class="pan-tissu" data-effet="coucou">
     <span class="pan-couture"></span>
@@ -114,7 +120,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     </p>
   </div>
   <div class="hero-patron">
-    <figure class="media hero-media" data-grok style="--cadrage:50% 52%">
+    <figure class="media hero-media" data-grok data-effet="tissu-vivant" style="--cadrage:50% 52%">
   <picture>
     <img src="/assets/images/grok/cours-weekend-784.webp" srcset="/assets/images/grok/cours-weekend-480.webp 480w, /assets/images/grok/cours-weekend-640.webp 640w, /assets/images/grok/cours-weekend-784.webp 784w" sizes="(max-width: 760px) 80vw, 40vw" alt="Matériel d’atelier créatif : feutrine, boutons, rubans, laines et bobines" width="784" height="1175" fetchpriority="high" loading="eager" decoding="async">
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
@@ -152,7 +158,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="cadre">
     <div class="tete-section">
       <p class="surtitre">Les cours</p>
-      <h2 data-anime="lignes">Un fil pour chacun</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>Un fil pour chacun</h2>
       <p data-anime>Stylisme et couture ou ateliers de création, pour ados, enfants et adultes, tout au long de l’année.</p>
     </div>
     <ul class="etiquettes"><li class="etiquette etiquette--fil" data-effet="etiquettes-cousues">
@@ -202,7 +208,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="cadre esprit-grille">
     <div class="esprit-texte">
       <p class="surtitre">L’esprit de l’atelier</p>
-      <h2 class="esprit-phrase" data-anime><span class="craie-mot">L’écoute,<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 14 C 50 6, 120 20, 196 9"/></svg></span> <span class="craie-mot">l’attention,<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 10 C 60 20, 130 4, 196 14"/></svg></span> <span class="craie-mot">la sensibilité<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 13 C 70 5, 110 21, 196 8"/></svg></span> </h2>
+      <h2 class="esprit-phrase titre-noue" data-anime data-fil-repere><span class="craie-mot">L’écoute,<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 14 C 50 6, 120 20, 196 9"/></svg></span> <span class="craie-mot">l’attention,<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 10 C 60 20, 130 4, 196 14"/></svg></span> <span class="craie-mot">la sensibilité<svg class="craie-trait" viewBox="0 0 200 24" preserveAspectRatio="none" aria-hidden="true" data-fx="trace" data-effet="craie"><path d="M4 13 C 70 5, 110 21, 196 8"/></svg></span> </h2>
       <p data-anime>Un enseignement basé sur l’écoute, l’attention et la sensibilité de chaque élève, pour lui permettre de trouver les moyens de développer sa propre pensée créatrice.</p>
     </div>
     <div class="esprit-visuel">
@@ -236,23 +242,27 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
     <path d="M96 300 q24 6 48 0 q24 -6 60 2" stroke-dasharray="4 6"/>
   </g>
 </svg><span class="etapes-legende craie" aria-hidden="true">Le croquis</span></div>
-      <div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+      <div class="etapes-cadre etapes-cadre--patron"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
   <picture>
     <img src="/assets/images/grok/accueil-etape-patron-960.webp" srcset="/assets/images/grok/accueil-etape-patron-480.webp 480w, /assets/images/grok/accueil-etape-patron-640.webp 640w, /assets/images/grok/accueil-etape-patron-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="Le patron" width="960" height="1280" loading="lazy" decoding="async">
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
-</figure></div><div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+</figure><svg class="outil outil-patron" viewBox="0 0 300 400" aria-hidden="true" data-superpose><g transform="translate(62 66) scale(.44)"><path class="outil-trait" pathLength="1" d="M100 30 L150 18 Q200 70 250 18 L300 30 Q296 118 332 150 L384 496 Q200 528 16 496 L68 150 Q104 118 100 30 Z"/></g><path class="outil-cran" d="M88 238 l10 3 M212 241 l10 -3 M148 291 v10"/></svg><svg class="ourlet" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><polyline points="0.0,2 12.5,12 25.0,2 37.5,12 50.0,2 62.5,12 75.0,2 87.5,12 100.0,2 112.5,12 125.0,2 137.5,12 150.0,2 162.5,12 175.0,2 187.5,12 200.0,2 212.5,12 225.0,2 237.5,12 250.0,2 262.5,12 275.0,2 287.5,12 300.0,2"/></svg></div><div class="etapes-cadre etapes-cadre--coupe"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
   <picture>
     <img src="/assets/images/grok/accueil-etape-coupe-960.webp" srcset="/assets/images/grok/accueil-etape-coupe-480.webp 480w, /assets/images/grok/accueil-etape-coupe-640.webp 640w, /assets/images/grok/accueil-etape-coupe-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="La coupe" width="960" height="1280" loading="lazy" decoding="async">
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
-</figure></div><div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+</figure><svg class="outil outil-coupe" viewBox="0 0 300 400" aria-hidden="true" data-superpose><path class="outil-craie" pathLength="1" d="M28 338 C 96 300, 176 236, 274 130"/><g class="outil-ciseaux">
+  <g class="lame lame-a"><path d="M-4 -2.2 L58 -5 Q62 -3.6 58 -1.6 L-4 2 Z"/><path class="branche" d="M-4 -1 L-14 -9"/><ellipse class="anneau" cx="-22" cy="-13" rx="10" ry="7" transform="rotate(-24 -22 -13)"/></g>
+  <g class="lame lame-b"><path d="M-4 2.2 L58 5 Q62 3.6 58 1.6 L-4 -2 Z"/><path class="branche" d="M-4 1 L-14 9"/><ellipse class="anneau" cx="-22" cy="13" rx="10" ry="7" transform="rotate(24 -22 13)"/></g>
+  <circle class="pivot" r="2.6"/>
+</g></svg><svg class="ourlet" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><polyline points="0.0,2 12.5,12 25.0,2 37.5,12 50.0,2 62.5,12 75.0,2 87.5,12 100.0,2 112.5,12 125.0,2 137.5,12 150.0,2 162.5,12 175.0,2 187.5,12 200.0,2 212.5,12 225.0,2 237.5,12 250.0,2 262.5,12 275.0,2 287.5,12 300.0,2"/></svg></div><div class="etapes-cadre etapes-cadre--couture"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
   <picture>
     <img src="/assets/images/grok/accueil-etape-couture-960.webp" srcset="/assets/images/grok/accueil-etape-couture-480.webp 480w, /assets/images/grok/accueil-etape-couture-640.webp 640w, /assets/images/grok/accueil-etape-couture-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="La couture" width="960" height="1280" loading="lazy" decoding="async">
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
-</figure></div><div class="etapes-cadre"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
+</figure><svg class="outil outil-couture" viewBox="0 0 300 400" aria-hidden="true" data-superpose><defs><mask id="couture-masque" maskUnits="userSpaceOnUse" x="0" y="0" width="300" height="400"><path class="outil-masque" pathLength="1" d="M18 246 C 84 206, 170 286, 284 226" fill="none" stroke="#fff" stroke-width="14"/></mask></defs><path class="outil-points" d="M18 246 C 84 206, 170 286, 284 226" mask="url(#couture-masque)"/><g class="outil-aiguille"><path d="M-30 -1.6 L20 -1.2 L28 0 L20 1.2 L-30 1.6 Q-34 0 -30 -1.6 Z" fill="#9a9ca2"/><ellipse cx="-25" cy="0" rx="3.4" ry=".9" fill="#f4ecdd"/></g></svg><svg class="ourlet" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><polyline points="0.0,2 12.5,12 25.0,2 37.5,12 50.0,2 62.5,12 75.0,2 87.5,12 100.0,2 112.5,12 125.0,2 137.5,12 150.0,2 162.5,12 175.0,2 187.5,12 200.0,2 212.5,12 225.0,2 237.5,12 250.0,2 262.5,12 275.0,2 287.5,12 300.0,2"/></svg></div><div class="etapes-cadre etapes-cadre--essayage"><figure class="media etapes-media" data-grok style="--cadrage:50% 50%">
   <picture>
     <img src="/assets/images/grok/accueil-etape-essayage-960.webp" srcset="/assets/images/grok/accueil-etape-essayage-480.webp 480w, /assets/images/grok/accueil-etape-essayage-640.webp 640w, /assets/images/grok/accueil-etape-essayage-960.webp 960w" sizes="(max-width: 760px) 70vw, 36vw" alt="L’essayage" width="960" height="1280" loading="lazy" decoding="async">
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
-</figure></div>
+</figure><svg class="outil outil-essayage" viewBox="0 0 300 400" aria-hidden="true" data-superpose><g class="outil-epingle" transform="translate(128 118) rotate(-30)"><g class="epingle-corps"><line x1="0" y1="0" x2="0" y2="34"/><circle r="6.5"/></g></g><g class="outil-epingle" transform="translate(176 132) rotate(20)"><g class="epingle-corps"><line x1="0" y1="0" x2="0" y2="34"/><circle r="6.5"/></g></g><g class="outil-epingle" transform="translate(112 214) rotate(-12)"><g class="epingle-corps"><line x1="0" y1="0" x2="0" y2="34"/><circle r="6.5"/></g></g><g class="outil-epingle" transform="translate(190 232) rotate(28)"><g class="epingle-corps"><line x1="0" y1="0" x2="0" y2="34"/><circle r="6.5"/></g></g><g class="outil-epingle" transform="translate(150 298) rotate(-6)"><g class="epingle-corps"><line x1="0" y1="0" x2="0" y2="34"/><circle r="6.5"/></g></g></svg><svg class="ourlet" viewBox="0 0 300 14" preserveAspectRatio="none" aria-hidden="true"><polyline points="0.0,2 12.5,12 25.0,2 37.5,12 50.0,2 62.5,12 75.0,2 87.5,12 100.0,2 112.5,12 125.0,2 137.5,12 150.0,2 162.5,12 175.0,2 187.5,12 200.0,2 212.5,12 225.0,2 237.5,12 250.0,2 262.5,12 275.0,2 287.5,12 300.0,2"/></svg></div>
     </div>
   </div>
 </section>
@@ -260,7 +270,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="cadre melody-grille">
     <div class="melody-texte">
       <p class="surtitre">Qui enseigne</p>
-      <h2 data-anime="lignes">Melody, styliste et enseignante</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>Melody, styliste et enseignante</h2>
       <p data-anime>Arts visuels, LISAA Paris, HEAD Genève, un stage aux ateliers Galliano, des costumes pour la scène, puis un diplôme d’enseignante à la HEPL : les deux facettes, artistique et pédagogique, au service des élèves.</p>
       <blockquote class="citation craie-citation" data-anime><p>J’aime sensibiliser, encourager, documenter et accompagner mes élèves même quand tout semble refléter l’impossible !</p></blockquote>
       <p class="melody-langues" data-anime>Français, anglais, italien et espagnol</p>
@@ -273,7 +283,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   <div class="cadre marque-grille">
     <div class="marque-texte">
       <p class="surtitre"><img class="marque-logo" src="/assets/images/madebymelody-480.webp" alt="MADEBYMELODY" width="480" height="72"></p>
-      <h2 data-anime="lignes">La marque cousue à Nyon</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>La marque cousue à Nyon</h2>
       <p data-anime>Depuis 2010, des pièces uniques et numérotées pour femmes et enfants, créées dans les ateliers Peekaboo. Les années 60, 70 et 90, la musique, la nature et les animaux.</p>
       <p class="marque-actions" data-anime>
         <a class="bouton" href="https://www.madebymelody.ch/boutique-tous-les-produits" target="_blank" rel="noopener" aria-label="La boutique MADEBYMELODY (nouvel onglet)">Voir la boutique</a>
@@ -346,7 +356,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
 </svg><p class="pratique-legende">Plan schématique : l’atelier est à côté de la bibliothèque des jeunes.</p></div>
     <div class="pratique-texte">
       <p class="surtitre">Infos pratiques</p>
-      <h2 data-anime="lignes">Où coudre ?</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>Où coudre ?</h2>
       <address class="pratique-adresse" data-anime><strong>Ateliers Peekaboo</strong><br>Ch. de Crève-Cœur 3, 1260 Nyon<br>À côté de la bibliothèque des jeunes<br><a href="tel:+41763969174">076 396 91 74</a> · <a href="mailto:melody_j8@hotmail.com">melody_j8@hotmail.com</a></address>
       <ul class="conditions" data-anime="cascade"><li><strong>Le tissu</strong> Non compris : tissus à prix préférentiels à l’atelier, et 20 % de réduction au magasin ALJA de Nyon.</li><li><strong>Le paiement</strong> Dans les 10 jours après l’inscription.</li><li><strong>L’assurance</strong> Une responsabilité civile suffisante est demandée à chaque participant.</li></ul>
       <p data-anime><a href="/cours#conditions" class="lien-fleche" data-libelle="Cours &amp; stages">Toutes les conditions</a></p>
@@ -361,7 +371,7 @@ setTimeout(function () { if (!d.classList.contains('demarre')) d.classList.add('
   </picture><figcaption class="mention-ia">Illustration générée</figcaption>
 </figure>
     <div>
-      <h2 data-anime="lignes">Une idée en tête ?</h2>
+      <h2 class="titre-noue" data-anime="lignes" data-fil-repere>Une idée en tête ?</h2>
       <p data-anime>Envoyez une demande : Peekaboo vous répond avec le formulaire d’inscription.</p>
       <p class="fin-actions" data-anime>
         <a href="/inscription" class="bouton" data-libelle="Inscription" data-survol="magnetique">Demander une inscription</a>

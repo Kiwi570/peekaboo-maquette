@@ -24,6 +24,7 @@ ${autres.length > 1 ? autres.map((a) => html`<link rel="alternate" hreflang="${a
 ${(c.site.polices || []).map((f) => html`<link rel="preload" href="${f}" as="font" type="font/woff2" crossorigin>\n`)}<link rel="stylesheet" href="${c.asset('css/socle.css')}">
 <link rel="stylesheet" href="${c.asset('js/modules/fil-conducteur/module.css')}">
 <link rel="stylesheet" href="${c.asset('js/modules/formulaire-par-etapes/module.css')}">
+<link rel="stylesheet" href="${c.asset('js/modules/carte-itineraire-collante/module.css')}">
 <link rel="stylesheet" href="${c.asset('css/site.css')}">
 <link rel="modulepreload" href="${c.asset('js/site.js')}">
 <link rel="modulepreload" href="${c.asset('js/socle/index.js')}">
@@ -107,7 +108,12 @@ function barre(c) {
 }
 
 function voile(c) {
-  return html`<div data-voile aria-hidden="true"><div class="voile-contenu"><img src="/assets/images/logo-clair-240.webp" alt="" width="240" height="219"><span data-voile-libelle>${c.libelle(c.page.cle)}</span></div></div>`;
+  return html`<div data-voile aria-hidden="true" data-effet="fermeture-eclair">
+  <span class="zip-pan zip-pan--g"></span><span class="zip-pan zip-pan--d"></span>
+  <span class="zip-joint"></span>
+  <span class="zip-tirette"><svg viewBox="0 0 40 90"><rect x="8" y="0" width="24" height="22" rx="4"/><path d="M12 22 h16 l-3 60 a5 5 0 0 1 -10 0 z"/><circle cx="20" cy="72" r="4.5"/></svg></span>
+  <div class="voile-contenu"><img src="/assets/images/logo-240.webp" alt="" width="240" height="219"><span data-voile-libelle>${c.libelle(c.page.cle)}</span></div>
+</div>`;
 }
 
 export function page(c, contenu) {

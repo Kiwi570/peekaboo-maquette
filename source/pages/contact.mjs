@@ -1,7 +1,30 @@
 /* Contact : numéro de téléphone en très grand sur fond rouge fil, contour piqué point par point (numero-cousu),
    bandeau panoramique de l'atelier, accès et plan schématique, formulaire court prérempli par ?sujet=…. */
-import { html } from '../../outils/gabarit.mjs';
+import { html, brut } from '../../outils/gabarit.mjs';
 import { plan } from '../gabarits/dessins.mjs';
+
+/* Chiffres 5 × 7 brodés en point de croix : une croix par case pleine, cousues colonne par colonne. */
+const POLICE = {
+  0: ['01110', '10001', '10011', '10101', '11001', '10001', '01110'], 1: ['00100', '01100', '00100', '00100', '00100', '00100', '01110'],
+  3: ['11110', '00001', '00001', '01110', '00001', '00001', '11110'], 4: ['00010', '00110', '01010', '10010', '11111', '00010', '00010'],
+  6: ['00110', '01000', '10000', '11110', '10001', '10001', '01110'], 7: ['11111', '00001', '00010', '00100', '01000', '01000', '01000'],
+  9: ['01110', '10001', '10001', '01111', '00001', '00010', '01100'],
+};
+function pointDeCroix(numero) {
+  const C = 10, croix = [];
+  let col = 0;
+  for (const ch of numero.replace(/\s+/g, ' ')) {
+    if (ch === ' ') { col += 3; continue; }
+    const g = POLICE[ch];
+    if (!g) continue;
+    for (let x = 0; x < 5; x++) for (let y = 0; y < 7; y++) if (g[y][x] === '1') croix.push([col + x, y]);
+    col += 6;
+  }
+  croix.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const L = col - 1, H = 7;
+  const d = croix.map(([x, y]) => { const a = x * C + 1.6, b = y * C + 1.6, s = C - 3.2; return `<path class="croix" d="M${a} ${b}l${s} ${s}M${a + s} ${b}l${-s} ${s}"/>`; }).join('');
+  return brut(`<svg class="point-de-croix" viewBox="-4 -4 ${L * C + 8} ${H * C + 8}" aria-hidden="true" data-anime="gsap" data-effet="point-de-croix"><rect class="toile" x="-4" y="-4" width="${L * C + 8}" height="${H * C + 8}"/>${d}</svg>`);
+}
 
 export const page = { cle: 'contact', fichier: 'contact', imagePartage: 'grok/contact-bandeau-1280.webp' };
 
@@ -11,7 +34,7 @@ export default (c) => html`
     <p class="surtitre" data-anime="gsap">${c.t('contact.tete.surtitre')}</p>
     <h1 class="tete-contact-titre" data-anime="gsap">${c.t('contact.tete.titre')}</h1>
     <a class="numero" href="tel:${c.site.contact.telephoneLien}" data-effet="numero-cousu" data-action-principale>
-      <span class="numero-chiffres" data-anime="gsap">${c.site.contact.telephone}</span>
+      <span class="visuellement-cache">${c.site.contact.telephone}</span>${pointDeCroix(c.site.contact.telephone)}
     </a>
     <p class="tete-contact-texte" data-anime="gsap">${c.t('contact.tete.texte')} <a href="mailto:${c.site.contact.email}">${c.site.contact.email}</a></p>
     <p class="hero-info" data-info-cle data-anime="gsap">${c.t('contact.tete.info')}</p>

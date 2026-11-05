@@ -38,6 +38,16 @@ export default (c) => {
         </fieldset>
         <fieldset class="fpe__etape" data-etape="${c.s('inscription.form.e2')}">
           <legend class="fpe__legende"><h2 class="fpe__titre">${F('e2q')}</h2></legend>
+          <div class="etiquette-brodee" data-effet="prenom-brode" data-visuel aria-hidden="true">
+            <svg viewBox="0 0 420 150">
+              <defs><pattern id="satin" width="3" height="3" patternUnits="userSpaceOnUse" patternTransform="rotate(38)"><rect width="3" height="3" fill="#b2261f"/><rect width="1.1" height="3" fill="#d0473f"/></pattern></defs>
+              <rect class="eb-fond" x="4" y="4" width="412" height="142" rx="8"/>
+              <rect class="eb-couture" x="13" y="13" width="394" height="124" rx="5"/>
+              <text class="eb-haut" x="210" y="40" text-anchor="middle">${c.t('inscription.form.brodeHaut')}</text>
+              <g class="eb-nom" transform="translate(210 100)"><text class="eb-attente" text-anchor="middle">${c.t('inscription.form.brodeAttente')}</text></g>
+              <text class="eb-bas" x="210" y="128" text-anchor="middle">${c.t('inscription.form.brodeBas')}</text>
+            </svg>
+          </div>
           <div class="fpe__champ"><label for="i-participant">${F('prenomParticipant')}</label><input id="i-participant" name="participant" autocomplete="off" required></div>
           <div class="fpe__champ"><label for="i-age">${F('age')}</label><input id="i-age" name="age" type="number" min="4" max="99" inputmode="numeric" aria-describedby="i-age-aide" required><p class="fpe__aide" id="i-age-aide">${F('ageAide')}</p></div>
           <div class="fpe__groupe fpe__puces" data-libelle="${c.s('inscription.form.niveau')}" role="radiogroup" aria-label="${c.s('inscription.form.niveau')}">
